@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="tabbar" destination="67a-iI-xyG" id="MDD-kr-oVu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tabBar contentMode="scaleToFill" barStyle="black" id="67a-iI-xyG">
+                    <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <tabBarItem title="财信" image="nav_home_green.png" id="2N6-ot-kKU"/>
+                        <tabBarItem tag="1" title="财友" image="nav_msg_green.png" id="saG-cC-jsp"/>
+                        <tabBarItem tag="2" title="财圈" image="nav_pro_green.png" id="MlW-P6-eUG"/>
+                        <tabBarItem tag="3" title="我" image="nav_wf_green.png" id="QC8-kN-eVs"/>
+                    </items>
+                    <color key="tintColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.51372551919999998" green="0.81960791349999995" blue="0.32549020649999999" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="selectedImageTintColor" red="0.51372551919999998" green="0.81960791349999995" blue="0.32549020649999999" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="LGN-CE-y7G"/>
+                    </connections>
+                </tabBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nav_home_green.png" width="26" height="25"/>
+        <image name="nav_msg_green.png" width="22" height="22"/>
+        <image name="nav_pro_green.png" width="23" height="23"/>
+        <image name="nav_wf_green.png" width="22" height="22"/>
+    </resources>
+</document>
