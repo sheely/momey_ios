@@ -7,6 +7,9 @@
 //
 #import "MainViewController.h"
 #import "SHMoneyListViewController.h"
+#import "SHGroupListViewController.h"
+#import "SHChatListViewController.h"
+#import "SHAboutMeViewController.h"
 
 @interface MainViewController ()
 
@@ -49,6 +52,31 @@
             [mDictionary setValue:nacontroller forKey:@"SHMoneyListViewController"];
         }
     }
+    else if(item.tag == 1){
+        nacontroller =[ mDictionary valueForKey:@"SHChatListViewController"];
+        if(!nacontroller){
+            SHChatListViewController * viewcontroller = [[SHChatListViewController alloc]init];
+            nacontroller = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
+            [mDictionary setValue:nacontroller forKey:@"SHChatListViewController"];
+        }
+    }
+    else if(item.tag == 2){
+        nacontroller =[ mDictionary valueForKey:@"SHGroupListViewController"];
+        if(!nacontroller){
+            SHGroupListViewController * viewcontroller = [[SHGroupListViewController alloc]init];
+            nacontroller = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
+            [mDictionary setValue:nacontroller forKey:@"SHGroupListViewController"];
+        }
+    }
+    else if(item.tag == 3){
+        nacontroller =[ mDictionary valueForKey:@"SHAboutMeViewController"];
+        if(!nacontroller){
+            SHAboutMeViewController * viewcontroller = [[SHAboutMeViewController alloc]init];
+            nacontroller = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
+            [mDictionary setValue:nacontroller forKey:@"SHAboutMeViewController"];
+        }
+    }
+    
     if(lastnacontroller != nacontroller){
         NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil];
         [nacontroller.navigationBar setTitleTextAttributes:attributes];
@@ -58,15 +86,11 @@
         if(!iOS7){
             nacontroller.navigationBar.clipsToBounds = YES;
         }
-        nacontroller.navigationBar.barTintColor = [UIColor colorWithRed:109/255.0 green:202/255.0 blue:65/255.0 alpha:1];
+        nacontroller.navigationBar.barTintColor = [UIColor colorWithRed:31/255.0 green:129/255.0 blue:198/255.0 alpha:1];
         nacontroller.view.frame = bound;
         [self.view addSubview:nacontroller.view];
         [lastnacontroller.view removeFromSuperview];
         lastnacontroller = nacontroller;
     }
 }
-
-
-
-
 @end

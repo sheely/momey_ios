@@ -1,19 +1,18 @@
 //
-//  SHMoneyListViewController.m
+//  SHAboutMeViewController.m
 //  money
 //
-//  Created by sheely.paean.Nightshade on 14-5-31.
+//  Created by sheely.paean.Nightshade on 14-6-1.
 //  Copyright (c) 2014年 sheely.paean.coretest. All rights reserved.
 //
 
-#import "SHMoneyListViewController.h"
-#import "SHMoneyListViewCell.h"
+#import "SHAboutMeViewController.h"
 
-@interface SHMoneyListViewController ()
+@interface SHAboutMeViewController ()
 
 @end
 
-@implementation SHMoneyListViewController
+@implementation SHAboutMeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,27 +26,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"财信";
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+    self.title = @"我";
+    
+    mList = [@[@"我的日历",@"我的关注",@"我的团队"] mutableCopy];
     // Do any additional setup after loading the view from its nib.
 }
-
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHMoneyListViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHMoneyListViewCell" owner:nil options:nil] objectAtIndex:0];
+    SHTableViewGeneralCell * cell = [self dequeueReusableGeneralCell];
+    cell.labTitle.text = [mList objectAtIndex:indexPath.row];
     return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return  110;
+    return  44;
 }
 
-- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 3;
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -1,19 +1,19 @@
 //
-//  SHMoneyListViewController.m
+//  SHGroupListViewController.m
 //  money
 //
-//  Created by sheely.paean.Nightshade on 14-5-31.
+//  Created by sheely.paean.Nightshade on 14-6-1.
 //  Copyright (c) 2014年 sheely.paean.coretest. All rights reserved.
 //
 
-#import "SHMoneyListViewController.h"
-#import "SHMoneyListViewCell.h"
+#import "SHGroupListViewController.h"
+#import "SHGroupListViewCell.h"
 
-@interface SHMoneyListViewController ()
+@interface SHGroupListViewController ()
 
 @end
 
-@implementation SHMoneyListViewController
+@implementation SHGroupListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,34 +24,39 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"财信";
+    self.title = @"财圈";
     mList = [@[@"",@"",@"",@"",@""] mutableCopy];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHMoneyListViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHMoneyListViewCell" owner:nil options:nil] objectAtIndex:0];
+    SHGroupListViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
     return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return  110;
+    return  80;
 }
 
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"companydetail" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
 }
 
 @end

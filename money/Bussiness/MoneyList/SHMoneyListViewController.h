@@ -8,6 +8,6 @@
 
 #import "SHViewController.h"
 
-@interface SHMoneyListViewController : SHViewController
+@interface SHMoneyListViewController : SHTableViewController
 
 @end

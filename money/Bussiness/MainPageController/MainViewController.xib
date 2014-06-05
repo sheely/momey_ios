@@ -26,8 +26,8 @@
                         <tabBarItem tag="3" title="我" image="nav_wf_green.png" id="QC8-kN-eVs"/>
                     </items>
                     <color key="tintColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="barTintColor" red="0.51372551919999998" green="0.81960791349999995" blue="0.32549020649999999" alpha="1" colorSpace="deviceRGB"/>
-                    <color key="selectedImageTintColor" red="0.51372551919999998" green="0.81960791349999995" blue="0.32549020649999999" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="barTintColor" red="0.18823531270027161" green="0.20000001788139343" blue="0.24705883860588074" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="selectedImageTintColor" red="0.69411766529083252" green="0.35294118523597717" blue="0.12156863510608673" alpha="1" colorSpace="deviceRGB"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="LGN-CE-y7G"/>
                     </connections>
