@@ -28,7 +28,6 @@
     [super viewDidLoad];
     self.title = @"财友";
     mList = [@[@"",@"",@"",@"",@""] mutableCopy];
-    
     // Do any additional setup after loading the view from its nib.
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -47,6 +46,12 @@
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
 }
 
 - (void)didReceiveMemoryWarning

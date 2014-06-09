@@ -10,6 +10,9 @@ pre_action = "login"
 name="login"
 target="SHLoginViewController" />
 
+<module
+name="chatdetail"
+target="SHChatDetailViewController" />
 
 
 </root>
