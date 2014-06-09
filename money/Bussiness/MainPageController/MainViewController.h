@@ -7,11 +7,13 @@
 //
 
 #import "SHViewController.h"
+#import "SHLoginViewController.h"
 
 @interface MainViewController : SHViewController <UITabBarDelegate,SHTaskDelegate>
 {
     NSMutableDictionary* mDictionary;
     UINavigationController* lastnacontroller;
+    SHLoginViewController * loginViewController;
 }
 @property (weak, nonatomic) IBOutlet UITabBar *tabbar;
 

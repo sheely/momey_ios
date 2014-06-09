@@ -29,6 +29,7 @@
     [super viewDidLoad];
     self.title = @"财信";
     mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:nil];
     // Do any additional setup after loading the view from its nib.
 }
 

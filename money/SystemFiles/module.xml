@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
 
-   <module
-   name="companydetail"
-   target="SHCompanyDetailViewController" />
-   
+<module
+name="companydetail"
+target="SHCompanyDetailViewController" />
+
+<module
+pre_action = "login"
+name="login"
+target="SHLoginViewController" />
+
 
 
 </root>

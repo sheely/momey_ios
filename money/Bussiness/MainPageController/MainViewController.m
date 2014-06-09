@@ -31,11 +31,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.tabbar.selectedItem = [self.tabbar.items objectAtIndex:0];
-    [self tabBar:self.tabbar didSelectItem:self.tabbar.selectedItem];
+   // [self tabBar:self.tabbar didSelectItem:self.tabbar.selectedItem];
+    self.tabbar.selectedImageTintColor = [UIColor colorWithRed:255/255.0 green:130/255.0  blue:46/255.0  alpha:1];
+    
+   // [self performSelector:@selector(nedlogin) withObject:nil afterDelay:0.5];
     //引导页加载
- 
+    loginViewController = [[SHLoginViewController alloc]init];
+    [self.view addSubview:loginViewController.view];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessful:) name:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
 }
 
+- (void)loginSuccessful:(NSObject *)sender
+{
+    [UIView setAnimationDuration:1];
+    [UIView animateWithDuration:1 animations:^{
+        CGRect rect = loginViewController.view.frame;
+        rect.origin.y = [UIApplication sharedApplication].keyWindow.frame.size.height - rect.origin.y;
+        loginViewController.view.frame = rect;
+    } completion:^(BOOL finished) {
+        [loginViewController.view removeFromSuperview];
+    }];
+    [self tabBar:self.tabbar didSelectItem:self.tabbar.selectedItem];
+}
 
 #pragma  mark Tabbar
 
@@ -88,7 +105,7 @@
         }
         nacontroller.navigationBar.barTintColor = [UIColor colorWithRed:31/255.0 green:129/255.0 blue:198/255.0 alpha:1];
         nacontroller.view.frame = bound;
-        [self.view addSubview:nacontroller.view];
+        [self.view insertSubview:nacontroller.view belowSubview:loginViewController.view];
         [lastnacontroller.view removeFromSuperview];
         lastnacontroller = nacontroller;
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
-                <outlet property="tabbar" destination="67a-iI-xyG" id="MDD-kr-oVu"/>
+                <outlet property="tabbar" destination="67a-iI-xyG" id="5X6-BL-4bq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,14 +20,14 @@
                     <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <tabBarItem title="财信" image="nav_home_green.png" id="2N6-ot-kKU"/>
-                        <tabBarItem tag="1" title="财友" image="nav_msg_green.png" id="saG-cC-jsp"/>
-                        <tabBarItem tag="2" title="财圈" image="nav_pro_green.png" id="MlW-P6-eUG"/>
-                        <tabBarItem tag="3" title="我" image="nav_wf_green.png" id="QC8-kN-eVs"/>
+                        <tabBarItem title="财信" image="navi_icon_message_press.png" id="2N6-ot-kKU"/>
+                        <tabBarItem tag="1" title="财友" image="navi_icon_friend_press.png" badgeValue="2" id="saG-cC-jsp"/>
+                        <tabBarItem tag="2" title="财圈" image="navi_icon_circle_press.png" id="MlW-P6-eUG"/>
+                        <tabBarItem tag="3" title="我" image="navi_icon_profile_press.png" id="QC8-kN-eVs"/>
                     </items>
                     <color key="tintColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="barTintColor" red="0.18823531270027161" green="0.20000001788139343" blue="0.24705883860588074" alpha="1" colorSpace="deviceRGB"/>
-                    <color key="selectedImageTintColor" red="0.69411766529083252" green="0.35294118523597717" blue="0.12156863510608673" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="selectedImageTintColor" red="1" green="0.50980395078659058" blue="0.18039216101169586" alpha="1" colorSpace="deviceRGB"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="LGN-CE-y7G"/>
                     </connections>
@@ -39,9 +39,9 @@
         </view>
     </objects>
     <resources>
-        <image name="nav_home_green.png" width="26" height="25"/>
-        <image name="nav_msg_green.png" width="22" height="22"/>
-        <image name="nav_pro_green.png" width="23" height="23"/>
-        <image name="nav_wf_green.png" width="22" height="22"/>
+        <image name="navi_icon_circle_press.png" width="30" height="30"/>
+        <image name="navi_icon_friend_press.png" width="30" height="30"/>
+        <image name="navi_icon_message_press.png" width="30" height="30"/>
+        <image name="navi_icon_profile_press.png" width="30" height="30"/>
     </resources>
 </document>
