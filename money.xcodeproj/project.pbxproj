@@ -10,6 +10,7 @@
 		9E31360E19462719002A3298 /* button_red_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360D19462719002A3298 /* button_red_mini@2x.png */; };
 		9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360F1946272C002A3298 /* dialogue_ others@2x.png */; };
 		9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3136101946272C002A3298 /* dialogue_me@2x.png */; };
+		9E31361419468B5C002A3298 /* SHChatUnitMySelfViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E31361319468B5C002A3298 /* SHChatUnitMySelfViewCell.xib */; };
 		9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */; };
 		9E8521CF193F8A93001A17C5 /* SHGroupListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */; };
 		9E8521DC193F9156001A17C5 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D3193F9155001A17C5 /* a.png */; };
@@ -225,6 +226,7 @@
 		9E31360D19462719002A3298 /* button_red_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_red_mini@2x.png"; sourceTree = "<group>"; };
 		9E31360F1946272C002A3298 /* dialogue_ others@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_ others@2x.png"; sourceTree = "<group>"; };
 		9E3136101946272C002A3298 /* dialogue_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_me@2x.png"; sourceTree = "<group>"; };
+		9E31361319468B5C002A3298 /* SHChatUnitMySelfViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatUnitMySelfViewCell.xib; sourceTree = "<group>"; };
 		9E8521CB193F8A85001A17C5 /* SHGroupListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHGroupListViewCell.h; sourceTree = "<group>"; };
 		9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHGroupListViewCell.m; sourceTree = "<group>"; };
 		9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGroupListViewCell.xib; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 				9E85228D19462022001A17C5 /* SHChatUnitViewCell.h */,
 				9E85228E19462022001A17C5 /* SHChatUnitViewCell.m */,
 				9E85229019462033001A17C5 /* SHChatUnitViewCell.xib */,
+				9E31361319468B5C002A3298 /* SHChatUnitMySelfViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1399,6 +1402,7 @@
 				9EA69D3F1938E7D50030C27F /* DSLCalendarDaySelection-right.png in Resources */,
 				9EA69D621938E7D50030C27F /* button_current_bg.png in Resources */,
 				9EA69D401938E7D50030C27F /* DSLCalendarDaySelection-right@2x.png in Resources */,
+				9E31361419468B5C002A3298 /* SHChatUnitMySelfViewCell.xib in Resources */,
 				9EA69DA41938E7D50030C27F /* module.xml in Resources */,
 				9E8522711944743D001A17C5 /* navi_icon_friend_press@2x.png in Resources */,
 				9EA69D821938E7D50030C27F /* SHImageViewController.xib in Resources */,

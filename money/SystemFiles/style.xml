@@ -111,6 +111,11 @@
     <btnsubmitgreen parent = "btnsubmit">
         <property name="backgroundImage:forState" type="UIImage.Stretchable" value="button_green_mini" externType = "int"  extern = "0"/>
     </btnsubmitgreen>
+    <btnstandardgreen parent = "btnstandard">
+        <property name="titleColor:forState" type="UIColor" value="ColorStyleMilkWhite" externType = "int"  extern = "1"/>
+  <property name="titleColor:forState" type="UIColor" value="ColorStyleMilkWhite" externType = "int"  extern = "0"/>
+        <property name="backgroundImage:forState" type="UIImage.Stretchable" value="button_green_mini" externType = "int"  extern = "0"/>
+    </btnstandardgreen>
     <btnsubmitred parent = "btnsubmit">
         <property name="backgroundImage:forState" type="UIImage.Stretchable" value="button_red_mini" externType = "int"  extern = "0"/>
     </btnsubmitred>
