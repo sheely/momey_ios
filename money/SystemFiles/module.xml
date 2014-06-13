@@ -14,5 +14,8 @@ target="SHLoginViewController" />
 name="chatdetail"
 target="SHChatDetailViewController" />
 
+<module
+name="calendar"
+target="SHMyCalendarViewController" />
 
 </root>
