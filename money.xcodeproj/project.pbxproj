@@ -64,6 +64,10 @@
 		9E8986FD193AC996006B3BBD /* SHAboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8986FB193AC996006B3BBD /* SHAboutMeViewController.xib */; };
 		9E898702193AC9BE006B3BBD /* SHGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E898700193AC9BE006B3BBD /* SHGroupListViewController.m */; };
 		9E898703193AC9BE006B3BBD /* SHGroupListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E898701193AC9BE006B3BBD /* SHGroupListViewController.xib */; };
+		9E94D22E194C69AA00D7F074 /* SHMyTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E94D22D194C69AA00D7F074 /* SHMyTeamTableViewCell.xib */; };
+		9E94D231194C69D300D7F074 /* SHMyTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E94D230194C69D300D7F074 /* SHMyTeamTableViewCell.m */; };
+		9E94D235194CA81A00D7F074 /* SHMoneyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */; };
+		9E94D236194CA81A00D7F074 /* SHMoneyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */; };
 		9EA69D281938E7D50030C27F /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C201938E7D40030C27F /* UIButton+Addition.m */; };
 		9EA69D291938E7D50030C27F /* SHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C231938E7D40030C27F /* SHContentViewController.m */; };
 		9EA69D2A1938E7D50030C27F /* SHContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA69C241938E7D40030C27F /* SHContentViewController.xib */; };
@@ -208,6 +212,12 @@
 		9EB92EE319365A3E00E87981 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB92EC519365A3E00E87981 /* UIKit.framework */; };
 		9EB92EEB19365A3E00E87981 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EB92EE919365A3E00E87981 /* InfoPlist.strings */; };
 		9EB92EED19365A3E00E87981 /* moneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB92EEC19365A3E00E87981 /* moneyTests.m */; };
+		9EDA5D2E194B66CA00471471 /* SHMyCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA5D2C194B66CA00471471 /* SHMyCalendarViewController.m */; };
+		9EDA5D2F194B66CA00471471 /* SHMyCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA5D2D194B66CA00471471 /* SHMyCalendarViewController.xib */; };
+		9EDA5D33194B673600471471 /* SHMyCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA5D32194B673600471471 /* SHMyCalendarViewCell.m */; };
+		9EDA5D35194B674400471471 /* SHMyCalendarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA5D34194B674400471471 /* SHMyCalendarViewCell.xib */; };
+		9EDA5D39194C427700471471 /* SHMyTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA5D37194C427700471471 /* SHMyTeamViewController.m */; };
+		9EDA5D3A194C427700471471 /* SHMyTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA5D38194C427700471471 /* SHMyTeamViewController.xib */; };
 		9EDC7F7A193E951800B1019B /* SHMoneyListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDC7F79193E951800B1019B /* SHMoneyListViewCell.m */; };
 		9EDC7F7C193E952600B1019B /* SHMoneyListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDC7F7B193E952600B1019B /* SHMoneyListViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -289,6 +299,12 @@
 		9E8986FF193AC9BE006B3BBD /* SHGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHGroupListViewController.h; sourceTree = "<group>"; };
 		9E898700193AC9BE006B3BBD /* SHGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHGroupListViewController.m; sourceTree = "<group>"; };
 		9E898701193AC9BE006B3BBD /* SHGroupListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGroupListViewController.xib; sourceTree = "<group>"; };
+		9E94D22D194C69AA00D7F074 /* SHMyTeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyTeamTableViewCell.xib; sourceTree = "<group>"; };
+		9E94D22F194C69D300D7F074 /* SHMyTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyTeamTableViewCell.h; sourceTree = "<group>"; };
+		9E94D230194C69D300D7F074 /* SHMyTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyTeamTableViewCell.m; sourceTree = "<group>"; };
+		9E94D232194CA81A00D7F074 /* SHMoneyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoneyDetailViewController.h; sourceTree = "<group>"; };
+		9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoneyDetailViewController.m; sourceTree = "<group>"; };
+		9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMoneyDetailViewController.xib; sourceTree = "<group>"; };
 		9EA69C1C1938E7D40030C27F /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		9EA69C1F1938E7D40030C27F /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		9EA69C201938E7D40030C27F /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
@@ -547,6 +563,15 @@
 		9EB92EE819365A3E00E87981 /* moneyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "moneyTests-Info.plist"; sourceTree = "<group>"; };
 		9EB92EEA19365A3E00E87981 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9EB92EEC19365A3E00E87981 /* moneyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moneyTests.m; sourceTree = "<group>"; };
+		9EDA5D2B194B66CA00471471 /* SHMyCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyCalendarViewController.h; sourceTree = "<group>"; };
+		9EDA5D2C194B66CA00471471 /* SHMyCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyCalendarViewController.m; sourceTree = "<group>"; };
+		9EDA5D2D194B66CA00471471 /* SHMyCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyCalendarViewController.xib; sourceTree = "<group>"; };
+		9EDA5D31194B673600471471 /* SHMyCalendarViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyCalendarViewCell.h; sourceTree = "<group>"; };
+		9EDA5D32194B673600471471 /* SHMyCalendarViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyCalendarViewCell.m; sourceTree = "<group>"; };
+		9EDA5D34194B674400471471 /* SHMyCalendarViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyCalendarViewCell.xib; sourceTree = "<group>"; };
+		9EDA5D36194C427700471471 /* SHMyTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyTeamViewController.h; sourceTree = "<group>"; };
+		9EDA5D37194C427700471471 /* SHMyTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyTeamViewController.m; sourceTree = "<group>"; };
+		9EDA5D38194C427700471471 /* SHMyTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyTeamViewController.xib; sourceTree = "<group>"; };
 		9EDC7F78193E951800B1019B /* SHMoneyListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoneyListViewCell.h; sourceTree = "<group>"; };
 		9EDC7F79193E951800B1019B /* SHMoneyListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoneyListViewCell.m; sourceTree = "<group>"; };
 		9EDC7F7B193E952600B1019B /* SHMoneyListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMoneyListViewCell.xib; sourceTree = "<group>"; };
@@ -585,6 +610,9 @@
 				9E8521CB193F8A85001A17C5 /* SHGroupListViewCell.h */,
 				9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */,
 				9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */,
+				9E94D22F194C69D300D7F074 /* SHMyTeamTableViewCell.h */,
+				9E94D230194C69D300D7F074 /* SHMyTeamTableViewCell.m */,
+				9E94D22D194C69AA00D7F074 /* SHMyTeamTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -658,6 +686,9 @@
 				9E8521E5193F93E7001A17C5 /* SHCompanyDetailViewController.h */,
 				9E8521E6193F93E7001A17C5 /* SHCompanyDetailViewController.m */,
 				9E8521E7193F93E7001A17C5 /* SHCompanyDetailViewController.xib */,
+				9EDA5D36194C427700471471 /* SHMyTeamViewController.h */,
+				9EDA5D37194C427700471471 /* SHMyTeamViewController.m */,
+				9EDA5D38194C427700471471 /* SHMyTeamViewController.xib */,
 			);
 			name = Group;
 			path = money/Bussiness/Group;
@@ -1194,6 +1225,9 @@
 				9EA69DB31938ED210030C27F /* SHMoneyListViewController.h */,
 				9EA69DB41938ED210030C27F /* SHMoneyListViewController.m */,
 				9EA69DB51938ED210030C27F /* SHMoneyListViewController.xib */,
+				9E94D232194CA81A00D7F074 /* SHMoneyDetailViewController.h */,
+				9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */,
+				9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */,
 			);
 			name = MoneyList;
 			path = money/Bussiness/MoneyList;
@@ -1202,9 +1236,13 @@
 		9EA69DB8193AC5A30030C27F /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
+				9EDA5D30194B66D100471471 /* View */,
 				9E8986F9193AC996006B3BBD /* SHAboutMeViewController.h */,
 				9E8986FA193AC996006B3BBD /* SHAboutMeViewController.m */,
 				9E8986FB193AC996006B3BBD /* SHAboutMeViewController.xib */,
+				9EDA5D2B194B66CA00471471 /* SHMyCalendarViewController.h */,
+				9EDA5D2C194B66CA00471471 /* SHMyCalendarViewController.m */,
+				9EDA5D2D194B66CA00471471 /* SHMyCalendarViewController.xib */,
 			);
 			name = AboutMe;
 			path = money/Bussiness/AboutMe;
@@ -1298,6 +1336,16 @@
 				9EB92EE919365A3E00E87981 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EDA5D30194B66D100471471 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EDA5D31194B673600471471 /* SHMyCalendarViewCell.h */,
+				9EDA5D32194B673600471471 /* SHMyCalendarViewCell.m */,
+				9EDA5D34194B674400471471 /* SHMyCalendarViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		9EDC7F77193E94ED00B1019B /* View */ = {
@@ -1437,6 +1485,7 @@
 				9E85226C1944743D001A17C5 /* login_icon_username@2x.png in Resources */,
 				9EA69D3C1938E7D50030C27F /* DSLCalendarDaySelection-left@2x.png in Resources */,
 				9E8522841944DBDB001A17C5 /* 7044702_190131486105_2.jpg in Resources */,
+				9E94D236194CA81A00D7F074 /* SHMoneyDetailViewController.xib in Resources */,
 				9EA69D6E1938E7D50030C27F /* ic_re_error@2x.png in Resources */,
 				9E8522751944743D001A17C5 /* navi_icon_profile_press@2x.png in Resources */,
 				9EA69D371938E7D50030C27F /* DSLCalendar-previousMonth.png in Resources */,
@@ -1445,6 +1494,7 @@
 				9E8522771944743D001A17C5 /* navi_search_nest@2x.png in Resources */,
 				9E8522781944743D001A17C5 /* navi_search_press@2x.png in Resources */,
 				9EA69D491938E7D50030C27F /* grayArrow@2x.png in Resources */,
+				9EDA5D3A194C427700471471 /* SHMyTeamViewController.xib in Resources */,
 				9EA69D671938E7D50030C27F /* showview_left_shade.png in Resources */,
 				9E85226A1944743D001A17C5 /* login_icon_close@2x.png in Resources */,
 				9E8521E2193F9156001A17C5 /* button_green_mini@2x.png in Resources */,
@@ -1454,18 +1504,21 @@
 				9E85226B1944743D001A17C5 /* login_icon_password@2x.png in Resources */,
 				9E8522691944743D001A17C5 /* dialogue_me.png in Resources */,
 				9EB92ECC19365A3E00E87981 /* InfoPlist.strings in Resources */,
+				9EDA5D2F194B66CA00471471 /* SHMyCalendarViewController.xib in Resources */,
 				9E8522701944743D001A17C5 /* navi_icon_circle_rest@2x.png in Resources */,
 				9E8521E3193F9156001A17C5 /* button_red_mini.png in Resources */,
 				9E8986F8193AC980006B3BBD /* SHChatListViewController.xib in Resources */,
 				9EA69D9A1938E7D50030C27F /* NVDebugPanelController.xib in Resources */,
 				9E8522731944743D001A17C5 /* navi_icon_message_press@2x.png in Resources */,
 				9EA69DA61938E7D50030C27F /* style.xml in Resources */,
+				9EDA5D35194B674400471471 /* SHMyCalendarViewCell.xib in Resources */,
 				9EA69D481938E7D50030C27F /* grayArrow.png in Resources */,
 				9EA69D701938E7D50030C27F /* SHLoadingViewCell.xib in Resources */,
 				9EA69D411938E7D50030C27F /* DSLCalendarDaySelection.png in Resources */,
 				9EA69D721938E7D50030C27F /* SHNoneViewCell.xib in Resources */,
 				9EA69D3B1938E7D50030C27F /* DSLCalendarDaySelection-left.png in Resources */,
 				9EA69DA51938E7D50030C27F /* string.xml in Resources */,
+				9E94D22E194C69AA00D7F074 /* SHMyTeamTableViewCell.xib in Resources */,
 				9E8521DC193F9156001A17C5 /* a.png in Resources */,
 				9EA69D7C1938E7D50030C27F /* SHTableViewTitleImageCell.xib in Resources */,
 				9E31360E19462719002A3298 /* button_red_mini@2x.png in Resources */,
@@ -1519,6 +1572,7 @@
 				9EA69D321938E7D50030C27F /* DSLCalendarMonthView.m in Sources */,
 				9EA69D301938E7D50030C27F /* DSLCalendarMonthSelectorView.m in Sources */,
 				9EA69DB61938ED210030C27F /* SHMoneyListViewController.m in Sources */,
+				9E94D231194C69D300D7F074 /* SHMyTeamTableViewCell.m in Sources */,
 				9EA69D2D1938E7D50030C27F /* DSLCalendarDayCalloutView.m in Sources */,
 				9EA69D681938E7D50030C27F /* SHShowTableViewController.m in Sources */,
 				9EA69D851938E7D50030C27F /* WTStatusWindow.m in Sources */,
@@ -1540,11 +1594,14 @@
 				9EA69DA01938E7D50030C27F /* UIViewAddtion.m in Sources */,
 				9EA69D931938E7D50030C27F /* DebugTextView.m in Sources */,
 				9EA69D751938E7D50030C27F /* SHTableViewGeneralCell.m in Sources */,
+				9E94D235194CA81A00D7F074 /* SHMoneyDetailViewController.m in Sources */,
 				9E8522871944DC25001A17C5 /* SHChatListViewCell.m in Sources */,
 				9EA69D531938E7D50030C27F /* PCHalfPieChart.m in Sources */,
 				9EA69D981938E7D50030C27F /* LogCMD.m in Sources */,
+				9EDA5D2E194B66CA00471471 /* SHMyCalendarViewController.m in Sources */,
 				9EA69D5C1938E7D50030C27F /* MMProgressHUDWindow.m in Sources */,
 				9EA69D291938E7D50030C27F /* SHContentViewController.m in Sources */,
+				9EDA5D39194C427700471471 /* SHMyTeamViewController.m in Sources */,
 				9EA69D8D1938E7D50030C27F /* NSMutableArray+convenience.m in Sources */,
 				9EB92ECE19365A3E00E87981 /* main.m in Sources */,
 				9EA69D841938E7D50030C27F /* WTStatusView.m in Sources */,
@@ -1600,6 +1657,7 @@
 				9EA69D331938E7D50030C27F /* DSLCalendarRange.m in Sources */,
 				9EA69D6B1938E7D50030C27F /* SHTableViewCell.m in Sources */,
 				9EA69D431938E7D50030C27F /* NSDate+DSLCalendarView.m in Sources */,
+				9EDA5D33194B673600471471 /* SHMyCalendarViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1720,6 +1778,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "money/money-Prefix.pch";
 				INFOPLIST_FILE = "money/money-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/money/frame",
@@ -1738,6 +1797,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "money/money-Prefix.pch";
 				INFOPLIST_FILE = "money/money-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/money/frame",

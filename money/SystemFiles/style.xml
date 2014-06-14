@@ -133,6 +133,9 @@
     <imgbackground2>
         <property name="image" type="UIImage.Stretchable" value="avar_kuan_mini.png" externType = "int"  extern = "0"/>
     </imgbackground2>
+    <view>
+        <property name="backgroundColor" type="UIColor" value="ColorBackGround"/>
+    </view>
     <!--顶部-->
   
 </Style>
