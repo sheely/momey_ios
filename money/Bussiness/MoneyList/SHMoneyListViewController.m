@@ -44,7 +44,7 @@
     return  110;
 }
 
-- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
 }
@@ -59,6 +59,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"moneydetail" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
 }
 
 @end

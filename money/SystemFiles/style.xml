@@ -113,10 +113,15 @@
         <property name="textAlignment" type="int" value="1"/>
     </lablogintitle>
     <imgbackground>
-        <property name="image" type="UIImage.Stretchable" value="details_kuan.png" externType="int" extern="0"/> 
+        <property name="image" type="UIImage.Stretchable" value="details_kuan.png" externType="int" extern="0"/>
     </imgbackground>  
     <imgbackground2> 
         <property name="image" type="UIImage.Stretchable" value="avar_kuan_mini.png" externType="int" extern="0"/> 
     </imgbackground2>  
     <!--顶部--> 
+         <view>
+        <property name="backgroundColor" type="UIColor" value="ColorBackGround"/>
+    </view>
+    <!--顶部-->
+  
 </Style>

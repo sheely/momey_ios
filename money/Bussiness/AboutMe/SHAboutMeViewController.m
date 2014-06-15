@@ -47,6 +47,18 @@
 {
     return 3;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 0){
+    SHIntent * intent = [[SHIntent alloc]init:@"calendar" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
+    }else if (indexPath.row == 2){
+        SHIntent * intent = [[SHIntent alloc]init:@"myteam" delegate:nil containner:self.navigationController];
+        [[UIApplication sharedApplication]open:intent];
+  
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

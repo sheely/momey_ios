@@ -17,6 +17,16 @@ target="SHChatDetailViewController" />
 <module
 name="chatuserdetail"
 target="SHCharUserDetailViewController" />
+<module
 
+name="calendar"
+target="SHMyCalendarViewController" />
+
+<module
+name="myteam"
+target="SHMyTeamViewController" />
+<module
+name="moneydetail"
+target="SHMoneyDetailViewController" />
 
 </root>
