@@ -29,42 +29,45 @@
     [super viewDidLoad];
     mList = [@[@"123456789012345678901234567890123456789012345678901234567890",@"123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890",@"123456789012345678901234567890123456789012345678901234567890",@"123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890",@"123456789012345678901234567890123456789012345678901234567890"] mutableCopy];
     self.title = @"聊天";
-    [self registerForKeyboardNotifications];
+    //[self registerForKeyboardNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     											 selector:@selector(keyboardWillShown:)
+     											 name:UIKeyboardWillShowNotification
+     object:nil];
     // Do any additional setup after loading the view from its nib.
 }
-- (void)registerForKeyboardNotifications
-{
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(keyboardDidShown:)
-												 name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(keyboardDidHidden:)
-												 name:UIKeyboardWillHideNotification object:nil];
-}
+//- (void)registerForKeyboardNotifications
+//{
+//	[[NSNotificationCenter defaultCenter] addObserver:self
+//											 selector:@selector(keyboardDidShown:)
+//												 name:UIKeyboardWillShowNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//											 selector:@selector(keyboardDidHidden:)
+//												 name:UIKeyboardWillHideNotification object:nil];
+//}
 
-- (void)keyboardDidShown:(NSNotification*)ns
+- (void)keyboardWillShown:(NSNotification*)ns
 {
   
     
-    [UIView beginAnimations:nil context:nil];
-    //设定动画持续时间
-    [UIView setAnimationDuration:0.3];
-    //动画的内容
-    
-    //动画结束
-    
-    CGRect rect;
-    [[[ns userInfo] objectForKey:UIKeyboardBoundsUserInfoKey] getValue:&rect];
-    self.tableView.frame = CGRectMake(0, 0,self.view.frame.size.width,
-                                    self.view.frame.size.height - rect.size.height +44-38);
-    
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect rect;
+        [[[ns userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&rect];
+        self.tableView.frame = CGRectMake(0, 0,self.view.frame.size.width,
+                                          self.view.frame.size.height - rect.size.height +44-38);
+        self.txtBox.frame = CGRectMake(3, self.view.frame.size.height - 30 - rect.size.height + 44 , 250, 30);
+        self.btnSender.frame = CGRectMake(261, self.view.frame.size.height - 30 - rect.size.height + 44 , 48, 30);
+        isAnimation = YES;
+        
+    } completion:^(BOOL finished) {
+        isAnimation = NO;
+    }];
 }
 
 - (void)unregisterForKeyboardNotifications
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self
-													name:UIKeyboardDidShowNotification
+													name:UIKeyboardWillShowNotification
 												  object:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self
 													name:UIKeyboardDidHideNotification
@@ -73,18 +76,30 @@
 
 - (void)keyboardDidHidden:(NSNotification*)ns
 {
+    isAnimation = YES;
 
-    [UIView beginAnimations:nil context:nil];
-    //设定动画持续时间
-    [UIView setAnimationDuration:0.3];
-    //_keybordView.frame = mRectkeybordview;
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.tableView.frame = CGRectMake(0, 0,self.view.frame.size.width,
+                                          self.view.frame.size.height -38);
+        self.txtBox.frame = CGRectMake(3, self.view.frame.size.height - 34  , 250, 30);
+        self.btnSender.frame = CGRectMake(261, self.view.frame.size.height - 34  , 48, 30);
+        
+    } completion:^(BOOL finished) {
+        isAnimation = NO;
+    }];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGSize size = [[mList objectAtIndex:indexPath.row] sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(183, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
     return  60 - 18 + size.height;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if(!isAnimation){
+        [self.txtBox resignFirstResponder];
+    }
 }
 
 - (void)dealloc
@@ -107,7 +122,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return mList.count;
 }
 
 

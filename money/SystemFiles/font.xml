@@ -3,8 +3,8 @@
     <property name="FontScaleSmall" size = "13"  />
     <property name="FontScaleMid"   size = "15" />
     <property name="FontScaleLarge" size = "18" />
-    <property name="FontScaleSmallBold" size = "16" type = "bold"/>
-    <property name="FontScaleMidBold"   size = "18" type = "bold" />
+    <property name="FontScaleSmallBold" size = "14" type = "bold"/>
+    <property name="FontScaleMidBold"   size = "16" type = "bold" />
     <property name="FontScaleLargeBold" size = "20" type = "bold"/>
      <property name="FontScaleSupereBold" size = "26" type = "bold"/>
 </Font>

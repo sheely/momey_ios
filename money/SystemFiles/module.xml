@@ -14,5 +14,9 @@ target="SHLoginViewController" />
 name="chatdetail"
 target="SHChatDetailViewController" />
 
+<module
+name="chatuserdetail"
+target="SHCharUserDetailViewController" />
+
 
 </root>

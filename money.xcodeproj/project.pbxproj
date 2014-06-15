@@ -11,6 +11,17 @@
 		9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360F1946272C002A3298 /* dialogue_ others@2x.png */; };
 		9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3136101946272C002A3298 /* dialogue_me@2x.png */; };
 		9E31361419468B5C002A3298 /* SHChatUnitMySelfViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E31361319468B5C002A3298 /* SHChatUnitMySelfViewCell.xib */; };
+		9E3137F41946D08E002A3298 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3137F31946D08E002A3298 /* CFNetwork.framework */; };
+		9E3137F61946D0F3002A3298 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3137F51946D0F3002A3298 /* SystemConfiguration.framework */; };
+		9E3137FA19470378002A3298 /* SHCharUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3137F819470378002A3298 /* SHCharUserDetailViewController.m */; };
+		9E3137FB19470378002A3298 /* SHCharUserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3137F919470378002A3298 /* SHCharUserDetailViewController.xib */; };
+		9E3137FE194703F7002A3298 /* SHChatUserInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3137FD194703F7002A3298 /* SHChatUserInfoViewCell.m */; };
+		9E31380019470422002A3298 /* SHChatUserInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3137FF19470422002A3298 /* SHChatUserInfoViewCell.xib */; };
+		9E31380219477AC6002A3298 /* userphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31380119477AC6002A3298 /* userphoto.png */; };
+		9E31380519477EF9002A3298 /* SHChatUserBaseInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E31380419477EF9002A3298 /* SHChatUserBaseInfoViewCell.m */; };
+		9E31380719477F0F002A3298 /* SHChatUserBaseInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E31380619477F0F002A3298 /* SHChatUserBaseInfoViewCell.xib */; };
+		9E31380A1947EF22002A3298 /* SHChatPersonalExperienceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3138091947EF22002A3298 /* SHChatPersonalExperienceViewCell.m */; };
+		9E31380C1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E31380B1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib */; };
 		9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */; };
 		9E8521CF193F8A93001A17C5 /* SHGroupListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */; };
 		9E8521DC193F9156001A17C5 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D3193F9155001A17C5 /* a.png */; };
@@ -227,6 +238,21 @@
 		9E31360F1946272C002A3298 /* dialogue_ others@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_ others@2x.png"; sourceTree = "<group>"; };
 		9E3136101946272C002A3298 /* dialogue_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_me@2x.png"; sourceTree = "<group>"; };
 		9E31361319468B5C002A3298 /* SHChatUnitMySelfViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatUnitMySelfViewCell.xib; sourceTree = "<group>"; };
+		9E3137F31946D08E002A3298 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9E3137F51946D0F3002A3298 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9E3137F719470378002A3298 /* SHCharUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCharUserDetailViewController.h; sourceTree = "<group>"; };
+		9E3137F819470378002A3298 /* SHCharUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCharUserDetailViewController.m; sourceTree = "<group>"; };
+		9E3137F919470378002A3298 /* SHCharUserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHCharUserDetailViewController.xib; sourceTree = "<group>"; };
+		9E3137FC194703F7002A3298 /* SHChatUserInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatUserInfoViewCell.h; sourceTree = "<group>"; };
+		9E3137FD194703F7002A3298 /* SHChatUserInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatUserInfoViewCell.m; sourceTree = "<group>"; };
+		9E3137FF19470422002A3298 /* SHChatUserInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatUserInfoViewCell.xib; sourceTree = "<group>"; };
+		9E31380119477AC6002A3298 /* userphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userphoto.png; sourceTree = "<group>"; };
+		9E31380319477EF9002A3298 /* SHChatUserBaseInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatUserBaseInfoViewCell.h; sourceTree = "<group>"; };
+		9E31380419477EF9002A3298 /* SHChatUserBaseInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatUserBaseInfoViewCell.m; sourceTree = "<group>"; };
+		9E31380619477F0F002A3298 /* SHChatUserBaseInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatUserBaseInfoViewCell.xib; sourceTree = "<group>"; };
+		9E3138081947EF22002A3298 /* SHChatPersonalExperienceViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatPersonalExperienceViewCell.h; sourceTree = "<group>"; };
+		9E3138091947EF22002A3298 /* SHChatPersonalExperienceViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatPersonalExperienceViewCell.m; sourceTree = "<group>"; };
+		9E31380B1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatPersonalExperienceViewCell.xib; sourceTree = "<group>"; };
 		9E8521CB193F8A85001A17C5 /* SHGroupListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHGroupListViewCell.h; sourceTree = "<group>"; };
 		9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHGroupListViewCell.m; sourceTree = "<group>"; };
 		9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGroupListViewCell.xib; sourceTree = "<group>"; };
@@ -557,6 +583,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3137F61946D0F3002A3298 /* SystemConfiguration.framework in Frameworks */,
+				9E3137F41946D08E002A3298 /* CFNetwork.framework in Frameworks */,
 				9EA69DB11938EBD00030C27F /* libxml2.2.dylib in Frameworks */,
 				9EA69DAF1938EBCA0030C27F /* libsqlite3.0.dylib in Frameworks */,
 				9EA69DA11938E7D50030C27F /* libCore.a in Frameworks */,
@@ -592,6 +620,7 @@
 		9E8521D2193F9136001A17C5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9E31380119477AC6002A3298 /* userphoto.png */,
 				9E31360D19462719002A3298 /* button_red_mini@2x.png */,
 				9E8522831944DBDB001A17C5 /* 7044702_190131486105_2.jpg */,
 				9E8522491944743D001A17C5 /* app_logo.png */,
@@ -644,6 +673,15 @@
 				9E85228E19462022001A17C5 /* SHChatUnitViewCell.m */,
 				9E85229019462033001A17C5 /* SHChatUnitViewCell.xib */,
 				9E31361319468B5C002A3298 /* SHChatUnitMySelfViewCell.xib */,
+				9E3137FC194703F7002A3298 /* SHChatUserInfoViewCell.h */,
+				9E3137FD194703F7002A3298 /* SHChatUserInfoViewCell.m */,
+				9E3137FF19470422002A3298 /* SHChatUserInfoViewCell.xib */,
+				9E31380319477EF9002A3298 /* SHChatUserBaseInfoViewCell.h */,
+				9E31380419477EF9002A3298 /* SHChatUserBaseInfoViewCell.m */,
+				9E31380619477F0F002A3298 /* SHChatUserBaseInfoViewCell.xib */,
+				9E3138081947EF22002A3298 /* SHChatPersonalExperienceViewCell.h */,
+				9E3138091947EF22002A3298 /* SHChatPersonalExperienceViewCell.m */,
+				9E31380B1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1220,6 +1258,9 @@
 				9E85228819461F25001A17C5 /* SHChatDetailViewController.h */,
 				9E85228919461F25001A17C5 /* SHChatDetailViewController.m */,
 				9E85228A19461F25001A17C5 /* SHChatDetailViewController.xib */,
+				9E3137F719470378002A3298 /* SHCharUserDetailViewController.h */,
+				9E3137F819470378002A3298 /* SHCharUserDetailViewController.m */,
+				9E3137F919470378002A3298 /* SHCharUserDetailViewController.xib */,
 			);
 			name = Chat;
 			path = money/Bussiness/Chat;
@@ -1247,6 +1288,8 @@
 		9EB92EC019365A3E00E87981 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E3137F51946D0F3002A3298 /* SystemConfiguration.framework */,
+				9E3137F31946D08E002A3298 /* CFNetwork.framework */,
 				9EA69DB01938EBD00030C27F /* libxml2.2.dylib */,
 				9EA69DAE1938EBCA0030C27F /* libsqlite3.0.dylib */,
 				9EB92EC119365A3E00E87981 /* Foundation.framework */,
@@ -1395,6 +1438,7 @@
 				9E8521E9193F93E7001A17C5 /* SHCompanyDetailViewController.xib in Resources */,
 				9E8522721944743D001A17C5 /* navi_icon_friend_rest@2x.png in Resources */,
 				9E8522671944743D001A17C5 /* Btn_green_press@2x.png in Resources */,
+				9E3137FB19470378002A3298 /* SHCharUserDetailViewController.xib in Resources */,
 				9EA69D361938E7D50030C27F /* DSLCalendar-nextMonth@2x.png in Resources */,
 				9EA69D661938E7D50030C27F /* SHNavigationShowViewController.xib in Resources */,
 				9EA69D311938E7D50030C27F /* DSLCalendarMonthSelectorView.xib in Resources */,
@@ -1405,6 +1449,8 @@
 				9E31361419468B5C002A3298 /* SHChatUnitMySelfViewCell.xib in Resources */,
 				9EA69DA41938E7D50030C27F /* module.xml in Resources */,
 				9E8522711944743D001A17C5 /* navi_icon_friend_press@2x.png in Resources */,
+				9E31380019470422002A3298 /* SHChatUserInfoViewCell.xib in Resources */,
+				9E31380719477F0F002A3298 /* SHChatUserBaseInfoViewCell.xib in Resources */,
 				9EA69D821938E7D50030C27F /* SHImageViewController.xib in Resources */,
 				9E8522821944D84F001A17C5 /* SHChatListViewCell.xib in Resources */,
 				9EA69D441938E7D50030C27F /* blackArrow.png in Resources */,
@@ -1452,6 +1498,7 @@
 				9E8521DF193F9156001A17C5 /* button_gray_mini.png in Resources */,
 				9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */,
 				9E85226B1944743D001A17C5 /* login_icon_password@2x.png in Resources */,
+				9E31380C1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib in Resources */,
 				9E8522691944743D001A17C5 /* dialogue_me.png in Resources */,
 				9EB92ECC19365A3E00E87981 /* InfoPlist.strings in Resources */,
 				9E8522701944743D001A17C5 /* navi_icon_circle_rest@2x.png in Resources */,
@@ -1462,6 +1509,7 @@
 				9EA69DA61938E7D50030C27F /* style.xml in Resources */,
 				9EA69D481938E7D50030C27F /* grayArrow.png in Resources */,
 				9EA69D701938E7D50030C27F /* SHLoadingViewCell.xib in Resources */,
+				9E31380219477AC6002A3298 /* userphoto.png in Resources */,
 				9EA69D411938E7D50030C27F /* DSLCalendarDaySelection.png in Resources */,
 				9EA69D721938E7D50030C27F /* SHNoneViewCell.xib in Resources */,
 				9EA69D3B1938E7D50030C27F /* DSLCalendarDaySelection-left.png in Resources */,
@@ -1526,6 +1574,7 @@
 				9EA69D911938E7D50030C27F /* Command.m in Sources */,
 				9EA69D921938E7D50030C27F /* CommandFactory.m in Sources */,
 				9E85228F19462022001A17C5 /* SHChatUnitViewCell.m in Sources */,
+				9E3137FE194703F7002A3298 /* SHChatUserInfoViewCell.m in Sources */,
 				9EA69D811938E7D50030C27F /* SHImageViewController.m in Sources */,
 				9EA69DAC1938E92B0030C27F /* MainViewController.m in Sources */,
 				9EA69D8C1938E7D50030C27F /* NSDate+convenience.m in Sources */,
@@ -1552,6 +1601,7 @@
 				9EA69D731938E7D50030C27F /* SHTableViewEditGeneralCell.m in Sources */,
 				9EA69D5F1938E7D50030C27F /* SHSelectionViewController.m in Sources */,
 				9EA69D941938E7D50030C27F /* DebugView.m in Sources */,
+				9E3137FA19470378002A3298 /* SHCharUserDetailViewController.m in Sources */,
 				9EA69D9F1938E7D50030C27F /* UIApplicationAddtion.m in Sources */,
 				9E85228B19461F25001A17C5 /* SHChatDetailViewController.m in Sources */,
 				9EA69D5E1938E7D50030C27F /* MMVectorImage.m in Sources */,
@@ -1568,6 +1618,7 @@
 				9EA69D7F1938E7D50030C27F /* SHView.m in Sources */,
 				9EA69D4D1938E7D50030C27F /* NTChartView.m in Sources */,
 				9EA69D831938E7D50030C27F /* WTStatusBar.m in Sources */,
+				9E31380519477EF9002A3298 /* SHChatUserBaseInfoViewCell.m in Sources */,
 				9EA69D2C1938E7D50030C27F /* SHDatePopoverController.m in Sources */,
 				9EA69D791938E7D50030C27F /* SHTableViewTitleContentCell.m in Sources */,
 				9EA69D5A1938E7D50030C27F /* MMProgressHUDOverlayView.m in Sources */,
@@ -1580,6 +1631,7 @@
 				9EA69D951938E7D50030C27F /* GuidClear.m in Sources */,
 				9EA69D511938E7D50030C27F /* SHPictureViewController.m in Sources */,
 				9EA69D551938E7D50030C27F /* PCPieChart.m in Sources */,
+				9E31380A1947EF22002A3298 /* SHChatPersonalExperienceViewCell.m in Sources */,
 				9EA69D881938E7D50030C27F /* SHTitleContentViewController.m in Sources */,
 				9EA69D651938E7D50030C27F /* SHNavigationShowViewController.m in Sources */,
 				9EA69D6A1938E7D50030C27F /* SHSkin.m in Sources */,
@@ -1717,14 +1769,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "money/money-Prefix.pch";
 				INFOPLIST_FILE = "money/money-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/money/frame",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1735,14 +1792,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "money/money-Prefix.pch";
 				INFOPLIST_FILE = "money/money-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/money/frame",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -9,6 +9,9 @@
 #import "SHTableViewController.h"
 
 @interface SHChatDetailViewController : SHTableViewController
+{
+    BOOL isAnimation;
+}
 @property (weak, nonatomic) IBOutlet UITextField *txtBox;
 @property (weak, nonatomic) IBOutlet UIButton *btnSender;
 

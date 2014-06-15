@@ -1,14 +1,14 @@
 //
-//  SHMoneyListViewCell.m
+//  SHChatUserBaseInfoViewCell.m
 //  money
 //
-//  Created by sheely.paean.Nightshade on 14-6-4.
+//  Created by sheely.paean.Nightshade on 14-6-11.
 //  Copyright (c) 2014年 sheely.paean.coretest. All rights reserved.
 //
 
-#import "SHMoneyListViewCell.h"
+#import "SHChatUserBaseInfoViewCell.h"
 
-@implementation SHMoneyListViewCell
+@implementation SHChatUserBaseInfoViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -17,13 +17,6 @@
         // Initialization code
     }
     return self;
-}
-
-- (void)loadSkin
-{
-    [super loadSkin];
-    self.btnEmployee.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
-    self.btnState.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
 }
 
 /*
