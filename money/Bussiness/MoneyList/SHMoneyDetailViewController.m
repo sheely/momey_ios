@@ -36,4 +36,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnMegOnTouch:(id)sender
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
+}
+
+- (IBAction)btnSeeOnTouch:(id)sender
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
+}
+
+- (IBAction)btnAttachmentOnTouch:(id)sender
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"attachment" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
+  
+}
+
+- (IBAction)btnExecuteOnTouch:(id)sender
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"executeinfo" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
+
+}
 @end

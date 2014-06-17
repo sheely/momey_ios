@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-
-<module
-name="companydetail"
-target="SHCompanyDetailViewController" />
-
-<module
-pre_action = "login"
-name="login"
-target="SHLoginViewController" />
-
-<module
-name="chatdetail"
-target="SHChatDetailViewController" />
-
-<module
-name="chatuserdetail"
-target="SHCharUserDetailViewController" />
-<module
-
-name="calendar"
-target="SHMyCalendarViewController" />
-
-<module
-name="myteam"
-target="SHMyTeamViewController" />
-<module
-name="moneydetail"
-target="SHMoneyDetailViewController" />
-
+    
+    <module
+    name="companydetail"
+    target="SHCompanyDetailViewController" />
+    
+    <module
+    pre_action = "login"
+    name="login"
+    target="SHLoginViewController" />
+    
+    <module
+    name="chatdetail"
+    target="SHChatDetailViewController" />
+    
+    <module
+    name="chatuserdetail"
+    target="SHCharUserDetailViewController" />
+    <module
+    
+    name="calendar"
+    target="SHMyCalendarViewController" />
+    
+    <module
+    name="myteam"
+    target="SHMyTeamViewController" />
+    <module
+    name="moneydetail"
+    target="SHMoneyDetailViewController" />
+    <module
+    name="attachment"
+    target="SHAttachmentViewController" />
+    <module
+    name="executeinfo"
+    target="SHExecuteViewController" />
+    
+    <module
+    name="searchcondition"
+    target="SHMoneySearchViewController" />
+    
 </root>

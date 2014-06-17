@@ -57,6 +57,7 @@
     }
     return lab;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if(section == 0){
@@ -79,6 +80,7 @@
         return 40;
     }
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;
@@ -96,6 +98,7 @@
     cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

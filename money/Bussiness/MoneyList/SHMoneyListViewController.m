@@ -29,8 +29,14 @@
     [super viewDidLoad];
     self.title = @"财信";
     mList = [@[@"",@"",@"",@"",@""] mutableCopy];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:@selector(btnSearch:)];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)btnSearch:(UIButton*)sender
+{
+    SHIntent * indent = [[SHIntent alloc]init:@"searchcondition" delegate:self containner:self.navigationController];
+    [[UIApplication sharedApplication]open:indent];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -47,12 +53,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
-    [[UIApplication sharedApplication]open:intent];
 }
 
 - (void)didReceiveMemoryWarning

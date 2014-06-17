@@ -79,6 +79,14 @@
 		9E94D231194C69D300D7F074 /* SHMyTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E94D230194C69D300D7F074 /* SHMyTeamTableViewCell.m */; };
 		9E94D235194CA81A00D7F074 /* SHMoneyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */; };
 		9E94D236194CA81A00D7F074 /* SHMoneyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */; };
+		9E9EDD7D194DF7DC00123254 /* SHAttachmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD7B194DF7DC00123254 /* SHAttachmentViewController.m */; };
+		9E9EDD7E194DF7DC00123254 /* SHAttachmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD7C194DF7DC00123254 /* SHAttachmentViewController.xib */; };
+		9E9EDD82194E0A8E00123254 /* SHExecuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD80194E0A8E00123254 /* SHExecuteViewController.m */; };
+		9E9EDD83194E0A8E00123254 /* SHExecuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD81194E0A8E00123254 /* SHExecuteViewController.xib */; };
+		9E9EDD88194E146100123254 /* SHCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD86194E146100123254 /* SHCalendarViewController.m */; };
+		9E9EDD89194E146100123254 /* SHCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD87194E146100123254 /* SHCalendarViewController.xib */; };
+		9E9EDD8D194FCA1E00123254 /* SHMoneySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD8B194FCA1E00123254 /* SHMoneySearchViewController.m */; };
+		9E9EDD8E194FCA1E00123254 /* SHMoneySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD8C194FCA1E00123254 /* SHMoneySearchViewController.xib */; };
 		9EA69D281938E7D50030C27F /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C201938E7D40030C27F /* UIButton+Addition.m */; };
 		9EA69D291938E7D50030C27F /* SHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C231938E7D40030C27F /* SHContentViewController.m */; };
 		9EA69D2A1938E7D50030C27F /* SHContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA69C241938E7D40030C27F /* SHContentViewController.xib */; };
@@ -331,6 +339,18 @@
 		9E94D232194CA81A00D7F074 /* SHMoneyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoneyDetailViewController.h; sourceTree = "<group>"; };
 		9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoneyDetailViewController.m; sourceTree = "<group>"; };
 		9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMoneyDetailViewController.xib; sourceTree = "<group>"; };
+		9E9EDD7A194DF7DC00123254 /* SHAttachmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAttachmentViewController.h; sourceTree = "<group>"; };
+		9E9EDD7B194DF7DC00123254 /* SHAttachmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAttachmentViewController.m; sourceTree = "<group>"; };
+		9E9EDD7C194DF7DC00123254 /* SHAttachmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHAttachmentViewController.xib; sourceTree = "<group>"; };
+		9E9EDD7F194E0A8E00123254 /* SHExecuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHExecuteViewController.h; sourceTree = "<group>"; };
+		9E9EDD80194E0A8E00123254 /* SHExecuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHExecuteViewController.m; sourceTree = "<group>"; };
+		9E9EDD81194E0A8E00123254 /* SHExecuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHExecuteViewController.xib; sourceTree = "<group>"; };
+		9E9EDD85194E146100123254 /* SHCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCalendarViewController.h; sourceTree = "<group>"; };
+		9E9EDD86194E146100123254 /* SHCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCalendarViewController.m; sourceTree = "<group>"; };
+		9E9EDD87194E146100123254 /* SHCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHCalendarViewController.xib; sourceTree = "<group>"; };
+		9E9EDD8A194FCA1E00123254 /* SHMoneySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoneySearchViewController.h; sourceTree = "<group>"; };
+		9E9EDD8B194FCA1E00123254 /* SHMoneySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoneySearchViewController.m; sourceTree = "<group>"; };
+		9E9EDD8C194FCA1E00123254 /* SHMoneySearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMoneySearchViewController.xib; sourceTree = "<group>"; };
 		9EA69C1C1938E7D40030C27F /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		9EA69C1F1938E7D40030C27F /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		9EA69C201938E7D40030C27F /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
@@ -732,6 +752,16 @@
 			path = money/Bussiness/Group;
 			sourceTree = SOURCE_ROOT;
 		};
+		9E9EDD84194E144C00123254 /* Canlendar */ = {
+			isa = PBXGroup;
+			children = (
+				9E9EDD85194E146100123254 /* SHCalendarViewController.h */,
+				9E9EDD86194E146100123254 /* SHCalendarViewController.m */,
+				9E9EDD87194E146100123254 /* SHCalendarViewController.xib */,
+			);
+			path = Canlendar;
+			sourceTree = "<group>";
+		};
 		9EA69C1B1938E7D40030C27F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +778,7 @@
 		9EA69C1D1938E7D40030C27F /* component */ = {
 			isa = PBXGroup;
 			children = (
+				9E9EDD84194E144C00123254 /* Canlendar */,
 				9EA69C1E1938E7D40030C27F /* button */,
 				9EA69C211938E7D40030C27F /* ContentViewController */,
 				9EA69C251938E7D40030C27F /* Date */,
@@ -1266,6 +1297,15 @@
 				9E94D232194CA81A00D7F074 /* SHMoneyDetailViewController.h */,
 				9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */,
 				9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */,
+				9E9EDD7A194DF7DC00123254 /* SHAttachmentViewController.h */,
+				9E9EDD7B194DF7DC00123254 /* SHAttachmentViewController.m */,
+				9E9EDD7C194DF7DC00123254 /* SHAttachmentViewController.xib */,
+				9E9EDD7F194E0A8E00123254 /* SHExecuteViewController.h */,
+				9E9EDD80194E0A8E00123254 /* SHExecuteViewController.m */,
+				9E9EDD81194E0A8E00123254 /* SHExecuteViewController.xib */,
+				9E9EDD8A194FCA1E00123254 /* SHMoneySearchViewController.h */,
+				9E9EDD8B194FCA1E00123254 /* SHMoneySearchViewController.m */,
+				9E9EDD8C194FCA1E00123254 /* SHMoneySearchViewController.xib */,
 			);
 			name = MoneyList;
 			path = money/Bussiness/MoneyList;
@@ -1483,6 +1523,7 @@
 			files = (
 				9E8521E0193F9156001A17C5 /* button_gray_mini@2x.png in Resources */,
 				9EA69D471938E7D50030C27F /* blueArrow@2x.png in Resources */,
+				9E9EDD7E194DF7DC00123254 /* SHAttachmentViewController.xib in Resources */,
 				9E8521E9193F93E7001A17C5 /* SHCompanyDetailViewController.xib in Resources */,
 				9E8522721944743D001A17C5 /* navi_icon_friend_rest@2x.png in Resources */,
 				9E8522671944743D001A17C5 /* Btn_green_press@2x.png in Resources */,
@@ -1535,6 +1576,8 @@
 				9EA69D6E1938E7D50030C27F /* ic_re_error@2x.png in Resources */,
 				9E8522751944743D001A17C5 /* navi_icon_profile_press@2x.png in Resources */,
 				9EA69D371938E7D50030C27F /* DSLCalendar-previousMonth.png in Resources */,
+				9E9EDD83194E0A8E00123254 /* SHExecuteViewController.xib in Resources */,
+				9E9EDD8E194FCA1E00123254 /* SHMoneySearchViewController.xib in Resources */,
 				9EA69D391938E7D50030C27F /* DSLCalendarDayCallout.png in Resources */,
 				9E85226D1944743D001A17C5 /* navi_back_nest@2x.png in Resources */,
 				9E8522771944743D001A17C5 /* navi_search_nest@2x.png in Resources */,
@@ -1546,6 +1589,7 @@
 				9E8521E2193F9156001A17C5 /* button_green_mini@2x.png in Resources */,
 				9EA69D2A1938E7D50030C27F /* SHContentViewController.xib in Resources */,
 				9E8521DF193F9156001A17C5 /* button_gray_mini.png in Resources */,
+				9E9EDD89194E146100123254 /* SHCalendarViewController.xib in Resources */,
 				9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */,
 				9E85226B1944743D001A17C5 /* login_icon_password@2x.png in Resources */,
 				9E31380C1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib in Resources */,
@@ -1641,8 +1685,10 @@
 				9EA69D541938E7D50030C27F /* PCLineChartView.m in Sources */,
 				9E85227E1944BA30001A17C5 /* SHLoginViewController.m in Sources */,
 				9EA69DA01938E7D50030C27F /* UIViewAddtion.m in Sources */,
+				9E9EDD7D194DF7DC00123254 /* SHAttachmentViewController.m in Sources */,
 				9EA69D931938E7D50030C27F /* DebugTextView.m in Sources */,
 				9EA69D751938E7D50030C27F /* SHTableViewGeneralCell.m in Sources */,
+				9E9EDD82194E0A8E00123254 /* SHExecuteViewController.m in Sources */,
 				9E94D235194CA81A00D7F074 /* SHMoneyDetailViewController.m in Sources */,
 				9E8522871944DC25001A17C5 /* SHChatListViewCell.m in Sources */,
 				9EA69D531938E7D50030C27F /* PCHalfPieChart.m in Sources */,
@@ -1668,6 +1714,7 @@
 				9EA69D771938E7D50030C27F /* SHTableViewTitleContentBottomCell.m in Sources */,
 				9EA69D901938E7D50030C27F /* VRGCalendarView.m in Sources */,
 				9EDC7F7A193E951800B1019B /* SHMoneyListViewCell.m in Sources */,
+				9E9EDD88194E146100123254 /* SHCalendarViewController.m in Sources */,
 				9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */,
 				9E8521E8193F93E7001A17C5 /* SHCompanyDetailViewController.m in Sources */,
 				9EA69D8A1938E7D50030C27F /* UIBarButtonItemAddtion.m in Sources */,
@@ -1684,6 +1731,7 @@
 				9EA69D8E1938E7D50030C27F /* UIColor+expanded.m in Sources */,
 				9EA69D341938E7D50030C27F /* DSLCalendarView.m in Sources */,
 				9EA69D7D1938E7D50030C27F /* SHTableViewUnReadNumberCell.m in Sources */,
+				9E9EDD8D194FCA1E00123254 /* SHMoneySearchViewController.m in Sources */,
 				9EA69D9D1938E7D50030C27F /* SHAppDelegate.m in Sources */,
 				9EA69D951938E7D50030C27F /* GuidClear.m in Sources */,
 				9EA69D511938E7D50030C27F /* SHPictureViewController.m in Sources */,

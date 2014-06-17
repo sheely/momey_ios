@@ -10,4 +10,8 @@
 
 @interface SHMoneyDetailViewController : SHViewController
 
+- (IBAction)btnMegOnTouch:(id)sender;
+- (IBAction)btnSeeOnTouch:(id)sender;
+- (IBAction)btnAttachmentOnTouch:(id)sender;
+- (IBAction)btnExecuteOnTouch:(id)sender;
 @end
