@@ -55,6 +55,11 @@
     return 5;
 }
 
+- (void) moneysearchviewcontrollerDidSubmit:(NSObject*)obj
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -67,4 +72,33 @@
     [[UIApplication sharedApplication]open:intent];
 }
 
+- (IBAction)btnAllOnTouch:(id)sender
+{
+    self.btnAll.selected = YES;
+    self.btnBidding.selected = NO;
+    self.btnParticipate.selected = NO;
+    self.btnStart.selected = NO;
+}
+- (IBAction)btnParticipateOnTouch:(id)sender
+{
+    self.btnAll.selected = NO;
+    self.btnBidding.selected = NO;
+    self.btnParticipate.selected = YES;
+    self.btnStart.selected = NO;
+}
+- (IBAction)btnBiddingOnTouch:(id)sender
+{
+    self.btnAll.selected = NO;
+    self.btnBidding.selected = YES;
+    self.btnParticipate.selected = NO;
+    self.btnStart.selected = NO;
+}
+
+- (IBAction)btnStartOnTouch:(id)sender
+{
+    self.btnAll.selected = NO;
+    self.btnBidding.selected = NO;
+    self.btnParticipate.selected = NO;
+    self.btnStart.selected = YES;
+}
 @end

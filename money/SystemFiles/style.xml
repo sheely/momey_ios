@@ -50,7 +50,9 @@
     <!--标准样式button-->
     <btnstandard>
         <property name="font" type="UIFont" value="FontScaleSmallBold"/>
-        <property name="titleColor:forState" type="UIColor" value="ColorStyleDark" externType="int" extern="1"/>
+        <property name="titleColor:forState" type="UIColor" value="ColorStyleMilkWhite" externType="int" extern="1"/>
+        <property name="titleColor:forState" type="UIColor" value="ColorStyleMilkWhite" externType="int" extern="4"/>
+        
         <property name="titleColor:forState" type="UIColor" value="ColorStyleDark" externType="int" extern="0"/>
         <property name="backgroundImage:forState" type="UIImage.Stretchable" value="bg_button_standard" externType="int" extern="0"/>
     </btnstandard>

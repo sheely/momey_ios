@@ -10,4 +10,11 @@
 
 @interface SHGroupListViewController : SHTableViewController
 
+{
+    
+}
+- (IBAction)btnTeamOnTouch:(id)sender;
+- (IBAction)btCompanyOnTouch:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnCompany;
+@property (weak, nonatomic) IBOutlet UIButton *btnTeam;
 @end

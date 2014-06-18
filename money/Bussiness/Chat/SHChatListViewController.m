@@ -29,6 +29,14 @@
     self.title = @"财友";
     mList = [@[@"",@"",@"",@"",@""] mutableCopy];
     // Do any additional setup after loading the view from its nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:@selector(btnSearch:)];
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)btnSearch:(UIButton*)sender
+{
+    SHIntent * indent = [[SHIntent alloc]init:@"usersearchcondition" delegate:self containner:self.navigationController];
+    [[UIApplication sharedApplication]open:indent];
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

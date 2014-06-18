@@ -87,6 +87,13 @@
 		9E9EDD89194E146100123254 /* SHCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD87194E146100123254 /* SHCalendarViewController.xib */; };
 		9E9EDD8D194FCA1E00123254 /* SHMoneySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD8B194FCA1E00123254 /* SHMoneySearchViewController.m */; };
 		9E9EDD8E194FCA1E00123254 /* SHMoneySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD8C194FCA1E00123254 /* SHMoneySearchViewController.xib */; };
+		9E9EDD911951C5E500123254 /* SHChatSimpleUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD901951C5E500123254 /* SHChatSimpleUserInfoCell.m */; };
+		9E9EDD931951C5FD00123254 /* SHChatSimpleUserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD921951C5FD00123254 /* SHChatSimpleUserInfoCell.xib */; };
+		9E9EDD971951C83600123254 /* SHChatSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD951951C83600123254 /* SHChatSearchViewController.m */; };
+		9E9EDD981951C83600123254 /* SHChatSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD961951C83600123254 /* SHChatSearchViewController.xib */; };
+		9E9EDD9C1951D36100123254 /* SHChatSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD9A1951D36100123254 /* SHChatSearchListViewController.m */; };
+		9E9EDD9D1951D36100123254 /* SHChatSearchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD9B1951D36100123254 /* SHChatSearchListViewController.xib */; };
+		9E9EDD9F1951E31900123254 /* tab_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD9E1951E31900123254 /* tab_selected@2x.png */; };
 		9EA69D281938E7D50030C27F /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C201938E7D40030C27F /* UIButton+Addition.m */; };
 		9EA69D291938E7D50030C27F /* SHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C231938E7D40030C27F /* SHContentViewController.m */; };
 		9EA69D2A1938E7D50030C27F /* SHContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA69C241938E7D40030C27F /* SHContentViewController.xib */; };
@@ -351,6 +358,16 @@
 		9E9EDD8A194FCA1E00123254 /* SHMoneySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoneySearchViewController.h; sourceTree = "<group>"; };
 		9E9EDD8B194FCA1E00123254 /* SHMoneySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoneySearchViewController.m; sourceTree = "<group>"; };
 		9E9EDD8C194FCA1E00123254 /* SHMoneySearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMoneySearchViewController.xib; sourceTree = "<group>"; };
+		9E9EDD8F1951C5E500123254 /* SHChatSimpleUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatSimpleUserInfoCell.h; sourceTree = "<group>"; };
+		9E9EDD901951C5E500123254 /* SHChatSimpleUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatSimpleUserInfoCell.m; sourceTree = "<group>"; };
+		9E9EDD921951C5FD00123254 /* SHChatSimpleUserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatSimpleUserInfoCell.xib; sourceTree = "<group>"; };
+		9E9EDD941951C83600123254 /* SHChatSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatSearchViewController.h; sourceTree = "<group>"; };
+		9E9EDD951951C83600123254 /* SHChatSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatSearchViewController.m; sourceTree = "<group>"; };
+		9E9EDD961951C83600123254 /* SHChatSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatSearchViewController.xib; sourceTree = "<group>"; };
+		9E9EDD991951D36100123254 /* SHChatSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatSearchListViewController.h; sourceTree = "<group>"; };
+		9E9EDD9A1951D36100123254 /* SHChatSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatSearchListViewController.m; sourceTree = "<group>"; };
+		9E9EDD9B1951D36100123254 /* SHChatSearchListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatSearchListViewController.xib; sourceTree = "<group>"; };
+		9E9EDD9E1951E31900123254 /* tab_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_selected@2x.png"; path = "money/Resource/tab_selected@2x.png"; sourceTree = SOURCE_ROOT; };
 		9EA69C1C1938E7D40030C27F /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		9EA69C1F1938E7D40030C27F /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		9EA69C201938E7D40030C27F /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
@@ -669,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				9E31380119477AC6002A3298 /* userphoto.png */,
+				9E9EDD9E1951E31900123254 /* tab_selected@2x.png */,
 				9E31360D19462719002A3298 /* button_red_mini@2x.png */,
 				9E8522831944DBDB001A17C5 /* 7044702_190131486105_2.jpg */,
 				9E8522491944743D001A17C5 /* app_logo.png */,
@@ -730,6 +748,9 @@
 				9E3138081947EF22002A3298 /* SHChatPersonalExperienceViewCell.h */,
 				9E3138091947EF22002A3298 /* SHChatPersonalExperienceViewCell.m */,
 				9E31380B1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib */,
+				9E9EDD8F1951C5E500123254 /* SHChatSimpleUserInfoCell.h */,
+				9E9EDD901951C5E500123254 /* SHChatSimpleUserInfoCell.m */,
+				9E9EDD921951C5FD00123254 /* SHChatSimpleUserInfoCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1339,6 +1360,12 @@
 				9E3137F719470378002A3298 /* SHCharUserDetailViewController.h */,
 				9E3137F819470378002A3298 /* SHCharUserDetailViewController.m */,
 				9E3137F919470378002A3298 /* SHCharUserDetailViewController.xib */,
+				9E9EDD941951C83600123254 /* SHChatSearchViewController.h */,
+				9E9EDD951951C83600123254 /* SHChatSearchViewController.m */,
+				9E9EDD961951C83600123254 /* SHChatSearchViewController.xib */,
+				9E9EDD991951D36100123254 /* SHChatSearchListViewController.h */,
+				9E9EDD9A1951D36100123254 /* SHChatSearchListViewController.m */,
+				9E9EDD9B1951D36100123254 /* SHChatSearchListViewController.xib */,
 			);
 			name = Chat;
 			path = money/Bussiness/Chat;
@@ -1576,6 +1603,7 @@
 				9EA69D6E1938E7D50030C27F /* ic_re_error@2x.png in Resources */,
 				9E8522751944743D001A17C5 /* navi_icon_profile_press@2x.png in Resources */,
 				9EA69D371938E7D50030C27F /* DSLCalendar-previousMonth.png in Resources */,
+				9E9EDD9F1951E31900123254 /* tab_selected@2x.png in Resources */,
 				9E9EDD83194E0A8E00123254 /* SHExecuteViewController.xib in Resources */,
 				9E9EDD8E194FCA1E00123254 /* SHMoneySearchViewController.xib in Resources */,
 				9EA69D391938E7D50030C27F /* DSLCalendarDayCallout.png in Resources */,
@@ -1613,6 +1641,7 @@
 				9E94D22E194C69AA00D7F074 /* SHMyTeamTableViewCell.xib in Resources */,
 				9E8521DC193F9156001A17C5 /* a.png in Resources */,
 				9EA69D7C1938E7D50030C27F /* SHTableViewTitleImageCell.xib in Resources */,
+				9E9EDD9D1951D36100123254 /* SHChatSearchListViewController.xib in Resources */,
 				9E31360E19462719002A3298 /* button_red_mini@2x.png in Resources */,
 				9EA69D891938E7D50030C27F /* SHTitleContentViewController.xib in Resources */,
 				9EA69DAD1938E92B0030C27F /* MainViewController.xib in Resources */,
@@ -1627,12 +1656,14 @@
 				9EA69D521938E7D50030C27F /* SHPictureViewController.xib in Resources */,
 				9EA69D7A1938E7D50030C27F /* SHTableViewTitleContentCell.xib in Resources */,
 				9E8522641944743D001A17C5 /* Btn_blue_nest@2x.png in Resources */,
+				9E9EDD931951C5FD00123254 /* SHChatSimpleUserInfoCell.xib in Resources */,
 				9E85228C19461F25001A17C5 /* SHChatDetailViewController.xib in Resources */,
 				9EA69D351938E7D50030C27F /* DSLCalendar-nextMonth.png in Resources */,
 				9E85226F1944743D001A17C5 /* navi_icon_circle_press@2x.png in Resources */,
 				9E8522631944743D001A17C5 /* arrow_rt.png in Resources */,
 				9EDC7F7C193E952600B1019B /* SHMoneyListViewCell.xib in Resources */,
 				9E8521DE193F9156001A17C5 /* button_blue_mini@2x.png in Resources */,
+				9E9EDD981951C83600123254 /* SHChatSearchViewController.xib in Resources */,
 				9EA69D6D1938E7D50030C27F /* ic_re_error.png in Resources */,
 				9E85227A1944743D001A17C5 /* tab_selected.png in Resources */,
 				9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */,
@@ -1684,6 +1715,7 @@
 				9E8986FC193AC996006B3BBD /* SHAboutMeViewController.m in Sources */,
 				9EA69D541938E7D50030C27F /* PCLineChartView.m in Sources */,
 				9E85227E1944BA30001A17C5 /* SHLoginViewController.m in Sources */,
+				9E9EDD911951C5E500123254 /* SHChatSimpleUserInfoCell.m in Sources */,
 				9EA69DA01938E7D50030C27F /* UIViewAddtion.m in Sources */,
 				9E9EDD7D194DF7DC00123254 /* SHAttachmentViewController.m in Sources */,
 				9EA69D931938E7D50030C27F /* DebugTextView.m in Sources */,
@@ -1700,6 +1732,7 @@
 				9EA69D8D1938E7D50030C27F /* NSMutableArray+convenience.m in Sources */,
 				9EB92ECE19365A3E00E87981 /* main.m in Sources */,
 				9EA69D841938E7D50030C27F /* WTStatusView.m in Sources */,
+				9E9EDD9C1951D36100123254 /* SHChatSearchListViewController.m in Sources */,
 				9EA69D561938E7D50030C27F /* MMHud.m in Sources */,
 				9EA69D731938E7D50030C27F /* SHTableViewEditGeneralCell.m in Sources */,
 				9EA69D5F1938E7D50030C27F /* SHSelectionViewController.m in Sources */,
@@ -1723,6 +1756,7 @@
 				9EA69D4D1938E7D50030C27F /* NTChartView.m in Sources */,
 				9EA69D831938E7D50030C27F /* WTStatusBar.m in Sources */,
 				9E31380519477EF9002A3298 /* SHChatUserBaseInfoViewCell.m in Sources */,
+				9E9EDD971951C83600123254 /* SHChatSearchViewController.m in Sources */,
 				9EA69D2C1938E7D50030C27F /* SHDatePopoverController.m in Sources */,
 				9EA69D791938E7D50030C27F /* SHTableViewTitleContentCell.m in Sources */,
 				9EA69D5A1938E7D50030C27F /* MMProgressHUDOverlayView.m in Sources */,

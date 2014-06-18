@@ -39,4 +39,11 @@
     name="searchcondition"
     target="SHMoneySearchViewController" />
     
+    <module
+    name="usersearchcondition"
+    target="SHChatSearchViewController" />
+    <module
+    name="usersearchlist"
+    target="SHChatSearchListViewController" />
+    
 </root>

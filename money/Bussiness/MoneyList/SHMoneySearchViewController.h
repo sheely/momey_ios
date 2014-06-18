@@ -8,6 +8,16 @@
 
 #import "SHViewController.h"
 
-@interface SHMoneySearchViewController : SHViewController
+@class SHMoneySearchViewController;
 
+@protocol SHMoneySearchViewControllerDelegate <NSObject>
+
+- (void) moneysearchviewcontrollerDidSubmit:(NSObject*)obj;
+@end
+
+@interface SHMoneySearchViewController  : SHViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnType;
+- (IBAction)btnTypeOnTouch:(id)sender;
+@property (nonatomic,weak) id<SHMoneySearchViewControllerDelegate>delegate;
+- (IBAction)btnSearchOnTouch:(id)sender;
 @end

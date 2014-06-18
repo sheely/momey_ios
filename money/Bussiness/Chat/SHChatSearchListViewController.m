@@ -1,76 +1,76 @@
 //
-//  SHGroupListViewController.m
+//  SHChatSearchListViewController.m
 //  money
 //
-//  Created by sheely.paean.Nightshade on 14-6-1.
+//  Created by sheely.paean.Nightshade on 14-6-18.
 //  Copyright (c) 2014年 sheely.paean.coretest. All rights reserved.
 //
 
-#import "SHGroupListViewController.h"
-#import "SHGroupListViewCell.h"
-
-@interface SHGroupListViewController ()
+#import "SHChatSearchListViewController.h"
+#import "SHChatSimpleUserInfoCell.h"
+@interface SHChatSearchListViewController ()
 
 @end
 
-@implementation SHGroupListViewController
+@implementation SHChatSearchListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [[SHMsgManager instance]connect:@"192.168.1.109" port:1984];
-        SHMsgM * msg = [[SHMsgM alloc]init];
-        msg.target  = @"login";
-        [msg.args setValue:@"xxx" forKey:@"user"];
-        [msg start:nil taskWillTry:nil taskDidFailed:nil];
     }
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"财圈";
+    self.title = @"财友列表";
     mList = [@[@"",@"",@"",@"",@""] mutableCopy];
     // Do any additional setup after loading the view from its nib.
 }
-
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHGroupListViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
+    SHChatSimpleUserInfoCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatSimpleUserInfoCell" owner:nil options:nil] objectAtIndex:0];
+    cell.tag = indexPath.row;
+    [cell.btnChat addTarget:self action:@selector(btnChat:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.btnAdd addTarget:self action:@selector(btnAdd:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void)btnAdd:(NSObject*)sender
+{
+    [self showWaitDialogForNetWorkDismissBySelf];
+}
+
+- (void)btnChat:(NSObject*)sender
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];
+
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return  80;
+    return  72;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHIntent * intent = [[SHIntent alloc]init:@"companydetail" delegate:nil containner:self.navigationController];
+    SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
     [[UIApplication sharedApplication]open:intent];
-}
 
-- (IBAction)btnTeamOnTouch:(id)sender {
-    self.btnCompany.selected = NO;
-    self.btnTeam.selected = YES;
-}
-
-- (IBAction)btCompanyOnTouch:(id)sender {
-    self.btnCompany.selected = YES;
-    self.btnTeam.selected = NO;
 }
 @end
