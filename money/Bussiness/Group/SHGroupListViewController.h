@@ -11,7 +11,7 @@
 @interface SHGroupListViewController : SHTableViewController
 
 {
-    
+    BOOL isTeam;
 }
 - (IBAction)btnTeamOnTouch:(id)sender;
 - (IBAction)btCompanyOnTouch:(id)sender;

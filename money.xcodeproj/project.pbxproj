@@ -94,6 +94,8 @@
 		9E9EDD9C1951D36100123254 /* SHChatSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD9A1951D36100123254 /* SHChatSearchListViewController.m */; };
 		9E9EDD9D1951D36100123254 /* SHChatSearchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD9B1951D36100123254 /* SHChatSearchListViewController.xib */; };
 		9E9EDD9F1951E31900123254 /* tab_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD9E1951E31900123254 /* tab_selected@2x.png */; };
+		9E9EDDA41951F81100123254 /* SHTeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDDA21951F81100123254 /* SHTeamDetailViewController.m */; };
+		9E9EDDA51951F81100123254 /* SHTeamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDDA31951F81100123254 /* SHTeamDetailViewController.xib */; };
 		9EA69D281938E7D50030C27F /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C201938E7D40030C27F /* UIButton+Addition.m */; };
 		9EA69D291938E7D50030C27F /* SHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA69C231938E7D40030C27F /* SHContentViewController.m */; };
 		9EA69D2A1938E7D50030C27F /* SHContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA69C241938E7D40030C27F /* SHContentViewController.xib */; };
@@ -368,6 +370,9 @@
 		9E9EDD9A1951D36100123254 /* SHChatSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatSearchListViewController.m; sourceTree = "<group>"; };
 		9E9EDD9B1951D36100123254 /* SHChatSearchListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatSearchListViewController.xib; sourceTree = "<group>"; };
 		9E9EDD9E1951E31900123254 /* tab_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_selected@2x.png"; path = "money/Resource/tab_selected@2x.png"; sourceTree = SOURCE_ROOT; };
+		9E9EDDA11951F81100123254 /* SHTeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTeamDetailViewController.h; sourceTree = "<group>"; };
+		9E9EDDA21951F81100123254 /* SHTeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTeamDetailViewController.m; sourceTree = "<group>"; };
+		9E9EDDA31951F81100123254 /* SHTeamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHTeamDetailViewController.xib; sourceTree = "<group>"; };
 		9EA69C1C1938E7D40030C27F /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		9EA69C1F1938E7D40030C27F /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		9EA69C201938E7D40030C27F /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
@@ -768,6 +773,9 @@
 				9EDA5D36194C427700471471 /* SHMyTeamViewController.h */,
 				9EDA5D37194C427700471471 /* SHMyTeamViewController.m */,
 				9EDA5D38194C427700471471 /* SHMyTeamViewController.xib */,
+				9E9EDDA11951F81100123254 /* SHTeamDetailViewController.h */,
+				9E9EDDA21951F81100123254 /* SHTeamDetailViewController.m */,
+				9E9EDDA31951F81100123254 /* SHTeamDetailViewController.xib */,
 			);
 			name = Group;
 			path = money/Bussiness/Group;
@@ -1667,6 +1675,7 @@
 				9EA69D6D1938E7D50030C27F /* ic_re_error.png in Resources */,
 				9E85227A1944743D001A17C5 /* tab_selected.png in Resources */,
 				9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */,
+				9E9EDDA51951F81100123254 /* SHTeamDetailViewController.xib in Resources */,
 				9EA69D4B1938E7D50030C27F /* whiteArrow@2x.png in Resources */,
 				9EA69D7E1938E7D50030C27F /* SHTableViewUnReadNumberCell.xib in Resources */,
 				9E8522741944743D001A17C5 /* navi_icon_message_rest@2x.png in Resources */,
@@ -1788,6 +1797,7 @@
 				9EA69D4C1938E7D50030C27F /* EGORefreshTableHeaderView.m in Sources */,
 				9EA69D961938E7D50030C27F /* HelperCMD.m in Sources */,
 				9EA69D4E1938E7D50030C27F /* KxMenu.m in Sources */,
+				9E9EDDA41951F81100123254 /* SHTeamDetailViewController.m in Sources */,
 				9EA69D331938E7D50030C27F /* DSLCalendarRange.m in Sources */,
 				9EA69D6B1938E7D50030C27F /* SHTableViewCell.m in Sources */,
 				9EA69D431938E7D50030C27F /* NSDate+DSLCalendarView.m in Sources */,

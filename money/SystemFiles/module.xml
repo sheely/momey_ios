@@ -45,5 +45,9 @@
     <module
     name="usersearchlist"
     target="SHChatSearchListViewController" />
-    
+    <module
+    name="teamdetail"
+    target="SHTeamDetailViewController" />
+
+
 </root>

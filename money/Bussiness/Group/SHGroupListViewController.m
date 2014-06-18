@@ -34,6 +34,7 @@
 {
     [super viewDidLoad];
     self.title = @"财圈";
+    isTeam = NO;
     mList = [@[@"",@"",@"",@"",@""] mutableCopy];
     // Do any additional setup after loading the view from its nib.
 }
@@ -41,6 +42,11 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SHGroupListViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
+    if(isTeam){
+        cell.labTitle.text = @"审计二人组";
+    }else{
+        cell.labTitle.text = @"大众点评网00";
+    }
     return cell;
 }
 
@@ -60,17 +66,28 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHIntent * intent = [[SHIntent alloc]init:@"companydetail" delegate:nil containner:self.navigationController];
-    [[UIApplication sharedApplication]open:intent];
+    if(isTeam){
+        SHIntent * intent = [[SHIntent alloc]init:@"teamdetail" delegate:nil containner:self.navigationController];
+        [[UIApplication sharedApplication]open:intent];
+    }else{
+        SHIntent * intent = [[SHIntent alloc]init:@"companydetail" delegate:nil containner:self.navigationController];
+        [[UIApplication sharedApplication]open:intent];
+    }
+  
 }
 
 - (IBAction)btnTeamOnTouch:(id)sender {
     self.btnCompany.selected = NO;
     self.btnTeam.selected = YES;
+    isTeam = YES;
+    [self.tableView reloadData];
 }
 
 - (IBAction)btCompanyOnTouch:(id)sender {
     self.btnCompany.selected = YES;
     self.btnTeam.selected = NO;
+    isTeam = NO;
+    [self.tableView reloadData];
+
 }
 @end
