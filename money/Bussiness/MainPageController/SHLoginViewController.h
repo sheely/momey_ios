@@ -8,7 +8,9 @@
 
 #import "SHViewController.h"
 
-@interface SHLoginViewController : SHViewController
+@interface SHLoginViewController : SHViewController <UITextFieldDelegate>
 
 - (IBAction)btnLoginOnTouch:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *txtLogin;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @end

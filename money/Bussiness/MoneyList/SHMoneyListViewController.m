@@ -28,9 +28,23 @@
 {
     [super viewDidLoad];
     self.title = @"财信";
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+   // mList = [@[@"",@"",@"",@"",@""] mutableCopy];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:@selector(btnSearch:)];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)loadNext
+{
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryOppoListInit.do");
+    [post start:^(SHTask * t) {
+        mIsEnd  = YES;
+        [self.tableView reloadData];
+        ;
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        
+    }];
 }
 
 - (void)btnSearch:(UIButton*)sender
@@ -50,10 +64,7 @@
     return  110;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 5;
-}
+
 
 - (void) moneysearchviewcontrollerDidSubmit:(NSObject*)obj
 {

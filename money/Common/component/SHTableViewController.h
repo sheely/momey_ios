@@ -31,6 +31,8 @@
 
 - (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell;
 
+- (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell2;
+
 - (SHTableViewGeneralCell*)dequeueReusableTitleCustomCell:(NSString*)nibName identifier:(NSString*)identifier;
 
 - (SHTableViewTitleContentBottomCell*)dequeueReusableTitleContentBottomCell;

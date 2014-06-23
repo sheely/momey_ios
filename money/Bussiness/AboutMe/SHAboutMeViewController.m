@@ -33,7 +33,14 @@
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHTableViewGeneralCell * cell = [self dequeueReusableGeneralCell];
+    SHTableViewTitleImageCell * cell = [self dequeueReusableTitleImageCell2];
+    if(indexPath.row == 0){
+        cell.imgIcon.image = [UIImage imageNamed:@"icon_myprofile_mycalender"];
+    }else  if(indexPath.row == 1){
+        cell.imgIcon.image = [UIImage imageNamed:@"icon_myprofile_myfocus"];
+    }else  if(indexPath.row == 2){
+        cell.imgIcon.image = [UIImage imageNamed:@"icon_myprofile_myteam"];
+    }
     cell.labTitle.text = [mList objectAtIndex:indexPath.row];
     return cell;
 }

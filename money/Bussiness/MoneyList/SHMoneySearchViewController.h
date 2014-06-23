@@ -16,6 +16,9 @@
 @end
 
 @interface SHMoneySearchViewController  : SHViewController
+{
+    NSArray * mList;
+}
 @property (weak, nonatomic) IBOutlet UIButton *btnType;
 - (IBAction)btnTypeOnTouch:(id)sender;
 @property (nonatomic,weak) id<SHMoneySearchViewControllerDelegate>delegate;

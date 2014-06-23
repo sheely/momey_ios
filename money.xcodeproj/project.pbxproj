@@ -69,6 +69,10 @@
 		9E85228C19461F25001A17C5 /* SHChatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E85228A19461F25001A17C5 /* SHChatDetailViewController.xib */; };
 		9E85228F19462022001A17C5 /* SHChatUnitViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E85228E19462022001A17C5 /* SHChatUnitViewCell.m */; };
 		9E85229119462033001A17C5 /* SHChatUnitViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E85229019462033001A17C5 /* SHChatUnitViewCell.xib */; };
+		9E871DEA1957AF9E000109DA /* SHTableViewTitleImageCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E871DE91957AF9E000109DA /* SHTableViewTitleImageCell2.xib */; };
+		9E871DEE1957B14F000109DA /* icon_myprofile_mycalender.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E871DEB1957B14F000109DA /* icon_myprofile_mycalender.png */; };
+		9E871DEF1957B14F000109DA /* icon_myprofile_myfocus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E871DEC1957B14F000109DA /* icon_myprofile_myfocus.png */; };
+		9E871DF01957B14F000109DA /* icon_myprofile_myteam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E871DED1957B14F000109DA /* icon_myprofile_myteam.png */; };
 		9E8986F7193AC980006B3BBD /* SHChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8986F5193AC980006B3BBD /* SHChatListViewController.m */; };
 		9E8986F8193AC980006B3BBD /* SHChatListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8986F6193AC980006B3BBD /* SHChatListViewController.xib */; };
 		9E8986FC193AC996006B3BBD /* SHAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8986FA193AC996006B3BBD /* SHAboutMeViewController.m */; };
@@ -333,6 +337,10 @@
 		9E85228D19462022001A17C5 /* SHChatUnitViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatUnitViewCell.h; sourceTree = "<group>"; };
 		9E85228E19462022001A17C5 /* SHChatUnitViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatUnitViewCell.m; sourceTree = "<group>"; };
 		9E85229019462033001A17C5 /* SHChatUnitViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatUnitViewCell.xib; sourceTree = "<group>"; };
+		9E871DE91957AF9E000109DA /* SHTableViewTitleImageCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHTableViewTitleImageCell2.xib; sourceTree = "<group>"; };
+		9E871DEB1957B14F000109DA /* icon_myprofile_mycalender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_myprofile_mycalender.png; sourceTree = "<group>"; };
+		9E871DEC1957B14F000109DA /* icon_myprofile_myfocus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_myprofile_myfocus.png; sourceTree = "<group>"; };
+		9E871DED1957B14F000109DA /* icon_myprofile_myteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_myprofile_myteam.png; sourceTree = "<group>"; };
 		9E8986F4193AC980006B3BBD /* SHChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatListViewController.h; sourceTree = "<group>"; };
 		9E8986F5193AC980006B3BBD /* SHChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatListViewController.m; sourceTree = "<group>"; };
 		9E8986F6193AC980006B3BBD /* SHChatListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatListViewController.xib; sourceTree = "<group>"; };
@@ -690,6 +698,9 @@
 		9E8521D2193F9136001A17C5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9E871DEB1957B14F000109DA /* icon_myprofile_mycalender.png */,
+				9E871DEC1957B14F000109DA /* icon_myprofile_myfocus.png */,
+				9E871DED1957B14F000109DA /* icon_myprofile_myteam.png */,
 				9E31380119477AC6002A3298 /* userphoto.png */,
 				9E9EDD9E1951E31900123254 /* tab_selected@2x.png */,
 				9E31360D19462719002A3298 /* button_red_mini@2x.png */,
@@ -1087,6 +1098,7 @@
 				9EA69CAD1938E7D50030C27F /* SHTableViewUnReadNumberCell.h */,
 				9EA69CAE1938E7D50030C27F /* SHTableViewUnReadNumberCell.m */,
 				9EA69CAF1938E7D50030C27F /* SHTableViewUnReadNumberCell.xib */,
+				9E871DE91957AF9E000109DA /* SHTableViewTitleImageCell2.xib */,
 			);
 			path = SHTabViewCell;
 			sourceTree = "<group>";
@@ -1556,6 +1568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E871DF01957B14F000109DA /* icon_myprofile_myteam.png in Resources */,
 				9E8521E0193F9156001A17C5 /* button_gray_mini@2x.png in Resources */,
 				9EA69D471938E7D50030C27F /* blueArrow@2x.png in Resources */,
 				9E9EDD7E194DF7DC00123254 /* SHAttachmentViewController.xib in Resources */,
@@ -1629,12 +1642,15 @@
 				9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */,
 				9E85226B1944743D001A17C5 /* login_icon_password@2x.png in Resources */,
 				9E31380C1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib in Resources */,
+				9E871DEE1957B14F000109DA /* icon_myprofile_mycalender.png in Resources */,
 				9E8522691944743D001A17C5 /* dialogue_me.png in Resources */,
 				9EB92ECC19365A3E00E87981 /* InfoPlist.strings in Resources */,
 				9EDA5D2F194B66CA00471471 /* SHMyCalendarViewController.xib in Resources */,
 				9E8522701944743D001A17C5 /* navi_icon_circle_rest@2x.png in Resources */,
 				9E8521E3193F9156001A17C5 /* button_red_mini.png in Resources */,
+				9E871DEA1957AF9E000109DA /* SHTableViewTitleImageCell2.xib in Resources */,
 				9E8986F8193AC980006B3BBD /* SHChatListViewController.xib in Resources */,
+				9E871DEF1957B14F000109DA /* icon_myprofile_myfocus.png in Resources */,
 				9EA69D9A1938E7D50030C27F /* NVDebugPanelController.xib in Resources */,
 				9E8522731944743D001A17C5 /* navi_icon_message_press@2x.png in Resources */,
 				9EA69DA61938E7D50030C27F /* style.xml in Resources */,

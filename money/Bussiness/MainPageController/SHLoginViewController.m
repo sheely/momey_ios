@@ -8,6 +8,8 @@
 
 #import "SHLoginViewController.h"
 
+#define LOGIN_INFO @"login_info"
+
 @interface SHLoginViewController ()
 
 @end
@@ -29,6 +31,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.keybordView = self.view;
+    self.keybordheight = 70;
+    self.txtLogin.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
+#ifdef DEBUG
+    self.txtLogin.text = @"admin";
+    self.txtPassword.text = @"123456";
+#endif
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -38,8 +48,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField == self.txtLogin){
+        [self.txtPassword becomeFirstResponder];
+    }else{
+        [self btnLoginOnTouch:nil];
+    }
+    return YES;
+}
+// called when 'return' key pressed. return NO to ignore.
+
 - (IBAction)btnLoginOnTouch:(id)sender
 {
-    [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
+   
+    if(self.txtLogin.text.length == 0 || self.txtPassword.text.length == 0){
+        [self showAlertDialog:@"用户名或密码不能为空"];
+        return;
+    }
+     [self showWaitDialogForNetWork];
+    Entironment.instance.loginName = self.txtLogin.text;
+    Entironment.instance.password = self.txtPassword.text;
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"milogin.do");
+    [post start:^(SHTask * t) {
+        [self dismissWaitDialog];
+        Entironment.instance.sessionid = [t.result valueForKey:@"sessionId"];
+        [[NSUserDefaults standardUserDefaults] setValue:self.txtLogin.text forKey:LOGIN_INFO];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
+    } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+        
+        [self dismissWaitDialog];
+        [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
+
+        [t.respinfo show];
+        
+    }];
+
 }
 @end

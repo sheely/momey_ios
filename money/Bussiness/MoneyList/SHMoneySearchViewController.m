@@ -27,6 +27,16 @@
 {
     [super viewDidLoad];
     self.title = @"查找条件";
+    [self showWaitDialogForNetWork];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryOppoListInit.do");
+    [post start:^(SHTask * t) {
+        [self dismissWaitDialog];
+        mList = [t.result valueForKey:@"oppoTypes"];
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [self dismissWaitDialog];
+    }];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -37,9 +47,9 @@
 }
 - (IBAction)btnTypeOnTouch:(id)sender {
     NSMutableArray * array = [[NSMutableArray alloc]init];
-    for (int i =0 ; i< 5; i++) {
+    for (int i =0 ; i< mList.count; i++) {
         KxMenuItem* item = [[KxMenuItem alloc] init];
-        item.title = @"分类";
+        item.title = [[mList objectAtIndex:i] valueForKey:@"value"];
         [array addObject:item];
     }
     [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnType.frame fromView:self.btnType] menuItems:array];

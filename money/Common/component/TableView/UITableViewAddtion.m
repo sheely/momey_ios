@@ -40,6 +40,15 @@
     }
     return cell;
 }
+- (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell2
+{
+    
+    SHTableViewTitleImageCell * cell = [self dequeueReusableCellWithIdentifier:@"tableview_cell_title_image_cell2"];
+    if(cell == nil){
+        cell = (SHTableViewTitleImageCell*)[[[NSBundle mainBundle]loadNibNamed:@"SHTableViewTitleImageCell2" owner:nil options:nil] objectAtIndex:0];
+    }
+    return cell;
+}
 
 - (SHTableViewTitleContentBottomCell*)dequeueReusableTitleContentBottomCell
 {

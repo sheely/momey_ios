@@ -13,26 +13,8 @@
 
 
 //测试站
-#define URL_HEADER @"http://www.zyj.com/api"
+#define URL_HEADER @"http://germmyapp.nat123.net/myStruts1"
 // 测试图片地址
-#define PictureURL @ "http://192.168.1.200/"
-
-
-//正式地址 发布地址
-#define BATA_HEADER @ "http://192.168.1.200/api"
-//#define BATA_HEADER @ "http://www.zyj.com/api"
-
-
-//#define PictureURL @ "http://www.zyj.com" 
-
-
-// 正式测试图片地址
-//#define PictureURL @ "http://www.zyj.com/" 
-#define PublishAddress @ "http://www.zyj.com/api"
-
-//正是站
-//#define URL_HEADER @ "http://zambon-prod.mobilitychina.com:8091"
-
  #define URL_BATA @ "http://192.168.1.200/api"
 
 #define URL_DEVELOPER @ "http://zambon-test.mobilitychina.com:8091"

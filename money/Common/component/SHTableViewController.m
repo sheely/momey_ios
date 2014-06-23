@@ -115,6 +115,12 @@
     return [self.tableView dequeueReusableTitleImageCell];
 }
 
+- (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell2
+{
+    
+    return [self.tableView dequeueReusableTitleImageCell2];
+}
+
 - (SHTableViewTitleContentBottomCell*)dequeueReusableTitleContentBottomCell
 {
     
