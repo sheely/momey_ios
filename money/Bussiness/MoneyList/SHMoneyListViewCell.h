@@ -10,7 +10,9 @@
 
 @interface SHMoneyListViewCell : SHTableViewTitleContentBottomCell
 
+@property (weak, nonatomic) IBOutlet UILabel *labState;
 @property (weak, nonatomic) IBOutlet UIButton *btnEmployee;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnState;
+@property (weak, nonatomic) IBOutlet UIButton *a;
 @end

@@ -9,6 +9,9 @@
 #import "SHViewController.h"
 
 @interface SHMoneyListViewController : SHTableViewController
+{
+    int type;
+}
 @property (weak, nonatomic) IBOutlet UIButton *btnAll;
 @property (weak, nonatomic) IBOutlet UIButton *btnParticipate;
 @property (weak, nonatomic) IBOutlet UIButton *btnBidding;

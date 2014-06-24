@@ -108,6 +108,15 @@
     <btnsubmitred parent="btnsubmit">
         <property name="backgroundImage:forState" type="UIImage.Stretchable" value="button_red_mini" externType="int" extern="0"/>
     </btnsubmitred>
+    
+    <btnclosemoney parent="btnsubmitred">
+        <property name="font" type="UIFont" value="FontScaleSmall"/>
+
+    </btnclosemoney>
+    <btnopenemoney parent="btnsubmit">
+        <property name="font" type="UIFont" value="FontScaleSmall"/>
+
+    </btnopenemoney>
     <!--login-->
     <lablogintitle parent="labmiddark">
         <property name="font" type="UIFont" value="FontScaleSupereBold"/>

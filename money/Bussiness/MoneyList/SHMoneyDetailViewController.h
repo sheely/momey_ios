@@ -9,7 +9,13 @@
 #import "SHViewController.h"
 
 @interface SHMoneyDetailViewController : SHViewController
-
+{
+    __weak IBOutlet UILabel *labOrder;
+    __weak IBOutlet UITextView *labContent;
+    __weak IBOutlet UILabel *labTitle;
+    __weak IBOutlet UILabel *labType;
+    NSDictionary * dic ;
+}
 - (IBAction)btnMegOnTouch:(id)sender;
 - (IBAction)btnSeeOnTouch:(id)sender;
 - (IBAction)btnAttachmentOnTouch:(id)sender;

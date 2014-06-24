@@ -30,6 +30,7 @@
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryOppoListInit.do");
+    post.cachetype = CacheTypeTimes;
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
         mList = [t.result valueForKey:@"oppoTypes"];

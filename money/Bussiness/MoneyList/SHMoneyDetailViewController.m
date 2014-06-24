@@ -27,6 +27,21 @@
 {
     [super viewDidLoad];
     self.title = @"财信详情";
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryOppoDetail.do");
+    [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+    [self showWaitDialogForNetWork];
+    [post start:^(SHTask * t) {
+        dic = (NSDictionary*)t.result;
+        labTitle.text = [dic valueForKey:@"oppoTitle"];
+        labContent.text = [dic valueForKey:@"oppoContent"];
+        labContent.font = [NVSkin.instance fontOfStyle:@"FontScaleMid"];
+        labOrder.text = [dic valueForKey:@"oppoPublisher"];
+        labType.text = [dic valueForKey:@"oppoType"];
+        [self dismissWaitDialog];
+    } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+        [self dismissWaitDialog];
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 

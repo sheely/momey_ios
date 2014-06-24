@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHMoneyDetailViewController">
             <connections>
+                <outlet property="labContent" destination="WBu-qh-WqA" id="6g8-iX-Fum"/>
+                <outlet property="labOrder" destination="AjW-ag-gvW" id="EcB-Qd-lVC"/>
+                <outlet property="labTitle" destination="6em-Ys-s34" id="pEl-SF-XEo"/>
+                <outlet property="labType" destination="FN7-h0-lzH" id="SuH-Ef-hex"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -145,11 +149,10 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="userstyle" value="view"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="WBu-qh-WqA">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="--" selectable="NO" id="WBu-qh-WqA">
                     <rect key="frame" x="5" y="184" width="310" height="315"/>
                     <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <string key="text">Lorem ipsum dcient to factor tum poen legum odioque civiuda.Lorem ipsum dcient to factor tum poen legum odioque civiuda.Lorem ipsum dcient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

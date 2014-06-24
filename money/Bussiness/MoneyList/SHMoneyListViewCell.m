@@ -22,6 +22,7 @@
 - (void)loadSkin
 {
     [super loadSkin];
+    self.a.titleLabel.text = @"dsad";
     self.btnEmployee.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
     self.btnState.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
 }
