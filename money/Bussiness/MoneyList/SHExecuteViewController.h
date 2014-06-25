@@ -8,10 +8,17 @@
 
 #import "SHViewController.h"
 
-@interface SHExecuteViewController : SHViewController
+@interface SHExecuteViewController : SHViewController<SHCalendarViewControllerDelegate>
 
 {
+    __weak IBOutlet UILabel *labExecuter;
     SHCalendarViewController * calendarcontroller;
+    __weak IBOutlet UIButton *btnStart;
+    __weak IBOutlet UIButton *btnEnd;
+    __weak IBOutlet UITextField *txtPlace;
+    __weak IBOutlet UITextField *txtBudge;
+    __weak IBOutlet UITextField *txtMark;
+    UIButton * mButton;
 }
 - (IBAction)btnSeeOnTouch:(id)sender;
 - (IBAction)btnCalendarOnTouch:(id)sender;

@@ -8,8 +8,22 @@
 
 #import "SHViewController.h"
 
+@class SHCalendarViewController;
+
+@protocol SHCalendarViewControllerDelegate <NSObject,VRGCalendarViewDelegate>
+
+-(void)calendarViewController:(SHCalendarViewController *)controller dateSelected:(NSDate *)date;
+@end
+
 @interface SHCalendarViewController : SHViewController
+{
+    __weak IBOutlet VRGCalendarView *canlendarView;
+    
+}
+
+@property (weak,nonatomic) id <SHCalendarViewControllerDelegate> delegate;
 - (void)show;
 - (void)close;
 - (IBAction)btnOnTouch:(id)sender;
+
 @end

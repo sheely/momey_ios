@@ -42,5 +42,7 @@
 - (SHNoneViewCell*)dequeueReusableNoneViewCell;
 
 - (UITableViewCell*) tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)tableView:(UITableView *)tableView heightForGeneralRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 

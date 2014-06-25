@@ -48,6 +48,9 @@
     <module
     name="teamdetail"
     target="SHTeamDetailViewController" />
+    <module
+    name="searchexecuter"
+    target="SHSearchExecuteViewController" />
 
 
 </root>

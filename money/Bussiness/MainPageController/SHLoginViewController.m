@@ -8,7 +8,6 @@
 
 #import "SHLoginViewController.h"
 
-#define LOGIN_INFO @"login_info"
 
 @interface SHLoginViewController ()
 

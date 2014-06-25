@@ -65,6 +65,7 @@
     cell.labContent.text = [dic valueForKey:@"oppoType"];
     cell.labState.text = [dic valueForKey:@"oppoStatus"];
     cell.btnState.tag = indexPath.row;
+    cell.btnEmployee.tag = indexPath.row;
     [cell.btnState addTarget:self action:@selector(btnState:) forControlEvents:(UIControlEventTouchUpInside)];
     if(type == 3){
         [cell.btnEmployee setTitle:@"执行人" forState:UIControlStateNormal];
@@ -81,7 +82,25 @@
             [cell.btnState setTitle:@"关闭财信" forState:UIControlStateNormal];
         cell.btnState.userstyle = @"btnclosemoney";
     }
+    [cell.btnEmployee addTarget:self action:@selector(btnEmployee:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void)btnEmployee:(UIButton*)btn
+{
+    if(type == 3){
+        NSDictionary * dic = [mList objectAtIndex:btn.tag];
+        SHIntent * intent = [[SHIntent alloc]init:@"searchexecuter" delegate:nil containner:self.navigationController];
+        [intent.args setValue:[dic valueForKey:@"oppoId"] forKey:@"oppoId"];
+        [[UIApplication sharedApplication]open:intent];
+    }else{
+        NSDictionary * dic = [mList objectAtIndex:btn.tag];
+        SHIntent * intent = [[SHIntent alloc]init:@"executeinfo" delegate:nil containner:self.navigationController];
+        [intent.args setValue:@"self" forKey:@"type"];
+        [intent.args setValue:[dic valueForKey:@"oppoId"] forKey:@"oppoId"];
+        [[UIApplication sharedApplication]open:intent];
+    }
+
 }
 
 - (void)btnState:(UIButton*)btn
@@ -108,12 +127,10 @@
     }];
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat) tableView:(UITableView *)tableView heightForGeneralRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return  110;
 }
-
-
 
 - (void) moneysearchviewcontrollerDidSubmit:(NSObject*)obj
 {

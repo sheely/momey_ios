@@ -150,6 +150,18 @@
     return nil;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row >= mList.count || mList.count == 0 ){
+        return 44;
+    }else{
+        return [self tableView:self.tableView heightForGeneralRowAtIndexPath:indexPath];
+    }
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForGeneralRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

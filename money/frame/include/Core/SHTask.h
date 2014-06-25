@@ -54,7 +54,7 @@ typedef enum
 
 - (void)start;
 
-- (void)start:(void(^)(SHTask *))taskfinished taskWillTry : (void(^)(SHTask *))tasktry  taskDidFailed : (void(^)(SHTask *))taskFailed;
+- (void)start:(void(^)(SHTask * t))taskfinished taskWillTry : (void(^)(SHTask *t ))tasktry  taskDidFailed : (void(^)(SHTask * t))taskFailed;
 
 - (void)cancel;
 

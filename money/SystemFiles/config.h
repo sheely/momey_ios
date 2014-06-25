@@ -28,9 +28,9 @@
 
 #define DEVICE_TOKEN @"DeviceTokenStringKEY"
 
-#define STORE_USER_INFO @"userinfo"
 
- 
+#define LOGIN_INFO @"login_info"
+
 
 #define RECT_RIGHTSHOW CGRectMake(87, 23, 930, 730)
 #define RECT_RIGHTNAVIGATION CGRectMake(0, 0, 930, 44)

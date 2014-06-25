@@ -30,8 +30,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    canlendarView.delegate = self;
     // Do any additional setup after loading the view from its nib.
+}
+-(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated
+{
+}
+- (void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date
+{
+    if(self.delegate != nil && [self.delegate respondsToSelector:@selector(calendarViewController:dateSelected:)]){
+        [self.delegate calendarViewController:self dateSelected:date];
+    }
 }
 
 - (void)didReceiveMemoryWarning
