@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0ECC05195A4ECA004A907F /* SHExecutorViewSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0ECC04195A4ECA004A907F /* SHExecutorViewSelectCell.m */; };
+		9E0ECC07195A4F1E004A907F /* SHExecutorViewSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC06195A4F1E004A907F /* SHExecutorViewSelectCell.xib */; };
+		9E0ECC09195A5205004A907F /* icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC08195A5205004A907F /* icon_selected.png */; };
+		9E0ECC0D195A5380004A907F /* SHSearchExecuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0ECC0B195A5380004A907F /* SHSearchExecuteViewController.m */; };
+		9E0ECC0E195A5380004A907F /* SHSearchExecuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC0C195A5380004A907F /* SHSearchExecuteViewController.xib */; };
 		9E31360E19462719002A3298 /* button_red_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360D19462719002A3298 /* button_red_mini@2x.png */; };
 		9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360F1946272C002A3298 /* dialogue_ others@2x.png */; };
 		9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3136101946272C002A3298 /* dialogue_me@2x.png */; };
@@ -265,6 +270,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E0ECC03195A4ECA004A907F /* SHExecutorViewSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHExecutorViewSelectCell.h; sourceTree = "<group>"; };
+		9E0ECC04195A4ECA004A907F /* SHExecutorViewSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHExecutorViewSelectCell.m; sourceTree = "<group>"; };
+		9E0ECC06195A4F1E004A907F /* SHExecutorViewSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHExecutorViewSelectCell.xib; sourceTree = "<group>"; };
+		9E0ECC08195A5205004A907F /* icon_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_selected.png; sourceTree = "<group>"; };
+		9E0ECC0A195A5380004A907F /* SHSearchExecuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSearchExecuteViewController.h; sourceTree = "<group>"; };
+		9E0ECC0B195A5380004A907F /* SHSearchExecuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSearchExecuteViewController.m; sourceTree = "<group>"; };
+		9E0ECC0C195A5380004A907F /* SHSearchExecuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSearchExecuteViewController.xib; sourceTree = "<group>"; };
 		9E31360D19462719002A3298 /* button_red_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_red_mini@2x.png"; sourceTree = "<group>"; };
 		9E31360F1946272C002A3298 /* dialogue_ others@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_ others@2x.png"; sourceTree = "<group>"; };
 		9E3136101946272C002A3298 /* dialogue_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_me@2x.png"; sourceTree = "<group>"; };
@@ -698,6 +710,7 @@
 		9E8521D2193F9136001A17C5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9E0ECC08195A5205004A907F /* icon_selected.png */,
 				9E871DEB1957B14F000109DA /* icon_myprofile_mycalender.png */,
 				9E871DEC1957B14F000109DA /* icon_myprofile_myfocus.png */,
 				9E871DED1957B14F000109DA /* icon_myprofile_myteam.png */,
@@ -1347,6 +1360,9 @@
 				9E9EDD8A194FCA1E00123254 /* SHMoneySearchViewController.h */,
 				9E9EDD8B194FCA1E00123254 /* SHMoneySearchViewController.m */,
 				9E9EDD8C194FCA1E00123254 /* SHMoneySearchViewController.xib */,
+				9E0ECC0A195A5380004A907F /* SHSearchExecuteViewController.h */,
+				9E0ECC0B195A5380004A907F /* SHSearchExecuteViewController.m */,
+				9E0ECC0C195A5380004A907F /* SHSearchExecuteViewController.xib */,
 			);
 			name = MoneyList;
 			path = money/Bussiness/MoneyList;
@@ -1484,6 +1500,9 @@
 				9EDC7F78193E951800B1019B /* SHMoneyListViewCell.h */,
 				9EDC7F79193E951800B1019B /* SHMoneyListViewCell.m */,
 				9EDC7F7B193E952600B1019B /* SHMoneyListViewCell.xib */,
+				9E0ECC03195A4ECA004A907F /* SHExecutorViewSelectCell.h */,
+				9E0ECC04195A4ECA004A907F /* SHExecutorViewSelectCell.m */,
+				9E0ECC06195A4F1E004A907F /* SHExecutorViewSelectCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1670,6 +1689,8 @@
 				9EA69D891938E7D50030C27F /* SHTitleContentViewController.xib in Resources */,
 				9EA69DAD1938E92B0030C27F /* MainViewController.xib in Resources */,
 				9EA69D381938E7D50030C27F /* DSLCalendar-previousMonth@2x.png in Resources */,
+				9E0ECC07195A4F1E004A907F /* SHExecutorViewSelectCell.xib in Resources */,
+				9E0ECC0E195A5380004A907F /* SHSearchExecuteViewController.xib in Resources */,
 				9EA69D641938E7D50030C27F /* navigation_bar_bg.png in Resources */,
 				9EA69D631938E7D50030C27F /* button_item_white_bg.png in Resources */,
 				9EA69D501938E7D50030C27F /* NaviBack@2x.png in Resources */,
@@ -1691,6 +1712,7 @@
 				9EA69D6D1938E7D50030C27F /* ic_re_error.png in Resources */,
 				9E85227A1944743D001A17C5 /* tab_selected.png in Resources */,
 				9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */,
+				9E0ECC09195A5205004A907F /* icon_selected.png in Resources */,
 				9E9EDDA51951F81100123254 /* SHTeamDetailViewController.xib in Resources */,
 				9EA69D4B1938E7D50030C27F /* whiteArrow@2x.png in Resources */,
 				9EA69D7E1938E7D50030C27F /* SHTableViewUnReadNumberCell.xib in Resources */,
@@ -1725,6 +1747,7 @@
 				9EA69D681938E7D50030C27F /* SHShowTableViewController.m in Sources */,
 				9EA69D851938E7D50030C27F /* WTStatusWindow.m in Sources */,
 				9EA69D9C1938E7D50030C27F /* NSObjectAddtion.m in Sources */,
+				9E0ECC0D195A5380004A907F /* SHSearchExecuteViewController.m in Sources */,
 				9EA69D911938E7D50030C27F /* Command.m in Sources */,
 				9EA69D921938E7D50030C27F /* CommandFactory.m in Sources */,
 				9E85228F19462022001A17C5 /* SHChatUnitViewCell.m in Sources */,
@@ -1757,6 +1780,7 @@
 				9EA69D8D1938E7D50030C27F /* NSMutableArray+convenience.m in Sources */,
 				9EB92ECE19365A3E00E87981 /* main.m in Sources */,
 				9EA69D841938E7D50030C27F /* WTStatusView.m in Sources */,
+				9E0ECC05195A4ECA004A907F /* SHExecutorViewSelectCell.m in Sources */,
 				9E9EDD9C1951D36100123254 /* SHChatSearchListViewController.m in Sources */,
 				9EA69D561938E7D50030C27F /* MMHud.m in Sources */,
 				9EA69D731938E7D50030C27F /* SHTableViewEditGeneralCell.m in Sources */,

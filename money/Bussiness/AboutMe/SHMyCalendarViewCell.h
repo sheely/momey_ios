@@ -9,5 +9,7 @@
 #import "SHTableViewCell.h"
 
 @interface SHMyCalendarViewCell : SHTableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *btnEdit;
+- (IBAction)btnDelete:(id)sender;
 
 @end

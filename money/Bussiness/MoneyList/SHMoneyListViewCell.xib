@@ -69,7 +69,7 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aaA-5W-85p">
-                        <rect key="frame" x="140.00000267096283" y="78" width="72" height="22"/>
+                        <rect key="frame" x="139.99999466476092" y="78" width="72" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="--">
@@ -92,17 +92,9 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="userstyle" value="btnsubmitgreen"/>
                         </userDefinedRuntimeAttributes>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yHn-cm-Evf">
-                        <rect key="frame" x="99" y="74" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="a" destination="yHn-cm-Evf" id="yDG-2l-Wc8"/>
                 <outlet property="btnEmployee" destination="yIU-yN-nfI" id="56v-JC-wOE"/>
                 <outlet property="btnState" destination="aaA-5W-85p" id="yH4-Fv-gyq"/>
                 <outlet property="labBottom" destination="OYs-Cc-d43" id="8d2-Ww-69x"/>

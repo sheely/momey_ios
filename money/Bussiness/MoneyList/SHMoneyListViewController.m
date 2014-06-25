@@ -67,19 +67,18 @@
     cell.btnState.tag = indexPath.row;
     [cell.btnState addTarget:self action:@selector(btnState:) forControlEvents:(UIControlEventTouchUpInside)];
     if(type == 3){
-        cell.btnEmployee.titleLabel.text = @"执行人";
+        [cell.btnEmployee setTitle:@"执行人" forState:UIControlStateNormal];
     }else{
-        cell.btnEmployee.titleLabel.text = @"执行信息";
+        [cell.btnEmployee setTitle:@"执行信息" forState:UIControlStateNormal];
 
     }
     //cell.a.titleLabel.text = @"s";
     if([[dic valueForKey:@"oppoStatus"] caseInsensitiveCompare:@"已关闭"]==NSOrderedSame ){
+        [cell.btnState setTitle:@"打开财信" forState:UIControlStateNormal];
         cell.btnState.titleLabel.text = @"打开财信";
         cell.btnState.userstyle = @"btnopenmoney";
-          cell.a.titleLabel.text = @"打开财信";
-         cell.userstyle = @"btnopenmoney";
-    }else{
-        cell.btnState.titleLabel.text = @"关闭财信";
+        }else{
+            [cell.btnState setTitle:@"关闭财信" forState:UIControlStateNormal];
         cell.btnState.userstyle = @"btnclosemoney";
     }
     return cell;
