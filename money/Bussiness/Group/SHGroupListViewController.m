@@ -35,17 +35,67 @@
     [super viewDidLoad];
     self.title = @"财圈";
     isTeam = NO;
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+    [self request];
     // Do any additional setup after loading the view from its nib.
+}
+- (void) request
+{
+    [self showWaitDialogForNetWork];
+    if(isTeam){
+        SHPostTaskM * post = [[SHPostTaskM alloc]init];
+        post.URL = URL_FOR(@"miQueryTeam.do");
+        [post.postArgs setValue:@"" forKey:@"ownerUserName"];
+        [post.postArgs setValue:@"" forKey:@"teamName"];
+        [post.postArgs setValue:@"" forKey:@"memberUserName"];
+        [post start:^(SHTask * t) {
+            mIsEnd  = YES;
+            mList = [t.result valueForKey:@"teams"];
+            [self.tableView reloadData];
+            [self dismissWaitDialog];
+
+        } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+            [self dismissWaitDialog];
+            [t.respinfo show];
+        }];
+
+    }else{
+        SHPostTaskM * post = [[SHPostTaskM alloc]init];
+        post.URL = URL_FOR(@"queryCompany.do");
+        [post.postArgs setValue:@"" forKey:@"companyKey"];
+        [post.postArgs setValue:@"" forKey:@"companyName"];
+        
+        [post start:^(SHTask * t) {
+            mIsEnd  = YES;
+            mList = [t.result valueForKey:@"companys"];
+            [self.tableView reloadData];
+            [self dismissWaitDialog];
+        } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+            [t.respinfo show];
+            [self dismissWaitDialog];
+
+        }];
+
+    }
+}
+
+- (void)loadSkin
+{
+    [self.btnCompany setBackgroundImage:[NVSkin.instance stretchImage:@"tab_selected.png"] forState:UIControlStateHighlighted];
+    [self.btnCompany setBackgroundImage:[NVSkin.instance stretchImage:@"tab_selected.png"] forState:UIControlStateSelected];
+    [self.btnTeam setBackgroundImage:[NVSkin.instance stretchImage:@"tab_selected.png"] forState:UIControlStateHighlighted];
+    [self.btnTeam setBackgroundImage:[NVSkin.instance stretchImage:@"tab_selected.png"] forState:UIControlStateSelected];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SHGroupListViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
+    NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     if(isTeam){
-        cell.labTitle.text = @"审计二人组";
+        cell.labTitle.text = [dic valueForKey:@"teamName"];
+        [cell.imgView setUrl:[dic valueForKey:@"teamHeadIcon"]];
     }else{
-        cell.labTitle.text = @"大众点评网00";
+        cell.labTitle.text = [dic valueForKey:@"companyName"];
+        [cell.imgView setUrl:[dic valueForKey:@"companyHeadIcon"]];
     }
     return cell;
 }
@@ -57,7 +107,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return mList.count;
 }
 - (void)didReceiveMemoryWarning
 {
@@ -66,11 +116,14 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     if(isTeam){
         SHIntent * intent = [[SHIntent alloc]init:@"teamdetail" delegate:nil containner:self.navigationController];
         [[UIApplication sharedApplication]open:intent];
     }else{
         SHIntent * intent = [[SHIntent alloc]init:@"companydetail" delegate:nil containner:self.navigationController];
+        
+        [intent.args setValue: [dic valueForKey:@"companyId"] forKey:@"companyId"];
         [[UIApplication sharedApplication]open:intent];
     }
   
@@ -80,14 +133,14 @@
     self.btnCompany.selected = NO;
     self.btnTeam.selected = YES;
     isTeam = YES;
-    [self.tableView reloadData];
+    [self request];
 }
 
 - (IBAction)btCompanyOnTouch:(id)sender {
     self.btnCompany.selected = YES;
     self.btnTeam.selected = NO;
     isTeam = NO;
-    [self.tableView reloadData];
+    [self request];
 
 }
 @end

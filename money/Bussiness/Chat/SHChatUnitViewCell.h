@@ -10,5 +10,7 @@
 
 @interface SHChatUnitViewCell : SHTableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labTxt;
+@property (weak, nonatomic) IBOutlet SHImageView *imgIcon;
+@property (weak, nonatomic) IBOutlet UILabel *labTimer;
 
 @end

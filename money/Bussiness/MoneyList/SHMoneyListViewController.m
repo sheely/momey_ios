@@ -82,6 +82,19 @@
             [cell.btnState setTitle:@"关闭财信" forState:UIControlStateNormal];
         cell.btnState.userstyle = @"btnclosemoney";
     }
+    if (type == 0 || type == 1) {
+        cell.btnEmployee.hidden = YES;
+        cell.btnState.hidden = YES;
+        cell.btnMark.hidden = YES;
+    }else if (type == 2){
+        cell.btnEmployee.hidden = NO;
+        cell.btnState.hidden = YES;
+        cell.btnMark.hidden = NO;
+    }else {
+        cell.btnEmployee.hidden = NO;
+        cell.btnState.hidden = NO;
+        cell.btnMark.hidden = NO;
+    }
     [cell.btnEmployee addTarget:self action:@selector(btnEmployee:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }

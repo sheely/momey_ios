@@ -12,6 +12,8 @@
 		9E0ECC09195A5205004A907F /* icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC08195A5205004A907F /* icon_selected.png */; };
 		9E0ECC0D195A5380004A907F /* SHSearchExecuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0ECC0B195A5380004A907F /* SHSearchExecuteViewController.m */; };
 		9E0ECC0E195A5380004A907F /* SHSearchExecuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC0C195A5380004A907F /* SHSearchExecuteViewController.xib */; };
+		9E0ECC13195C6663004A907F /* SHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0ECC11195C6663004A907F /* SHWebViewController.m */; };
+		9E0ECC14195C6663004A907F /* SHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC12195C6663004A907F /* SHWebViewController.xib */; };
 		9E31360E19462719002A3298 /* button_red_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360D19462719002A3298 /* button_red_mini@2x.png */; };
 		9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360F1946272C002A3298 /* dialogue_ others@2x.png */; };
 		9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3136101946272C002A3298 /* dialogue_me@2x.png */; };
@@ -277,6 +279,9 @@
 		9E0ECC0A195A5380004A907F /* SHSearchExecuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSearchExecuteViewController.h; sourceTree = "<group>"; };
 		9E0ECC0B195A5380004A907F /* SHSearchExecuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSearchExecuteViewController.m; sourceTree = "<group>"; };
 		9E0ECC0C195A5380004A907F /* SHSearchExecuteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSearchExecuteViewController.xib; sourceTree = "<group>"; };
+		9E0ECC10195C6663004A907F /* SHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWebViewController.h; sourceTree = "<group>"; };
+		9E0ECC11195C6663004A907F /* SHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWebViewController.m; sourceTree = "<group>"; };
+		9E0ECC12195C6663004A907F /* SHWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHWebViewController.xib; sourceTree = "<group>"; };
 		9E31360D19462719002A3298 /* button_red_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_red_mini@2x.png"; sourceTree = "<group>"; };
 		9E31360F1946272C002A3298 /* dialogue_ others@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_ others@2x.png"; sourceTree = "<group>"; };
 		9E3136101946272C002A3298 /* dialogue_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_me@2x.png"; sourceTree = "<group>"; };
@@ -694,6 +699,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0ECC0F195C664D004A907F /* SHWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E0ECC10195C6663004A907F /* SHWebViewController.h */,
+				9E0ECC11195C6663004A907F /* SHWebViewController.m */,
+				9E0ECC12195C6663004A907F /* SHWebViewController.xib */,
+			);
+			path = SHWebViewController;
+			sourceTree = "<group>";
+		};
 		9E8521CA193F8A53001A17C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +846,7 @@
 		9EA69C1D1938E7D40030C27F /* component */ = {
 			isa = PBXGroup;
 			children = (
+				9E0ECC0F195C664D004A907F /* SHWebViewController */,
 				9E9EDD84194E144C00123254 /* Canlendar */,
 				9EA69C1E1938E7D40030C27F /* button */,
 				9EA69C211938E7D40030C27F /* ContentViewController */,
@@ -1718,6 +1734,7 @@
 				9EA69D7E1938E7D50030C27F /* SHTableViewUnReadNumberCell.xib in Resources */,
 				9E8522741944743D001A17C5 /* navi_icon_message_rest@2x.png in Resources */,
 				9EA69D3E1938E7D50030C27F /* DSLCalendarDaySelection-middle@2x.png in Resources */,
+				9E0ECC14195C6663004A907F /* SHWebViewController.xib in Resources */,
 				9E85226E1944743D001A17C5 /* navi_back_press@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1805,6 +1822,7 @@
 				9EA69D4D1938E7D50030C27F /* NTChartView.m in Sources */,
 				9EA69D831938E7D50030C27F /* WTStatusBar.m in Sources */,
 				9E31380519477EF9002A3298 /* SHChatUserBaseInfoViewCell.m in Sources */,
+				9E0ECC13195C6663004A907F /* SHWebViewController.m in Sources */,
 				9E9EDD971951C83600123254 /* SHChatSearchViewController.m in Sources */,
 				9EA69D2C1938E7D50030C27F /* SHDatePopoverController.m in Sources */,
 				9EA69D791938E7D50030C27F /* SHTableViewTitleContentCell.m in Sources */,

@@ -13,27 +13,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a.png" id="I5g-3X-MCi">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a.png" id="I5g-3X-MCi" customClass="SHImageView">
                         <rect key="frame" x="8" y="5" width="106" height="69"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大众点评网" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eZG-RU-4Mf">
-                        <rect key="frame" x="122" y="2" width="205" height="49"/>
+                        <rect key="frame" x="125" y="5" width="162" height="54"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="类型:本地服务平台" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dJH-VZ-yCn">
-                        <rect key="frame" x="122" y="50" width="205" height="26"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pdS-aV-jIU">
+                        <rect key="frame" x="125" y="53" width="162" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="labContent" destination="dJH-VZ-yCn" id="Dpg-BW-44b"/>
+                <outlet property="imgView" destination="I5g-3X-MCi" id="62W-XK-89d"/>
+                <outlet property="labContent" destination="pdS-aV-jIU" id="2wX-vO-e8w"/>
                 <outlet property="labTitle" destination="eZG-RU-4Mf" id="Wzn-e4-SSR"/>
             </connections>
         </tableViewCell>

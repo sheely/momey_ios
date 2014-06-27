@@ -51,6 +51,9 @@
     <module
     name="searchexecuter"
     target="SHSearchExecuteViewController" />
+    <module
+    name="webbrowser"
+    target="SHWebViewController" />
 
 
 </root>

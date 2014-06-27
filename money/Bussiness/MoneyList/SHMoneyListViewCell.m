@@ -24,6 +24,7 @@
     [super loadSkin];
     self.btnEmployee.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
     self.btnState.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
+    self.btnMark.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
 }
 
 /*

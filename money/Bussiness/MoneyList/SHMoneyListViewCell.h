@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labState;
 @property (weak, nonatomic) IBOutlet UIButton *btnEmployee;
+@property (weak, nonatomic) IBOutlet UIButton *btnMark;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnState;
 @end

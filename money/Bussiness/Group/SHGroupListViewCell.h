@@ -9,5 +9,6 @@
 #import "SHTableViewCell.h"
 
 @interface SHGroupListViewCell : SHTableViewTitleContentCell
+@property (weak, nonatomic) IBOutlet SHImageView *imgView;
 
 @end

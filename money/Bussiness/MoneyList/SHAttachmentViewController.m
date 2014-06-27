@@ -27,9 +27,24 @@
 {
     [super viewDidLoad];
     self.title = @"财信附件";
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
 
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)loadNext
+{
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"queryAttachment.do");
+    [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+    [post.postArgs setValue:@"queryAttachment" forKey:@"attachments"];
+    [post.postArgs setValue:[NSNumber numberWithInt:2] forKey:@"attachmentType"];
+    [post start:^(SHTask * t) {
+        mIsEnd  = YES;
+        mList = [t.result valueForKey:@"opportunies"];
+        [self.tableView reloadData];
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [t.respinfo show];
+    }];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -37,14 +52,13 @@
     return  44;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 5;
-}
+
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString * url = [[mList objectAtIndex:indexPath.row] valueForKey:@"attachmentUrl"];
+    NSArray * array = [url componentsSeparatedByString:@"/"];
     SHTableViewGeneralCell * cell = [tableView dequeueReusableGeneralCell];
-    cell.labTitle.text = @"招标说明书";
+    cell.labTitle.text = [array objectAtIndex:array.count-1];
     return cell;
 }
 
@@ -52,6 +66,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"webbrowser" delegate:nil containner:self.navigationController];
+    NSString * url = [[mList objectAtIndex:indexPath.row] valueForKey:@"attachmentUrl"];
+      NSArray * array = [url componentsSeparatedByString:@"/"];
+    [intent.args setValue:url forKey:@"url"];
+    [intent.args setValue:[array objectAtIndex:array.count -1] forKey:@"title"];
+
+    [[UIApplication sharedApplication]open:intent];
 }
 
 @end

@@ -60,7 +60,7 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KbP-kn-qtG">
-                    <rect key="frame" x="0.0" y="40" width="320" height="1"/>
+                    <rect key="frame" x="0.0" y="39" width="320" height="1"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

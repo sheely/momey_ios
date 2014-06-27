@@ -54,18 +54,23 @@
 - (IBAction)btnMegOnTouch:(id)sender
 {
     SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+
     [[UIApplication sharedApplication]open:intent];
 }
 
 - (IBAction)btnSeeOnTouch:(id)sender
 {
     SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+
     [[UIApplication sharedApplication]open:intent];
 }
 
 - (IBAction)btnAttachmentOnTouch:(id)sender
 {
     SHIntent * intent = [[SHIntent alloc]init:@"attachment" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
     [[UIApplication sharedApplication]open:intent];
   
 }

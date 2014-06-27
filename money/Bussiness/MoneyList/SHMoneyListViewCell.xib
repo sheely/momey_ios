@@ -69,7 +69,7 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aaA-5W-85p">
-                        <rect key="frame" x="139.99999466476092" y="78" width="72" height="22"/>
+                        <rect key="frame" x="101" y="78" width="60" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="--">
@@ -81,10 +81,22 @@
                         </userDefinedRuntimeAttributes>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yIU-yN-nfI">
-                        <rect key="frame" x="218" y="78" width="72" height="22"/>
+                        <rect key="frame" x="229" y="78" width="60" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="--">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="userstyle" value="btnsubmitgreen"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fIG-wX-ydQ">
+                        <rect key="frame" x="165" y="78" width="60" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="财信评论">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -96,6 +108,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="btnEmployee" destination="yIU-yN-nfI" id="56v-JC-wOE"/>
+                <outlet property="btnMark" destination="fIG-wX-ydQ" id="qhe-9R-6GN"/>
                 <outlet property="btnState" destination="aaA-5W-85p" id="yH4-Fv-gyq"/>
                 <outlet property="labBottom" destination="OYs-Cc-d43" id="8d2-Ww-69x"/>
                 <outlet property="labContent" destination="Muz-gG-Ybh" id="ef2-HX-hQQ"/>

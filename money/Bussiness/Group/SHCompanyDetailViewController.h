@@ -11,6 +11,7 @@
 @interface SHCompanyDetailViewController : SHViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray * mList;
+    NSDictionary * dic ;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

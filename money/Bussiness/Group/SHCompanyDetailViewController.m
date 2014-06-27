@@ -28,6 +28,20 @@
 {
     [super viewDidLoad];
     self.title = @"公司详情";
+    [self showWaitDialogForNetWork];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryCompanyDetail.do");
+    [post.postArgs setValue:[self.intent.args valueForKey:@"companyId"] forKey:@"companyId"];
+ 
+    [post start:^(SHTask * t) {
+        [self dismissWaitDialog];
+        dic = (NSDictionary*)t.result;
+        [self.tableView reloadData];
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [self dismissWaitDialog];
+        [t.respinfo show];
+    }];
+ 
     mList = [@[@"",@"",@"",@""]mutableCopy];
     // Do any additional setup after loading the view from its nib.
 }
@@ -75,10 +89,41 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0){
-    return  80;
-    }else{
-        return 40;
+        return  80;
+    }else if (indexPath.section == 1){
+        NSString* msg = [dic valueForKey:@"introduction"];
+        if(msg.length > 0){
+            CGSize size = [msg sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(310, 99999) lineBreakMode:NSLineBreakByTruncatingTail];;
+            return  44 - 18 + size.height;
+        }else{
+            return 0;
+        }
+    }else if (indexPath.section == 2){
+        
+        NSArray* com = [dic valueForKey:@"companyProducts"];
+        if(com.count > 0 ){
+            NSMutableString * msg = [[NSMutableString alloc]init];
+            for (int i = 0;i < com.count; i++) {
+                [msg appendFormat:@"%@,",[[com objectAtIndex:i] valueForKey:@"productName"]];
+            }
+            CGSize size = [msg sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(310, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
+            return  44 - 18 + size.height;
+        }else{
+            return 0;
+        }
+        
+    }else if (indexPath.section == 3){
+        
+        NSString* msg = [dic valueForKey:@"mainClients"];
+        if(msg.length > 0){
+            CGSize size = [msg sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(310, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
+            return  44 - 18 + size.height;
+        }else{
+            return 0;
+        }
+        
     }
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -88,12 +133,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHTableViewGeneralCell * cell;
+    SHGroupListViewCell * cell;
     if(indexPath.section == 0){
     cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
-    }else {
+        cell.labTitle.text = [dic valueForKey:@"companyName"];
+        cell.labContent.text = [dic valueForKey:@"companyType"];
+
+    }else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableGeneralCell];
-        cell.labTitle.text = @"美国人";
+        cell.labTitle.text =  [dic valueForKey:@"introduction"];
+    }else if (indexPath.section == 2){
+        NSArray* com = [dic valueForKey:@"companyProducts"];
+        NSMutableString * msg = [[NSMutableString alloc]init];
+        for (int i = 0;i < com.count; i++) {
+            [msg appendFormat:@"%@,",[[com objectAtIndex:i] valueForKey:@"productName"]];
+        }
+
+        cell = [tableView dequeueReusableGeneralCell];
+        cell.labTitle.text =  msg;
+
+    }else if (indexPath.section == 3){
+        cell = [tableView dequeueReusableGeneralCell];
+        cell.labTitle.text =  [dic valueForKey:@"mainClients"];
     }
     cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
