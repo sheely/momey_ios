@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E06709F19607AF300E20195 /* SHTeamMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E06709E19607AF300E20195 /* SHTeamMemberCell.m */; };
+		9E0670A119607AFD00E20195 /* SHTeamMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0670A019607AFD00E20195 /* SHTeamMemberCell.xib */; };
 		9E0ECC05195A4ECA004A907F /* SHExecutorViewSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0ECC04195A4ECA004A907F /* SHExecutorViewSelectCell.m */; };
 		9E0ECC07195A4F1E004A907F /* SHExecutorViewSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC06195A4F1E004A907F /* SHExecutorViewSelectCell.xib */; };
 		9E0ECC09195A5205004A907F /* icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC08195A5205004A907F /* icon_selected.png */; };
@@ -272,6 +274,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E06709D19607AF300E20195 /* SHTeamMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTeamMemberCell.h; sourceTree = "<group>"; };
+		9E06709E19607AF300E20195 /* SHTeamMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTeamMemberCell.m; sourceTree = "<group>"; };
+		9E0670A019607AFD00E20195 /* SHTeamMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHTeamMemberCell.xib; sourceTree = "<group>"; };
 		9E0ECC03195A4ECA004A907F /* SHExecutorViewSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHExecutorViewSelectCell.h; sourceTree = "<group>"; };
 		9E0ECC04195A4ECA004A907F /* SHExecutorViewSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHExecutorViewSelectCell.m; sourceTree = "<group>"; };
 		9E0ECC06195A4F1E004A907F /* SHExecutorViewSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHExecutorViewSelectCell.xib; sourceTree = "<group>"; };
@@ -718,6 +723,9 @@
 				9E94D22F194C69D300D7F074 /* SHMyTeamTableViewCell.h */,
 				9E94D230194C69D300D7F074 /* SHMyTeamTableViewCell.m */,
 				9E94D22D194C69AA00D7F074 /* SHMyTeamTableViewCell.xib */,
+				9E06709D19607AF300E20195 /* SHTeamMemberCell.h */,
+				9E06709E19607AF300E20195 /* SHTeamMemberCell.m */,
+				9E0670A019607AFD00E20195 /* SHTeamMemberCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1672,6 +1680,7 @@
 				9E85226A1944743D001A17C5 /* login_icon_close@2x.png in Resources */,
 				9E8521E2193F9156001A17C5 /* button_green_mini@2x.png in Resources */,
 				9EA69D2A1938E7D50030C27F /* SHContentViewController.xib in Resources */,
+				9E0670A119607AFD00E20195 /* SHTeamMemberCell.xib in Resources */,
 				9E8521DF193F9156001A17C5 /* button_gray_mini.png in Resources */,
 				9E9EDD89194E146100123254 /* SHCalendarViewController.xib in Resources */,
 				9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */,
@@ -1821,6 +1830,7 @@
 				9EA69D7F1938E7D50030C27F /* SHView.m in Sources */,
 				9EA69D4D1938E7D50030C27F /* NTChartView.m in Sources */,
 				9EA69D831938E7D50030C27F /* WTStatusBar.m in Sources */,
+				9E06709F19607AF300E20195 /* SHTeamMemberCell.m in Sources */,
 				9E31380519477EF9002A3298 /* SHChatUserBaseInfoViewCell.m in Sources */,
 				9E0ECC13195C6663004A907F /* SHWebViewController.m in Sources */,
 				9E9EDD971951C83600123254 /* SHChatSearchViewController.m in Sources */,

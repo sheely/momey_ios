@@ -9,5 +9,8 @@
 #import "SHTableViewController.h"
 
 @interface SHTeamDetailViewController : SHTableViewController
+{
+    NSDictionary *dic;
+}
 
 @end

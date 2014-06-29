@@ -61,7 +61,7 @@
     }else{
         SHPostTaskM * post = [[SHPostTaskM alloc]init];
         post.URL = URL_FOR(@"queryCompany.do");
-        [post.postArgs setValue:@"" forKey:@"companyKey"];
+        [post.postArgs setValue:@"" forKey:@"companyCategoryKey"];
         [post.postArgs setValue:@"" forKey:@"companyName"];
         
         [post start:^(SHTask * t) {
@@ -119,6 +119,8 @@
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     if(isTeam){
         SHIntent * intent = [[SHIntent alloc]init:@"teamdetail" delegate:nil containner:self.navigationController];
+        [intent.args setValue: [dic valueForKey:@"teamId"] forKey:@"teamId"];
+
         [[UIApplication sharedApplication]open:intent];
     }else{
         SHIntent * intent = [[SHIntent alloc]init:@"companydetail" delegate:nil containner:self.navigationController];
