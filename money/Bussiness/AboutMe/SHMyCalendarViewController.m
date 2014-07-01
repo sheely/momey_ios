@@ -27,13 +27,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"我的日历";
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+    self.title = @"我的日历";//http://cjcapp.nat123.net:21414/myStruts1/ miQueryTasks.do
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryTasks.do");
+    [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"isOwnTask"];
+    NSString * user = [[NSUserDefaults standardUserDefaults] valueForKey:LOGIN_INFO];
+
+    [post.postArgs setValue:user forKey:@"queryedUserName"];
+    
+    [post start:^(SHTask * t) {
+        mIsEnd  = YES;
+        mList = [[(NSArray*)t.result valueForKey:@"tasks"] mutableCopy];
+        [self.tableView reloadData];
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [t.respinfo show];
+    }];
+
     // Do any additional setup after loading the view from its nib.
 }
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     SHMyCalendarViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHMyCalendarViewCell" owner:nil options:nil]objectAtIndex:0];
+    cell.labStartTime.text = [NSString stringWithFormat:@"%@ 至 %@",[dic valueForKey:@"startTime" ], [dic valueForKey:@"endTime" ]];
+    cell.labEndTime.text = [dic valueForKey:@"taskContent"];
     return cell;
 }
 
@@ -44,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return mList.count;
 }
 - (void)didReceiveMemoryWarning
 {

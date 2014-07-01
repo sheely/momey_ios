@@ -10,6 +10,8 @@
 
 @interface SHMyCalendarViewCell : SHTableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *btnEdit;
+@property (weak, nonatomic) IBOutlet UILabel *labStartTime;
+@property (weak, nonatomic) IBOutlet UILabel *labEndTime;
 - (IBAction)btnDelete:(id)sender;
 
 @end
