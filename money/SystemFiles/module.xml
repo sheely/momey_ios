@@ -54,6 +54,12 @@
     <module
     name="webbrowser"
     target="SHWebViewController" />
+    <module
+    name="userreport"
+    target="SHReportListViewController" />
+    <module
+    name="writereport"
+    target="SHReportViewController" />
 
 
 </root>

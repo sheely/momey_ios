@@ -78,7 +78,20 @@
 - (IBAction)btnExecuteOnTouch:(id)sender
 {
     SHIntent * intent = [[SHIntent alloc]init:@"executeinfo" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+
     [[UIApplication sharedApplication]open:intent];
 
+}
+
+- (IBAction)btnMarkOnTouch:(id)sender
+{
+    SHIntent * intent = [[SHIntent alloc]init:@"userreport" delegate:nil containner:self.navigationController];
+    //NSString* username =  [[NSUserDefaults standardUserDefaults] valueForKey:@"LOGIN_INFO"];
+    
+    [intent.args setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+    [[UIApplication sharedApplication]open:intent];
+
+    
 }
 @end

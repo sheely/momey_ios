@@ -95,6 +95,7 @@
         cell.btnState.hidden = NO;
         cell.btnMark.hidden = NO;
     }
+    [cell.btnMark addTarget:self action:@selector(btnMark:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnEmployee addTarget:self action:@selector(btnEmployee:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
@@ -115,7 +116,19 @@
     }
 
 }
+- (void)btnMark:(UIButton*)btn
+{
+    NSDictionary * dic = [mList objectAtIndex:btn.tag];
+    SHIntent * intent = [[SHIntent alloc]init:@"userreport" delegate:nil containner:self.navigationController];
+    if (type == 3) {
+        [intent.args setValue:[NSNumber numberWithInt:1] forKey:@"commenterType"];
+    }else{
+        [intent.args setValue:[NSNumber numberWithInt:2] forKey:@"commenterType"];
 
+    }
+    [intent.args setValue:[dic valueForKey:@"oppoId"] forKey:@"oppoId"];
+    [[UIApplication sharedApplication]open:intent];
+}
 - (void)btnState:(UIButton*)btn
 {
     SHPostTaskM * post = [[SHPostTaskM alloc]init];

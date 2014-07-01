@@ -34,7 +34,7 @@
     self.keybordheight = 70;
     self.txtLogin.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
 #ifdef DEBUG
-    self.txtLogin.text = @"admin";
+    self.txtLogin.text = @"zhangsan";
     self.txtPassword.text = @"123456";
 #endif
     
