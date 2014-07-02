@@ -35,7 +35,8 @@
     self.txtLogin.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
 #ifdef DEBUG
     self.txtLogin.text = @"zhangsan";
-    self.txtPassword.text = @"123456";
+    self.txtPassword.text = [[@"123456" md5Encrypt] lowercaseString];
+    //e10adc3949ba59abbe56e057f20f883e
 #endif
     
     // Do any additional setup after loading the view from its nib.
@@ -72,7 +73,7 @@
     post.URL = URL_FOR(@"milogin.do");
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
-        Entironment.instance.sessionid = [t.result valueForKey:@"sessionId"];
+        //Entironment.instance.sessionid = [t.result valueForKey:@"sessionId"];
         [[NSUserDefaults standardUserDefaults] setValue:self.txtLogin.text forKey:LOGIN_INFO];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];

@@ -96,6 +96,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="btnDelete" destination="Pth-XS-rCW" id="l0V-MA-lkA"/>
                 <outlet property="btnEdit" destination="jLU-qe-gR3" id="wLd-x7-r1J"/>
                 <outlet property="labEndTime" destination="ulp-uP-NMf" id="Bu0-bq-qdo"/>
                 <outlet property="labStartTime" destination="yTS-wK-ovU" id="IWP-uM-srd"/>

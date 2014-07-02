@@ -51,7 +51,32 @@
     SHMyCalendarViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHMyCalendarViewCell" owner:nil options:nil]objectAtIndex:0];
     cell.labStartTime.text = [NSString stringWithFormat:@"%@ 至 %@",[dic valueForKey:@"startTime" ], [dic valueForKey:@"endTime" ]];
     cell.labEndTime.text = [dic valueForKey:@"taskContent"];
+    cell.btnDelete.tag = indexPath.row;
+    cell.btnEdit.tag = indexPath.row;
+    [cell.btnDelete addTarget:self action:@selector(btnDelete:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.btnEdit addTarget:self action:@selector(btnEdit:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void)btnDelete:(UIButton*)btn
+{
+    NSDictionary * dic = [mList objectAtIndex:btn.tag];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryTasks.do");
+    [post.postArgs setValue:[dic valueForKey:@"taskId"] forKey:@"taskId"];
+    [post.postArgs setValue:[NSNumber numberWithInt:3] forKey:@"operationType"];
+    [post start:^(SHTask * t) {
+        [mList removeObjectAtIndex:btn.tag];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [t.respinfo show];
+    }];
+
+}
+
+- (void)btnEdit:(UIButton*)btn
+{
+    
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
