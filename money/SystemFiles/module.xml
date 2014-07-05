@@ -60,6 +60,9 @@
     <module
     name="writereport"
     target="SHReportViewController" />
-
+    
+    <module
+    name="editcalendar"
+    target="SHEditCalendarViewController" />
 
 </root>

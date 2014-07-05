@@ -13,7 +13,7 @@
 
 
 //测试站
-#define URL_HEADER @"http://wandejun1012.gicp.net/myStruts1"
+#define URL_HEADER @"http://112.124.22.156:18080/myStruts1"
 // 测试图片地址
  #define URL_BATA @ "http://192.168.1.200/api"
 

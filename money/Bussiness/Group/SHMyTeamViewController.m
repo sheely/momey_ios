@@ -27,7 +27,23 @@
 {
     [super viewDidLoad];
     self.title = @"我的团队";
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+    [self showWaitDialogForNetWork];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryTeam.do");
+    [post.postArgs setValue: [[NSUserDefaults standardUserDefaults] valueForKey:LOGIN_INFO] forKey:@"ownerUserName"];
+    [post.postArgs setValue:@"" forKey:@"teamName"];
+    [post.postArgs setValue:@"" forKey:@"memberUserName"];
+    [post start:^(SHTask * t) {
+        mIsEnd  = YES;
+        mList = [t.result valueForKey:@"teams"];
+        [self.tableView reloadData];
+        [self dismissWaitDialog];
+        
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [self dismissWaitDialog];
+        [t.respinfo show];
+    }];
+
 
     // Do any additional setup after loading the view from its nib.
 }
@@ -35,6 +51,13 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SHMyTeamTableViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHMyTeamTableViewCell" owner:nil options:nil] objectAtIndex:0];
+    NSDictionary * dic = [mList objectAtIndex:indexPath.row];
+    cell.labTitle.text = [dic valueForKey:@"teamName"];
+    if([[dic valueForKey:@"isCreatedByMe"] integerValue]){
+        cell.labContent.text = @"我参与的";
+    }else {
+        cell.labContent.text = @"我发起的";
+    }
     return cell;
 }
 
@@ -43,10 +66,7 @@
     return  44;
 }
 
-- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 5;
-}
+
 
 - (void)didReceiveMemoryWarning
 {

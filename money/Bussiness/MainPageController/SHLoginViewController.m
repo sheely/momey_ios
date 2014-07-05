@@ -35,7 +35,7 @@
     self.txtLogin.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
 #ifdef DEBUG
     self.txtLogin.text = @"zhangsan";
-    self.txtPassword.text = [[@"123456" md5Encrypt] lowercaseString];
+    self.txtPassword.text = @"123456" ;
     //e10adc3949ba59abbe56e057f20f883e
 #endif
     
@@ -68,7 +68,7 @@
     }
      [self showWaitDialogForNetWork];
     Entironment.instance.loginName = self.txtLogin.text;
-    Entironment.instance.password = self.txtPassword.text;
+    Entironment.instance.password = [[self.txtPassword.text md5Encrypt]lowercaseString];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"milogin.do");
     [post start:^(SHTask * t) {

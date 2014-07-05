@@ -20,11 +20,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [[SHMsgManager instance]connect:@"192.168.1.109" port:1984];
-        SHMsgM * msg = [[SHMsgM alloc]init];
-        msg.target  = @"login";
-        [msg.args setValue:@"xxx" forKey:@"user"];
-        [msg start:nil taskWillTry:nil taskDidFailed:nil];
+//        [[SHMsgManager instance]connect:@"192.168.1.109" port:1984];
+//        SHMsgM * msg = [[SHMsgM alloc]init];
+//        msg.target  = @"login";
+//        [msg.args setValue:@"xxx" forKey:@"user"];
+//        [msg start:nil taskWillTry:nil taskDidFailed:nil];
     }
     return self;
 }

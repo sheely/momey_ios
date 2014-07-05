@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     self.title = @"我的日历";//http://cjcapp.nat123.net:21414/myStruts1/ miQueryTasks.do
+    [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryTasks.do");
     [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"isOwnTask"];
@@ -39,12 +40,22 @@
         mIsEnd  = YES;
         mList = [[(NSArray*)t.result valueForKey:@"tasks"] mutableCopy];
         [self.tableView reloadData];
+        [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];
-    }];
+        [self dismissWaitDialog];
 
+    }];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"新增" target:self action:@selector(btnAdd:)];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)btnAdd:(UIButton*)btn
+{
+    SHIntent  *intent = [[SHIntent alloc]init:@"editcalendar" delegate:nil containner:self.navigationController];
+    [[UIApplication sharedApplication]open:intent];   
+}
+
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
@@ -62,7 +73,7 @@
 {
     NSDictionary * dic = [mList objectAtIndex:btn.tag];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
-    post.URL = URL_FOR(@"miQueryTasks.do");
+    post.URL = URL_FOR(@"miTaskMaintainance.do");
     [post.postArgs setValue:[dic valueForKey:@"taskId"] forKey:@"taskId"];
     [post.postArgs setValue:[NSNumber numberWithInt:3] forKey:@"operationType"];
     [post start:^(SHTask * t) {
@@ -76,6 +87,10 @@
 
 - (void)btnEdit:(UIButton*)btn
 {
+    SHIntent  *intent = [[SHIntent alloc]init:@"editcalendar" delegate:nil containner:self.navigationController];
+    NSDictionary * dic = [mList objectAtIndex:btn.tag];
+    [intent.args setValue:dic forKey:@"info"];
+    [[UIApplication sharedApplication]open:intent];
     
 }
 

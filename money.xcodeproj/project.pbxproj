@@ -13,6 +13,8 @@
 		9E0670AB1961D82500E20195 /* SHReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0670A91961D82500E20195 /* SHReportViewController.xib */; };
 		9E0670AF1961D89700E20195 /* SHReportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0670AD1961D89700E20195 /* SHReportListViewController.m */; };
 		9E0670B01961D89700E20195 /* SHReportListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0670AE1961D89700E20195 /* SHReportListViewController.xib */; };
+		9E0670B4196702C700E20195 /* SHEditCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0670B2196702C700E20195 /* SHEditCalendarViewController.m */; };
+		9E0670B5196702C700E20195 /* SHEditCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0670B3196702C700E20195 /* SHEditCalendarViewController.xib */; };
 		9E0ECC05195A4ECA004A907F /* SHExecutorViewSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0ECC04195A4ECA004A907F /* SHExecutorViewSelectCell.m */; };
 		9E0ECC07195A4F1E004A907F /* SHExecutorViewSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC06195A4F1E004A907F /* SHExecutorViewSelectCell.xib */; };
 		9E0ECC09195A5205004A907F /* icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC08195A5205004A907F /* icon_selected.png */; };
@@ -287,6 +289,9 @@
 		9E0670AC1961D89700E20195 /* SHReportListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHReportListViewController.h; sourceTree = "<group>"; };
 		9E0670AD1961D89700E20195 /* SHReportListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHReportListViewController.m; sourceTree = "<group>"; };
 		9E0670AE1961D89700E20195 /* SHReportListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHReportListViewController.xib; sourceTree = "<group>"; };
+		9E0670B1196702C700E20195 /* SHEditCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHEditCalendarViewController.h; sourceTree = "<group>"; };
+		9E0670B2196702C700E20195 /* SHEditCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHEditCalendarViewController.m; sourceTree = "<group>"; };
+		9E0670B3196702C700E20195 /* SHEditCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHEditCalendarViewController.xib; sourceTree = "<group>"; };
 		9E0ECC03195A4ECA004A907F /* SHExecutorViewSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHExecutorViewSelectCell.h; sourceTree = "<group>"; };
 		9E0ECC04195A4ECA004A907F /* SHExecutorViewSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHExecutorViewSelectCell.m; sourceTree = "<group>"; };
 		9E0ECC06195A4F1E004A907F /* SHExecutorViewSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHExecutorViewSelectCell.xib; sourceTree = "<group>"; };
@@ -1418,6 +1423,9 @@
 				9EDA5D2B194B66CA00471471 /* SHMyCalendarViewController.h */,
 				9EDA5D2C194B66CA00471471 /* SHMyCalendarViewController.m */,
 				9EDA5D2D194B66CA00471471 /* SHMyCalendarViewController.xib */,
+				9E0670B1196702C700E20195 /* SHEditCalendarViewController.h */,
+				9E0670B2196702C700E20195 /* SHEditCalendarViewController.m */,
+				9E0670B3196702C700E20195 /* SHEditCalendarViewController.xib */,
 			);
 			name = AboutMe;
 			path = money/Bussiness/AboutMe;
@@ -1717,6 +1725,7 @@
 				9EA69DA61938E7D50030C27F /* style.xml in Resources */,
 				9EDA5D35194B674400471471 /* SHMyCalendarViewCell.xib in Resources */,
 				9EA69D481938E7D50030C27F /* grayArrow.png in Resources */,
+				9E0670B5196702C700E20195 /* SHEditCalendarViewController.xib in Resources */,
 				9EA69D701938E7D50030C27F /* SHLoadingViewCell.xib in Resources */,
 				9E31380219477AC6002A3298 /* userphoto.png in Resources */,
 				9EA69D411938E7D50030C27F /* DSLCalendarDaySelection.png in Resources */,
@@ -1836,6 +1845,7 @@
 				9E85228B19461F25001A17C5 /* SHChatDetailViewController.m in Sources */,
 				9EA69D5E1938E7D50030C27F /* MMVectorImage.m in Sources */,
 				9EA69D861938E7D50030C27F /* SHTableHorizontalView.m in Sources */,
+				9E0670B4196702C700E20195 /* SHEditCalendarViewController.m in Sources */,
 				9EA69D5D1938E7D50030C27F /* MMRadialProgressView.m in Sources */,
 				9EA69D691938E7D50030C27F /* SHShowViewController.m in Sources */,
 				9EA69D771938E7D50030C27F /* SHTableViewTitleContentBottomCell.m in Sources */,
