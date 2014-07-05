@@ -66,7 +66,14 @@
     return  44;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary * dic = [mList objectAtIndex:indexPath.row];
+    SHIntent * intent = [[SHIntent alloc]init:@"teamdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue: [dic valueForKey:@"teamId"] forKey:@"teamId"];
+    
+    [[UIApplication sharedApplication]open:intent];
+}
 
 - (void)didReceiveMemoryWarning
 {
