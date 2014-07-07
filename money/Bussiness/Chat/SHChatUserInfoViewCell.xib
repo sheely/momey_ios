@@ -54,6 +54,8 @@
             <connections>
                 <outlet property="btnAddFavorate" destination="vPI-FE-pEH" id="85g-Z1-dSv"/>
                 <outlet property="btnSendChat" destination="B5e-az-gXL" id="6KS-uX-kHq"/>
+                <outlet property="imgView" destination="dRW-by-rfP" id="icN-x1-ZlX"/>
+                <outlet property="labUser" destination="Id9-je-hmE" id="gpY-1K-jvd"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -9,6 +9,8 @@
 #import "SHTableViewCell.h"
 
 @interface SHChatUserInfoViewCell : SHTableViewCell
+@property (weak, nonatomic) IBOutlet SHImageView *imgView;
+@property (weak, nonatomic) IBOutlet UILabel *labUser;
 @property (weak, nonatomic) IBOutlet UIButton *btnAddFavorate;
 @property (weak, nonatomic) IBOutlet UIButton *btnSendChat;
 

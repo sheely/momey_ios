@@ -8,7 +8,8 @@
 
 #import "SHCharUserDetailViewController.h"
 #import "SHChatPersonalExperienceViewCell.h"
-
+#import "SHChatUserInfoViewCell.h"
+#import "SHChatUserBaseInfoViewCell.h"
 
 @interface SHCharUserDetailViewController ()
 
@@ -88,6 +89,16 @@
 {
     [super viewDidLoad];
     self.title = @"基本资料";
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryFriendDetail.do");
+    [post.postArgs setValue:@"zhangsan" forKey:@"friendId"];
+    
+    [post start:^(SHTask * t) {
+        dic = t.result;
+        [self.tableView reloadData];
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [t.respinfo show];
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -113,11 +124,25 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
-        case 0:
-            return [[[NSBundle mainBundle]loadNibNamed:@"SHChatUserInfoViewCell" owner:nil options:nil] objectAtIndex:0];
+        case 0:{
+            SHChatUserInfoViewCell *cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatUserInfoViewCell" owner:nil options:nil] objectAtIndex:0];
+            cell.labUser.text = [dic valueForKey:@"friendName"];
+            [cell.imgView setUrl:[dic valueForKey:@"friendHeadIcon"]];
+            return  cell;
+        }
             break;
         case 1:
-            return [[[NSBundle mainBundle]loadNibNamed:@"SHChatUserBaseInfoViewCell" owner:nil options:nil] objectAtIndex:0];
+        {
+            SHChatUserBaseInfoViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatUserBaseInfoViewCell" owner:nil options:nil] objectAtIndex:0];
+            cell.labCompany.text = [dic valueForKey:@"companyName"];
+            cell.labMail.text = [dic valueForKey:@"friendMail"];
+            cell.labPosition.text = [dic valueForKey:@"friendTitle"];
+            cell.labSchool.text = [dic valueForKey:@"graduatedSchool"];
+            cell.labStanddard.text = [dic valueForKey:@"chargeStandard"];
+            cell.labPhone.text = [dic valueForKey:@"friendMobile"];
+            cell.labStudy.text = [dic valueForKey:@"maxAttainment"];
+            return cell;
+        }
             break;
         case 2:
         { SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];

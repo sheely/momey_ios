@@ -9,5 +9,7 @@
 #import "SHViewController.h"
 
 @interface SHCharUserDetailViewController : SHTableViewController
-
+{
+    NSDictionary * dic ;
+}
 @end

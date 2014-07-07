@@ -151,6 +151,15 @@
                     </view>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="labCompany" destination="lY5-x1-d1d" id="F2c-nE-Gyg"/>
+                <outlet property="labMail" destination="Bbj-AG-4Vx" id="z6x-6j-YLq"/>
+                <outlet property="labPhone" destination="VQc-39-Ali" id="Rm5-dk-pub"/>
+                <outlet property="labPosition" destination="q4y-kS-HQ1" id="1Wf-a8-KZa"/>
+                <outlet property="labSchool" destination="mDC-qf-b8b" id="7Ix-ZN-afd"/>
+                <outlet property="labStanddard" destination="522-eW-1fG" id="qnt-fl-EI3"/>
+                <outlet property="labStudy" destination="tRr-Bq-mpJ" id="GCd-pl-qEL"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

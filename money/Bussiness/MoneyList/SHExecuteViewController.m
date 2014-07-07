@@ -34,8 +34,7 @@
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
-    [post.postArgs setValue:@"executeInfoGuide" forKey:@"requestType"];
-    post.URL = URL_FOR(@"miExecuteInfoGuide.do");
+    post.URL = URL_FOR(@"queryexecuteinfodetail.do");
     [post start:^(SHTask *t) {
         [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
