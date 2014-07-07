@@ -28,7 +28,7 @@
 
 - (int)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 8;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -42,13 +42,48 @@
             
         case 2:
         {
-            CGSize size = [@"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(280, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
-            return  60 - 18 + size.height;
+            NSArray *a = [dic valueForKey:@"techonologyTitle"];
+            
+            NSMutableString * s = [[NSMutableString alloc]init];
+            for (int i = 0; i<a.count; i++) {
+                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+            }
+
+            CGSize size = [s sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(280, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
+            return  44 - 18 + size.height;
         }
-        break;
+        case 3:
+        {
+            NSArray *a = [dic valueForKey:@"personalExperience"];
+            
+            NSMutableString * s = [[NSMutableString alloc]init];
+            for (int i = 0; i<a.count; i++) {
+                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+            }
+            
+            CGSize size = [s sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(280, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
+            return  44 - 18 + size.height;
+        }
+            
+            break;
+        case 4:
+        {
+            NSArray *a = [dic valueForKey:@"personalClients"];
+            
+            NSMutableString * s = [[NSMutableString alloc]init];
+            for (int i = 0; i<a.count; i++) {
+                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+            }
+            
+            CGSize size = [s sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(280, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
+            return  44 - 18 + size.height;
+        }
+        
+            break;
+      
 
     };
-    return 0;
+    return 44;
     
 }
 
@@ -64,6 +99,7 @@
 {
     UILabel * lab =  [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 300, 30)];
     lab.userstyle = @"labminlight";
+    lab.backgroundColor = self.view.backgroundColor;
     switch (section) {
         case 0:
             
@@ -72,10 +108,25 @@
             lab.text = @"  基本资料";
             break;
         case 2:
-            lab.text = @"  个人技能";
-            
+            lab.text = @"  职称和职业资格";
             break;
         case 3:
+            lab.text = @"  任职经历";
+            break;
+
+        case 4:
+            lab.text = @"  服务客户";
+            
+            break;
+        case 5:
+            lab.text = @"  个人技能";
+            break;
+
+        case 6:
+            lab.text = @"  成功案例";
+            
+            break;
+        case 7:
             lab.text = @"  日历";
             
             break;
@@ -111,8 +162,28 @@
         case 1:
             return 1;
             break;
-        case 2:
-            return 2;
+        case 2:{
+            return 1;
+             break;
+        }case 3:{
+            return 1;
+             break;
+        }case 4:{
+            return 1;
+            break;
+        }case 5:{
+            NSArray *a = [dic valueForKey:@"personalSkills"];
+            return a.count;
+            break;
+        }case 6:{
+            NSArray *a = [dic valueForKey:@"successfulCases"];
+            return a.count;
+            break;
+        }case 7:{
+            NSArray *a = [dic valueForKey:@"myTasks"];
+            return a.count;
+            break;
+        }
             break;
         default:
             return 0;
@@ -145,11 +216,104 @@
         }
             break;
         case 2:
-        { SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];
-            cell.labContent.text = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            
+        {
+            //                       SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];
+            //cell.labContent.text = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            NSArray *a = [dic valueForKey:@"techonologyTitle"];
+            
+            NSMutableString * s = [[NSMutableString alloc]init];
+            for (int i = 0; i<a.count; i++) {
+                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+            }
+            SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.labTitle.text = s;
             return cell;
         }
             break;
+        case 3:
+            
+        {
+            //                       SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];
+            //cell.labContent.text = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            NSArray *a = [dic valueForKey:@"personalExperience"];
+            
+            NSMutableString * s = [[NSMutableString alloc]init];
+            for (int i = 0; i<a.count; i++) {
+                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+            }
+            SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.labTitle.text = s;
+            return cell;
+        }
+            
+            break;
+        case 4:
+            
+        {
+            //                       SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];
+            //cell.labContent.text = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            NSArray *a = [dic valueForKey:@"personalClients"];
+            
+            NSMutableString * s = [[NSMutableString alloc]init];
+            for (int i = 0; i<a.count; i++) {
+                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+            }
+            SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.labTitle.text = s;
+            return cell;
+        }
+            
+            break;
+        case 5:
+            
+        {
+            //                       SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];
+            //cell.labContent.text = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            NSArray *a = [dic valueForKey:@"personalSkills"];
+
+            SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
+            cell.labTitle.text = [[a objectAtIndex:indexPath.row] valueForKey:@"skillTitle"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            return cell;
+        }
+            
+            break;
+        case 6:
+            
+        {
+            //                       SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];
+            //cell.labContent.text = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            NSArray *a = [dic valueForKey:@"successfulCases"];
+            
+            SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
+            cell.labTitle.text = [[a objectAtIndex:indexPath.row] valueForKey:@"caseTitle"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            return cell;
+        }
+            
+            break;
+        case 7:
+            
+        {
+            //                       SHChatPersonalExperienceViewCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHChatPersonalExperienceViewCell" owner:nil options:nil] objectAtIndex:0];
+            //cell.labContent.text = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            NSArray *a = [dic valueForKey:@"myTasks"];
+            
+            SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
+            NSString * s = [[a objectAtIndex:indexPath.row] valueForKey:@"startTime"];
+            NSString * e = [[a objectAtIndex:indexPath.row] valueForKey:@"endTime"];
+            NSString * u = [[a objectAtIndex:indexPath.row] valueForKey:@"taskStatus"];
+            cell.labTitle.text = [[NSString alloc]initWithFormat:@"%@ 至 %@ [%@]",s,e,u];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            return cell;
+        }
+            
+            break;
+            
         default:
             break;
     }
