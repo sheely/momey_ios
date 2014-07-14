@@ -34,7 +34,7 @@
     self.keybordheight = 70;
     self.txtLogin.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
 #ifdef DEBUG
-    self.txtLogin.text = @"zhangsan";
+    self.txtLogin.text = @"admin";
     self.txtPassword.text = @"123456" ;
     //e10adc3949ba59abbe56e057f20f883e
 #endif
@@ -70,6 +70,7 @@
     Entironment.instance.loginName = self.txtLogin.text;
     Entironment.instance.password = [[self.txtPassword.text md5Encrypt]lowercaseString];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    [post.postArgs setValue:@"" forKey:@"appUuid"];
     post.URL = URL_FOR(@"milogin.do");
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
@@ -80,7 +81,7 @@
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
         
         [self dismissWaitDialog];
-        [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
+//        [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
 
         [t.respinfo show];
         

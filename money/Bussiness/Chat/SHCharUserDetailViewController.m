@@ -46,7 +46,7 @@
             
             NSMutableString * s = [[NSMutableString alloc]init];
             for (int i = 0; i<a.count; i++) {
-                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+                [s appendFormat:@"%@\n",[[a objectAtIndex:i] valueForKey:@"techonologyName"]];
             }
 
             CGSize size = [s sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(280, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
@@ -58,7 +58,7 @@
             
             NSMutableString * s = [[NSMutableString alloc]init];
             for (int i = 0; i<a.count; i++) {
-                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+                [s appendFormat:@"%@\n",[[a objectAtIndex:i] valueForKey:@"experienceName"]];
             }
             
             CGSize size = [s sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(280, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
@@ -72,7 +72,7 @@
             
             NSMutableString * s = [[NSMutableString alloc]init];
             for (int i = 0; i<a.count; i++) {
-                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+                [s appendFormat:@"%@\n",[[a objectAtIndex:i] valueForKey:@"clientName"]];
             }
             
             CGSize size = [s sizeWithFont:[NVSkin.instance fontOfStyle:@"FontScaleMid"] constrainedToSize:CGSizeMake(280, 99999) lineBreakMode:NSLineBreakByTruncatingTail];
@@ -142,7 +142,7 @@
     self.title = @"基本资料";
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryFriendDetail.do");
-    [post.postArgs setValue:@"zhangsan" forKey:@"friendId"];
+    [post.postArgs setValue:[self.intent.args valueForKey:@"friendId"] forKey:@"friendId"];
     
     [post start:^(SHTask * t) {
         dic = t.result;
@@ -224,7 +224,7 @@
             
             NSMutableString * s = [[NSMutableString alloc]init];
             for (int i = 0; i<a.count; i++) {
-                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+                [s appendFormat:@"%@\n",[[a objectAtIndex:i] valueForKey:@"techonologyName"]];
             }
             SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
             cell.accessoryType = UITableViewCellAccessoryNone;
@@ -241,7 +241,7 @@
             
             NSMutableString * s = [[NSMutableString alloc]init];
             for (int i = 0; i<a.count; i++) {
-                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+                [s appendFormat:@"%@\n",[[a objectAtIndex:i]valueForKey:@"experienceName" ]];
             }
             SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
             cell.accessoryType = UITableViewCellAccessoryNone;
@@ -259,7 +259,7 @@
             
             NSMutableString * s = [[NSMutableString alloc]init];
             for (int i = 0; i<a.count; i++) {
-                [s appendFormat:@"%@\n",[a objectAtIndex:i]];
+                [s appendFormat:@"%@\n",[[a objectAtIndex:i] valueForKey:@"clientName"]];
             }
             SHTableViewGeneralCell * cell  = [tableView dequeueReusableGeneralCell];
             cell.accessoryType = UITableViewCellAccessoryNone;
@@ -308,7 +308,7 @@
             NSString * e = [[a objectAtIndex:indexPath.row] valueForKey:@"endTime"];
             NSString * u = [[a objectAtIndex:indexPath.row] valueForKey:@"taskStatus"];
             cell.labTitle.text = [[NSString alloc]initWithFormat:@"%@ 至 %@ [%@]",s,e,u];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.accessoryType = UITableViewCellAccessoryNone;
             return cell;
         }
             
@@ -319,7 +319,50 @@
     }
     return nil;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 5) {
+        NSString *title = [[[dic valueForKey:@"personalSkills"] objectAtIndex:indexPath.row] valueForKey:@"skillTitle"];
+        NSString *skillId =[[[dic valueForKey:@"personalSkills"] objectAtIndex:indexPath.row] valueForKey:@"skillId"];
+        
+        SHPostTaskM * post = [[SHPostTaskM alloc]init];
+        post.URL = URL_FOR(@"miQuerySkillCaseDetail.do");
+        [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"itemType"];
+        [post.postArgs setValue:skillId forKey:@"itemId"];
+        
+        [post start:^(SHTask *t) {
+            SHIntent * intent = [[SHIntent alloc]init:@"webview" delegate:nil containner:self.navigationController];
+            [intent.args setValue:title forKey:@"title"];
+            [intent.args setValue:[t.result valueForKey:@"itemContent"] forKey:@"html"];
+            [[UIApplication sharedApplication]open:intent];
+            
+        } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+            [t.respinfo show];
+        }];
+        
+    }else  if (indexPath.section == 6) {
+        NSString *title = [[[dic valueForKey:@"successfulCases"] objectAtIndex:indexPath.row] valueForKey:@"caseTitle"];
+        NSString *skillId =[[[dic valueForKey:@"successfulCases"] objectAtIndex:indexPath.row] valueForKey:@"caseId"];
+        
+        SHPostTaskM * post = [[SHPostTaskM alloc]init];
+        post.URL = URL_FOR(@"miQuerySkillCaseDetail.do");
+        [post.postArgs setValue:[NSNumber numberWithInt:2] forKey:@"itemType"];
+        [post.postArgs setValue:skillId forKey:@"itemId"];
+        
+        [post start:^(SHTask *t) {
+            SHIntent * intent = [[SHIntent alloc]init:@"webview" delegate:nil containner:self.navigationController];
+            [intent.args setValue:title forKey:@"title"];
+            [intent.args setValue:[t.result valueForKey:@"itemContent"] forKey:@"html"];
+            [[UIApplication sharedApplication]open:intent];
+            
+        } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+            [t.respinfo show];
+        }];
+        
+    }
 
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

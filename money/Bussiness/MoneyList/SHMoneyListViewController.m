@@ -30,7 +30,10 @@
     self.title = @"财信";
    // mList = [@[@"",@"",@"",@"",@""] mutableCopy];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:@selector(btnSearch:)];
-    
+    oppoType = @"";
+    bossName = @"";
+    oppoTitle = @"";
+    type = 99;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -39,8 +42,10 @@
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryOppoList.do");
     [post.postArgs setValue:[NSNumber numberWithInt:type] forKey:@"statusWithMe"];
-    [post.postArgs setValue:@"" forKey:@"oppoType"];
-    
+    [post.postArgs setValue:oppoType forKey:@"oppoType"];
+    [post.postArgs setValue:bossName forKey:@"bossName"];
+    [post.postArgs setValue:oppoTitle forKey:@"oppoTitle"];
+
     [post start:^(SHTask * t) {
         mIsEnd  = YES;
         mList = [t.result valueForKey:@"opportunies"];
@@ -54,6 +59,15 @@
 {
     SHIntent * indent = [[SHIntent alloc]init:@"searchcondition" delegate:self containner:self.navigationController];
     [[UIApplication sharedApplication]open:indent];
+}
+
+- (void) moneysearchviewcontrollerDidSubmit:(SHMoneySearchViewController*)obj type:(NSDictionary*)type_ boss:(NSString*)boss title:(NSString*)title
+{
+
+    bossName = boss;
+    oppoTitle = title;
+    oppoType = [type_ valueForKey:@"key"];
+    [self reSet];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -171,6 +185,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(mList.count == 0){
+        return;
+    }
     SHIntent * intent = [[SHIntent alloc]init:@"moneydetail" delegate:nil containner:self.navigationController];
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     [intent.args setValue:[dic valueForKey:@"oppoId"] forKey:@"oppoId"];

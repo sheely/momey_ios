@@ -28,9 +28,11 @@
     [super viewDidLoad];
     if([[self.intent.args valueForKey:@"url"] length] > 0 ){
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.intent.args valueForKey:@"url"]]]];
-        self.title = [self.intent.args valueForKey:@"title"];
+    }else if([self.intent.args valueForKey:@"html"]){
+        [self.webView loadHTMLString:[self.intent.args valueForKey:@"html"] baseURL:nil];
     }
-    
+    self.title = [self.intent.args valueForKey:@"title"];
+
     // Do any additional setup after loading the view from its nib.
 }
 

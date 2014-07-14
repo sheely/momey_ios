@@ -62,7 +62,7 @@
 - (IBAction)btnSeeOnTouch:(id)sender
 {
     SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
-    [intent.args setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+    [intent.args setValue:[dic valueForKey:@"oppoPublisherId"] forKey:@"friendId"];
 
     [[UIApplication sharedApplication]open:intent];
 }

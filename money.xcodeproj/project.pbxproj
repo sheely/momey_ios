@@ -98,6 +98,10 @@
 		9E94D231194C69D300D7F074 /* SHMyTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E94D230194C69D300D7F074 /* SHMyTeamTableViewCell.m */; };
 		9E94D235194CA81A00D7F074 /* SHMoneyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */; };
 		9E94D236194CA81A00D7F074 /* SHMoneyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */; };
+		9E983FBB1972D21200EA3E1B /* SHMyFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E983FB91972D21200EA3E1B /* SHMyFollowViewController.m */; };
+		9E983FBC1972D21200EA3E1B /* SHMyFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E983FBA1972D21200EA3E1B /* SHMyFollowViewController.xib */; };
+		9E983FBF1972D30800EA3E1B /* SHMyFollowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E983FBE1972D30800EA3E1B /* SHMyFollowViewCell.m */; };
+		9E983FC11972D31600EA3E1B /* SHMyFollowViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E983FC01972D31600EA3E1B /* SHMyFollowViewCell.xib */; };
 		9E9EDD7D194DF7DC00123254 /* SHAttachmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD7B194DF7DC00123254 /* SHAttachmentViewController.m */; };
 		9E9EDD7E194DF7DC00123254 /* SHAttachmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD7C194DF7DC00123254 /* SHAttachmentViewController.xib */; };
 		9E9EDD82194E0A8E00123254 /* SHExecuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD80194E0A8E00123254 /* SHExecuteViewController.m */; };
@@ -393,6 +397,12 @@
 		9E94D232194CA81A00D7F074 /* SHMoneyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoneyDetailViewController.h; sourceTree = "<group>"; };
 		9E94D233194CA81A00D7F074 /* SHMoneyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoneyDetailViewController.m; sourceTree = "<group>"; };
 		9E94D234194CA81A00D7F074 /* SHMoneyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMoneyDetailViewController.xib; sourceTree = "<group>"; };
+		9E983FB81972D21200EA3E1B /* SHMyFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyFollowViewController.h; sourceTree = "<group>"; };
+		9E983FB91972D21200EA3E1B /* SHMyFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyFollowViewController.m; sourceTree = "<group>"; };
+		9E983FBA1972D21200EA3E1B /* SHMyFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyFollowViewController.xib; sourceTree = "<group>"; };
+		9E983FBD1972D30800EA3E1B /* SHMyFollowViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyFollowViewCell.h; sourceTree = "<group>"; };
+		9E983FBE1972D30800EA3E1B /* SHMyFollowViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyFollowViewCell.m; sourceTree = "<group>"; };
+		9E983FC01972D31600EA3E1B /* SHMyFollowViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyFollowViewCell.xib; sourceTree = "<group>"; };
 		9E9EDD7A194DF7DC00123254 /* SHAttachmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAttachmentViewController.h; sourceTree = "<group>"; };
 		9E9EDD7B194DF7DC00123254 /* SHAttachmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAttachmentViewController.m; sourceTree = "<group>"; };
 		9E9EDD7C194DF7DC00123254 /* SHAttachmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHAttachmentViewController.xib; sourceTree = "<group>"; };
@@ -1426,6 +1436,9 @@
 				9E0670B1196702C700E20195 /* SHEditCalendarViewController.h */,
 				9E0670B2196702C700E20195 /* SHEditCalendarViewController.m */,
 				9E0670B3196702C700E20195 /* SHEditCalendarViewController.xib */,
+				9E983FB81972D21200EA3E1B /* SHMyFollowViewController.h */,
+				9E983FB91972D21200EA3E1B /* SHMyFollowViewController.m */,
+				9E983FBA1972D21200EA3E1B /* SHMyFollowViewController.xib */,
 			);
 			name = AboutMe;
 			path = money/Bussiness/AboutMe;
@@ -1538,6 +1551,9 @@
 				9EDA5D31194B673600471471 /* SHMyCalendarViewCell.h */,
 				9EDA5D32194B673600471471 /* SHMyCalendarViewCell.m */,
 				9EDA5D34194B674400471471 /* SHMyCalendarViewCell.xib */,
+				9E983FBD1972D30800EA3E1B /* SHMyFollowViewCell.h */,
+				9E983FBE1972D30800EA3E1B /* SHMyFollowViewCell.m */,
+				9E983FC01972D31600EA3E1B /* SHMyFollowViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1639,6 +1655,7 @@
 				9E8521E0193F9156001A17C5 /* button_gray_mini@2x.png in Resources */,
 				9EA69D471938E7D50030C27F /* blueArrow@2x.png in Resources */,
 				9E9EDD7E194DF7DC00123254 /* SHAttachmentViewController.xib in Resources */,
+				9E983FBC1972D21200EA3E1B /* SHMyFollowViewController.xib in Resources */,
 				9E8521E9193F93E7001A17C5 /* SHCompanyDetailViewController.xib in Resources */,
 				9E8522721944743D001A17C5 /* navi_icon_friend_rest@2x.png in Resources */,
 				9E8522671944743D001A17C5 /* Btn_green_press@2x.png in Resources */,
@@ -1735,6 +1752,7 @@
 				9E94D22E194C69AA00D7F074 /* SHMyTeamTableViewCell.xib in Resources */,
 				9E8521DC193F9156001A17C5 /* a.png in Resources */,
 				9EA69D7C1938E7D50030C27F /* SHTableViewTitleImageCell.xib in Resources */,
+				9E983FC11972D31600EA3E1B /* SHMyFollowViewCell.xib in Resources */,
 				9E9EDD9D1951D36100123254 /* SHChatSearchListViewController.xib in Resources */,
 				9E31360E19462719002A3298 /* button_red_mini@2x.png in Resources */,
 				9EA69D891938E7D50030C27F /* SHTitleContentViewController.xib in Resources */,
@@ -1840,6 +1858,7 @@
 				9EA69D731938E7D50030C27F /* SHTableViewEditGeneralCell.m in Sources */,
 				9EA69D5F1938E7D50030C27F /* SHSelectionViewController.m in Sources */,
 				9EA69D941938E7D50030C27F /* DebugView.m in Sources */,
+				9E983FBB1972D21200EA3E1B /* SHMyFollowViewController.m in Sources */,
 				9E3137FA19470378002A3298 /* SHCharUserDetailViewController.m in Sources */,
 				9EA69D9F1938E7D50030C27F /* UIApplicationAddtion.m in Sources */,
 				9E85228B19461F25001A17C5 /* SHChatDetailViewController.m in Sources */,
@@ -1851,6 +1870,7 @@
 				9EA69D771938E7D50030C27F /* SHTableViewTitleContentBottomCell.m in Sources */,
 				9EA69D901938E7D50030C27F /* VRGCalendarView.m in Sources */,
 				9EDC7F7A193E951800B1019B /* SHMoneyListViewCell.m in Sources */,
+				9E983FBF1972D30800EA3E1B /* SHMyFollowViewCell.m in Sources */,
 				9E9EDD88194E146100123254 /* SHCalendarViewController.m in Sources */,
 				9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */,
 				9E8521E8193F93E7001A17C5 /* SHCompanyDetailViewController.m in Sources */,

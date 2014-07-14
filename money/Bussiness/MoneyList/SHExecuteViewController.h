@@ -19,6 +19,7 @@
     __weak IBOutlet UITextField *txtBudge;
     __weak IBOutlet UITextField *txtMark;
     UIButton * mButton;
+    NSDictionary * dic ;
 }
 - (IBAction)btnSeeOnTouch:(id)sender;
 - (IBAction)btnCalendarOnTouch:(id)sender;

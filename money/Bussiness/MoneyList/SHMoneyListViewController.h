@@ -7,10 +7,15 @@
 //
 
 #import "SHViewController.h"
+#import "SHMoneySearchViewController.h"
 
-@interface SHMoneyListViewController : SHTableViewController
+@interface SHMoneyListViewController : SHTableViewController<SHMoneySearchViewControllerDelegate>
 {
     int type;
+    NSString * oppoType;
+    NSString * bossName;
+    NSString * oppoTitle;
+    
 }
 @property (weak, nonatomic) IBOutlet UIButton *btnAll;
 @property (weak, nonatomic) IBOutlet UIButton *btnParticipate;

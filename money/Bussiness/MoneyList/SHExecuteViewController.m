@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     self.title = @"执行信息";
-    if([[self.intent.args valueForKey:@"type"] caseInsensitiveCompare:@"self"] == NSOrderedSame){
+    if([[self.intent.args valueForKey:@"type"] length ] > 0 &&  [[self.intent.args valueForKey:@"type"] caseInsensitiveCompare:@"self"] == NSOrderedSame){
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"提交" target:self action:@selector(btnSubmit:)];
         labExecuter.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
     }
@@ -36,8 +36,16 @@
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
     post.URL = URL_FOR(@"queryexecuteinfodetail.do");
     [post start:^(SHTask *t) {
+        dic = t.result;
+        labExecuter.text = [dic valueForKey:@"oppoPublisherId"];
+        txtPlace.text = [dic valueForKey:@"executePlace"];
+        txtMark.text = [dic valueForKey:@"remark"];
+        [btnStart setTitle:[dic valueForKey:@"startTime"] forState:UIControlStateNormal];
+        txtBudge.text = [dic valueForKey:@"budget"];
+        
         [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+        [t.respinfo show];
         [self dismissWaitDialog];
     }];
     calendarcontroller = [[SHCalendarViewController alloc]init];
@@ -93,6 +101,7 @@
 - (IBAction)btnSeeOnTouch:(id)sender
 {
     SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[dic valueForKey:@"oppoPublisherId"] forKey:@"friendId"];
     [[UIApplication sharedApplication]open:intent];
 }
 

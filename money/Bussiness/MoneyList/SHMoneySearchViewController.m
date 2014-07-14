@@ -49,16 +49,23 @@
 - (IBAction)btnTypeOnTouch:(id)sender {
     NSMutableArray * array = [[NSMutableArray alloc]init];
     for (int i =0 ; i< mList.count; i++) {
-        KxMenuItem* item = [[KxMenuItem alloc] init];
-        item.title = [[mList objectAtIndex:i] valueForKey:@"value"];
+        KxMenuItem* item = [KxMenuItem menuItem: [[mList objectAtIndex:i] valueForKey:@"value"] image:nil target:self action:@selector(btnKxMenuOnTouch:)];
+        item.tag = i;
         [array addObject:item];
     }
     [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnType.frame fromView:self.btnType] menuItems:array];
 }
+
+- (void)btnKxMenuOnTouch:(KxMenuItem*) item{
+    [self.btnType setTitle:item.title forState:UIControlStateNormal];
+    dictype =[mList objectAtIndex:item.tag];
+}
+
 - (IBAction)btnSearchOnTouch:(id)sender
 {
-    if(self.delegate && [self.delegate respondsToSelector:@selector(moneysearchviewcontrollerDidSubmit:)]){
-        [self.delegate moneysearchviewcontrollerDidSubmit:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(moneysearchviewcontrollerDidSubmit:type:boss:title:)]){
+        [self.delegate moneysearchviewcontrollerDidSubmit:self type:dictype boss:self.txtBoss.text title:self.txtTitle.text];
     }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

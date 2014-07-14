@@ -64,5 +64,11 @@
     <module
     name="editcalendar"
     target="SHEditCalendarViewController" />
+    <module
+    name="webview"
+    target="SHWebViewController" />
+    <module
+    name="myfollow"
+    target="SHMyFollowViewController" />
 
 </root>
