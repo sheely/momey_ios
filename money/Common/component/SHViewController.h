@@ -13,7 +13,17 @@
 @interface SHViewController : UIViewController<ISHSkin>
 {
     CGRect mRectkeybordview;
+   
+    
 }
+
+/**
+ left right sider
+ **/
+@property (nonatomic,strong) IBOutlet UIView * contentView;//
+@property (nonatomic,strong) IBOutlet UIView * leftView;
+@property (nonatomic,strong) IBOutlet UIView * rightView;
+
 
 @property (nonatomic,strong) UIView * keybordView;
 
@@ -56,4 +66,10 @@
 - (void)dismiss;
 
 - (void)btnBack:(NSObject*)sender;
+
+- (void)leftItemClick;
+
+- (void)rightItemClick;
+
+- (void)closeSideBar;
 @end

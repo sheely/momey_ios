@@ -9,9 +9,33 @@
 #import "SHViewController.h"
 
 #import "MMProgressHUD.h"
+
+
+
+typedef NS_ENUM(NSInteger, RMoveDirection) {
+    RMoveDirectionLeft = 0,
+    RMoveDirectionRight
+};
+
+
 @interface SHViewController ()<UIAlertViewDelegate>
 {
     BOOL mIsShowKeyboard;
+    UIAlertView * alert;
+    
+    
+    float  _LeftSContentOffset;
+    float _RightSContentOffset;
+    float _LeftSContentScale;
+    float _RightSContentScale;
+    float _LeftSJudgeOffset;
+    float _RightSJudgeOffset;
+    float _LeftSOpenDuration;
+    float _RightSOpenDuration;
+    float _LeftSCloseDuration;
+    float _RightSCloseDuration;
+    UITapGestureRecognizer* _tapGestureRec ;
+    UIPanGestureRecognizer* _panGestureRec;
 }
 @end
 
@@ -59,10 +83,184 @@
     }
     [self loadSkin];
     
-   
-    
+    _LeftSContentOffset=240;
+    _RightSContentOffset=160;
+    _LeftSContentScale=0.85;
+    _RightSContentScale=0.85;
+    _LeftSJudgeOffset=100;
+    _RightSJudgeOffset=100;
+    _LeftSOpenDuration=0.4;
+    _RightSOpenDuration=0.4;
+    _LeftSCloseDuration=0.3;
+    _RightSCloseDuration=0.3;
+    if(self.contentView){
+        [self.view addSubview:self.contentView];
+        _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSideBar)];
+        _tapGestureRec.delegate = self;
+        [self.contentView addGestureRecognizer:_tapGestureRec];
+        _tapGestureRec.enabled = NO;
+        
+        _panGestureRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGesture:)];
+        [self.view addGestureRecognizer:_panGestureRec];
+        
+    }
     //NVSkin * skin = [[NVSkin alloc]init];
 }
+
+- (void)moveViewWithGesture:(UIPanGestureRecognizer *)panGes
+{
+    static CGFloat currentTranslateX;
+    if (panGes.state == UIGestureRecognizerStateBegan){
+        currentTranslateX = self.contentView.transform.tx;
+    }
+    if (panGes.state == UIGestureRecognizerStateChanged){
+        CGFloat transX = [panGes translationInView:self.contentView].x;
+        transX = transX + currentTranslateX;
+        CGFloat sca;
+        if (transX > 0){
+            [self.view sendSubviewToBack:self.rightView];
+            [self configureViewShadowWithDirection:RMoveDirectionRight];
+            
+            if (self.contentView.frame.origin.x < _LeftSContentOffset){
+                sca = 1 - (self.contentView.frame.origin.x/_LeftSContentOffset) * (1-_LeftSContentScale);
+            }
+            else{
+                sca = _LeftSContentScale;
+            }
+        }else {   //transX < 0
+            [self.view sendSubviewToBack:self.leftView];
+            [self configureViewShadowWithDirection:RMoveDirectionLeft];
+            
+            if (self.contentView.frame.origin.x > -_RightSContentOffset){
+                sca = 1 - (-self.contentView.frame.origin.x/_RightSContentOffset) * (1-_RightSContentScale);
+            }
+            else{
+                sca = _RightSContentScale;
+            }
+        }
+        CGAffineTransform transS = CGAffineTransformMakeScale(1.0, sca);
+        CGAffineTransform transT = CGAffineTransformMakeTranslation(transX, 0);
+        
+        CGAffineTransform conT = CGAffineTransformConcat(transT, transS);
+        
+        self.contentView.transform = conT;
+    }else if (panGes.state == UIGestureRecognizerStateEnded){
+        CGFloat panX = [panGes translationInView:self.contentView].x;
+        CGFloat finalX = currentTranslateX + panX;
+        if (finalX > _LeftSJudgeOffset){
+            CGAffineTransform conT = [self transformWithDirection:RMoveDirectionRight];
+            [UIView beginAnimations:nil context:nil];
+            self.contentView.transform = conT;
+            [UIView commitAnimations];
+            
+            _tapGestureRec.enabled = YES;
+            return;
+        }
+        if (finalX < -_RightSJudgeOffset){
+            CGAffineTransform conT = [self transformWithDirection:RMoveDirectionLeft];
+            [UIView beginAnimations:nil context:nil];
+            self.contentView.transform = conT;
+            [UIView commitAnimations];
+            
+            _tapGestureRec.enabled = YES;
+            return;
+        }else{
+            CGAffineTransform oriT = CGAffineTransformIdentity;
+            [UIView beginAnimations:nil context:nil];
+            self.contentView.transform = oriT;
+            [UIView commitAnimations];
+            
+            _tapGestureRec.enabled = NO;
+        }
+    }
+}
+
+- (void)rightItemClick
+{
+    CGAffineTransform conT = [self transformWithDirection:RMoveDirectionLeft];
+    
+    [self.view insertSubview:self.rightView belowSubview:self.contentView];
+    [self configureViewShadowWithDirection:RMoveDirectionLeft];
+    
+    [UIView animateWithDuration:_RightSOpenDuration
+                     animations:^{
+                         self.contentView.transform = conT;
+                     }
+                     completion:^(BOOL finished) {
+                         _tapGestureRec.enabled = YES;
+                     }];
+}
+- (void)leftItemClick{
+    CGAffineTransform conT = [self transformWithDirection:RMoveDirectionRight];
+    
+    
+    [self configureViewShadowWithDirection:RMoveDirectionRight];
+    [self.view insertSubview:self.leftView belowSubview:self.contentView];
+    [UIView animateWithDuration:_LeftSOpenDuration
+                     animations:^{
+                         self.contentView.transform = conT;
+                     }
+                     completion:^(BOOL finished) {
+                            _tapGestureRec.enabled = YES;
+                     }];
+}
+
+- (CGAffineTransform)transformWithDirection:(RMoveDirection)direction
+{
+    CGFloat translateX = 0;
+    CGFloat transcale = 0;
+    switch (direction) {
+        case RMoveDirectionLeft:
+            translateX = -_RightSContentOffset;
+            transcale = _RightSContentScale;
+            break;
+        case RMoveDirectionRight:
+            translateX = _LeftSContentOffset;
+            transcale = _LeftSContentScale;
+            break;
+        default:
+            break;
+    }
+    
+    CGAffineTransform transT = CGAffineTransformMakeTranslation(translateX, 0);
+    CGAffineTransform scaleT = CGAffineTransformMakeScale(1.0, transcale);
+    CGAffineTransform conT = CGAffineTransformConcat(transT, scaleT);
+    
+    return conT;
+}
+
+- (void)configureViewShadowWithDirection:(RMoveDirection)direction
+{
+    CGFloat shadowW;
+    switch (direction)
+    {
+        case RMoveDirectionLeft:
+            shadowW = 2.0f;
+            break;
+        case RMoveDirectionRight:
+            shadowW = -2.0f;
+            break;
+        default:
+            break;
+    }
+    
+    self.contentView.layer.shadowOffset = CGSizeMake(shadowW, 1.0);
+    self.contentView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.contentView.layer.shadowOpacity = 0.8f;
+}
+
+- (void)closeSideBar
+{
+    CGAffineTransform oriT = CGAffineTransformIdentity;
+    [UIView animateWithDuration:self.view.transform.tx==_LeftSContentOffset?_LeftSCloseDuration:_RightSCloseDuration
+                     animations:^{
+                         self.contentView.transform = oriT;
+                     }
+                     completion:^(BOOL finished) {
+                         _tapGestureRec.enabled = NO;
+                     }];
+}
+
 
 - (void)btnBack:(NSObject*)sender
 {
@@ -87,11 +285,15 @@
 
 - (void)showAlertDialog:(NSString*)content
 {
-    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:content delegate: self cancelButtonTitle:(NSString *) @"确认"  otherButtonTitles: nil];
+    alert = [[UIAlertView alloc]initWithTitle:@"提示" message:content delegate: self cancelButtonTitle:(NSString *) @"确认"  otherButtonTitles: nil];
     alert.delegate = self;
     [alert show];
 }
 
+- (void)dealloc
+{
+    alert.delegate = nil;
+}
 
 - (void)showAlertDialogForCancel:(NSString*)content
 {
@@ -111,10 +313,10 @@
 
 - (void)showAlertDialog:(NSString*)content button:(NSString*)button otherButton:(NSString*)otherbutton tag:(int)tag
 {
-    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:content delegate:self cancelButtonTitle: otherbutton otherButtonTitles :button, nil];
-    alert.delegate = self;
-    alert.tag = tag;
-    [alert show];
+    UIAlertView * alert2 = [[UIAlertView alloc]initWithTitle:@"提示" message:content delegate:self cancelButtonTitle: otherbutton otherButtonTitles :button, nil];
+    alert2.delegate = self;
+    alert2.tag = tag;
+    [alert2 show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -296,4 +498,8 @@
     [self.view setHidden:YES];
     [self.view removeFromSuperview];
 }
+
+
+
+
 @end
