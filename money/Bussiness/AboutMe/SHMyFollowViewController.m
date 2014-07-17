@@ -67,9 +67,21 @@
     [cell.imgView setUrl:[dic valueForKey:@"followerHeadIcon"]];
     cell.labUserName.text = [dic valueForKey:@"followerName"];
     cell.btnCancel.tag = indexPath.row;
+    cell.btnCalendar.tag =indexPath.row;
+    [cell.btnCalendar addTarget:self action:@selector(btnCalendar:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnCancel addTarget:self action:@selector(btnCancel:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
+}
+
+- (void)btnCalendar:(UIButton*)btn
+{
+    NSDictionary * dic = [mList objectAtIndex:btn.tag];
+    SHIntent * intent = [[SHIntent alloc]init:@"usercalendar" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[dic valueForKey:@"followerUserName"] forKey:@"username"];
+    
+    [[UIApplication sharedApplication]open:intent];
+
 }
 
 - (void)btnCancel:(UIButton*)btn
@@ -84,8 +96,8 @@
         NSDictionary * dic = [mList objectAtIndex:alertView.tag];
         SHPostTaskM * post = [[SHPostTaskM alloc]init];
         post.URL = URL_FOR(@"miFollowerAdd.do");
-        [post.postArgs setValue:Entironment.instance.loginName forKey:@"myUsername"];
-        [post.postArgs setValue:[dic valueForKey:@"followerId"] forKey:@"followerUsername"];
+        [post.postArgs setValue:Entironment.instance.loginName forKey:@"myUserName"];
+        [post.postArgs setValue:[dic valueForKey:@"followerId"] forKey:@"followerUserName"];
         [post.postArgs setValue:[NSNumber numberWithInt:0] forKey:@"addOrDelete"];
         [post start:^(SHTask *t) {
             [mList removeObjectAtIndex:alertView.tag];
@@ -97,6 +109,17 @@
             [self dismissWaitDialog];
         }];
 
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(mList.count > 0){
+        NSDictionary * dic = [mList objectAtIndex:indexPath.row];
+    SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[dic valueForKey:@"followerId"] forKey:@"friendId"];
+    
+    [[UIApplication sharedApplication]open:intent];
     }
 }
 

@@ -33,7 +33,7 @@
     oppoType = @"";
     bossName = @"";
     oppoTitle = @"";
-    type = 99;
+    type = 0;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -66,7 +66,7 @@
 
     bossName = boss;
     oppoTitle = title;
-    oppoType = [type_ valueForKey:@"key"];
+    oppoType = [type_ valueForKey:@"key"] == nil ? @"":[type_ valueForKey:@"key"] ;
     [self reSet];
 }
 

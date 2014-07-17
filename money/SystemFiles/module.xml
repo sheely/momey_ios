@@ -70,5 +70,8 @@
     <module
     name="myfollow"
     target="SHMyFollowViewController" />
+    <module
+    name="usercalendar"
+    target="SHUserCalendarViewController" />
 
 </root>

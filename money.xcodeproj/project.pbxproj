@@ -102,6 +102,8 @@
 		9E983FBC1972D21200EA3E1B /* SHMyFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E983FBA1972D21200EA3E1B /* SHMyFollowViewController.xib */; };
 		9E983FBF1972D30800EA3E1B /* SHMyFollowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E983FBE1972D30800EA3E1B /* SHMyFollowViewCell.m */; };
 		9E983FC11972D31600EA3E1B /* SHMyFollowViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E983FC01972D31600EA3E1B /* SHMyFollowViewCell.xib */; };
+		9E983FC519742FC400EA3E1B /* SHUserCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E983FC319742FC400EA3E1B /* SHUserCalendarViewController.m */; };
+		9E983FC619742FC400EA3E1B /* SHUserCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E983FC419742FC400EA3E1B /* SHUserCalendarViewController.xib */; };
 		9E9EDD7D194DF7DC00123254 /* SHAttachmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD7B194DF7DC00123254 /* SHAttachmentViewController.m */; };
 		9E9EDD7E194DF7DC00123254 /* SHAttachmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9EDD7C194DF7DC00123254 /* SHAttachmentViewController.xib */; };
 		9E9EDD82194E0A8E00123254 /* SHExecuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9EDD80194E0A8E00123254 /* SHExecuteViewController.m */; };
@@ -403,6 +405,9 @@
 		9E983FBD1972D30800EA3E1B /* SHMyFollowViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyFollowViewCell.h; sourceTree = "<group>"; };
 		9E983FBE1972D30800EA3E1B /* SHMyFollowViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyFollowViewCell.m; sourceTree = "<group>"; };
 		9E983FC01972D31600EA3E1B /* SHMyFollowViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyFollowViewCell.xib; sourceTree = "<group>"; };
+		9E983FC219742FC400EA3E1B /* SHUserCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUserCalendarViewController.h; sourceTree = "<group>"; };
+		9E983FC319742FC400EA3E1B /* SHUserCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUserCalendarViewController.m; sourceTree = "<group>"; };
+		9E983FC419742FC400EA3E1B /* SHUserCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHUserCalendarViewController.xib; sourceTree = "<group>"; };
 		9E9EDD7A194DF7DC00123254 /* SHAttachmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAttachmentViewController.h; sourceTree = "<group>"; };
 		9E9EDD7B194DF7DC00123254 /* SHAttachmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAttachmentViewController.m; sourceTree = "<group>"; };
 		9E9EDD7C194DF7DC00123254 /* SHAttachmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHAttachmentViewController.xib; sourceTree = "<group>"; };
@@ -1439,6 +1444,9 @@
 				9E983FB81972D21200EA3E1B /* SHMyFollowViewController.h */,
 				9E983FB91972D21200EA3E1B /* SHMyFollowViewController.m */,
 				9E983FBA1972D21200EA3E1B /* SHMyFollowViewController.xib */,
+				9E983FC219742FC400EA3E1B /* SHUserCalendarViewController.h */,
+				9E983FC319742FC400EA3E1B /* SHUserCalendarViewController.m */,
+				9E983FC419742FC400EA3E1B /* SHUserCalendarViewController.xib */,
 			);
 			name = AboutMe;
 			path = money/Bussiness/AboutMe;
@@ -1779,6 +1787,7 @@
 				9E0670AB1961D82500E20195 /* SHReportViewController.xib in Resources */,
 				9E8521DE193F9156001A17C5 /* button_blue_mini@2x.png in Resources */,
 				9E9EDD981951C83600123254 /* SHChatSearchViewController.xib in Resources */,
+				9E983FC619742FC400EA3E1B /* SHUserCalendarViewController.xib in Resources */,
 				9EA69D6D1938E7D50030C27F /* ic_re_error.png in Resources */,
 				9E85227A1944743D001A17C5 /* tab_selected.png in Resources */,
 				9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */,
@@ -1871,6 +1880,7 @@
 				9EA69D901938E7D50030C27F /* VRGCalendarView.m in Sources */,
 				9EDC7F7A193E951800B1019B /* SHMoneyListViewCell.m in Sources */,
 				9E983FBF1972D30800EA3E1B /* SHMyFollowViewCell.m in Sources */,
+				9E983FC519742FC400EA3E1B /* SHUserCalendarViewController.m in Sources */,
 				9E9EDD88194E146100123254 /* SHCalendarViewController.m in Sources */,
 				9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */,
 				9E8521E8193F93E7001A17C5 /* SHCompanyDetailViewController.m in Sources */,
