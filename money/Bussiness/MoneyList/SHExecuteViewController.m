@@ -41,7 +41,10 @@
         txtPlace.text = [dic valueForKey:@"executePlace"];
         txtMark.text = [dic valueForKey:@"remark"];
         [btnStart setTitle:[dic valueForKey:@"startTime"] forState:UIControlStateNormal];
+        [btnEnd setTitle:[dic valueForKey:@"endTime"] forState:UIControlStateNormal];
+
         txtBudge.text = [dic valueForKey:@"budget"];
+
         
         [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {

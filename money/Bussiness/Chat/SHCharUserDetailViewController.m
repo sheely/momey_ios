@@ -140,6 +140,8 @@
 {
     [super viewDidLoad];
     self.title = @"基本资料";
+    [self dismissWaitDialog];
+
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryFriendDetail.do");
     [post.postArgs setValue:[self.intent.args valueForKey:@"friendId"] forKey:@"friendId"];
@@ -147,8 +149,11 @@
     [post start:^(SHTask * t) {
         dic = t.result;
         [self.tableView reloadData];
+        [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];
+        [self dismissWaitDialog];
+
     }];
     // Do any additional setup after loading the view from its nib.
 }
@@ -192,6 +197,30 @@
 
 }
 
+- (void)btnAddFavorate:(NSObject*)sender
+{
+    [self showWaitDialogForNetWork];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miFollowerAdd.do");
+    NSNumber * value = [[dic valueForKey:@"isFollowed"] intValue] == 0 ? [NSNumber numberWithInt:1]:[NSNumber numberWithInt:0];
+    [post.postArgs setValue:Entironment.instance.loginName forKey:@"myUserName"];
+    [post.postArgs setValue:[dic valueForKey:@"friendId"] forKey:@"followerUserName"];
+    [post.postArgs setValue:value forKey:@"addOrDelete"];
+    [post start:^(SHTask *t) {
+        [dic setValue:value forKey:@"isFollowed"];
+        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+        [t.respinfo show];
+
+        [self dismissWaitDialog];
+        
+    } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+        [t.respinfo show];
+        [self dismissWaitDialog];
+    }];
+    
+
+}
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
@@ -199,6 +228,14 @@
             SHChatUserInfoViewCell *cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatUserInfoViewCell" owner:nil options:nil] objectAtIndex:0];
             cell.labUser.text = [dic valueForKey:@"friendName"];
             [cell.imgView setUrl:[dic valueForKey:@"friendHeadIcon"]];
+            [cell.btnAddFavorate addTarget:self action:@selector(btnAddFavorate:) forControlEvents:UIControlEventTouchUpInside];
+            if([[dic valueForKey:@"isFollowed"]integerValue] == 1){
+                [cell.btnAddFavorate setTitle:@"取消关注" forState:UIControlStateNormal];
+                cell.btnAddFavorate.userstyle = @"btnclosemoney";
+            }else {
+                [cell.btnAddFavorate setTitle:@"添加关注" forState:UIControlStateNormal];
+                cell.btnAddFavorate.userstyle = @"btnsubmit";
+            }
             return  cell;
         }
             break;

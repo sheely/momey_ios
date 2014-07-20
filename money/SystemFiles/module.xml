@@ -73,5 +73,14 @@
     <module
     name="usercalendar"
     target="SHUserCalendarViewController" />
-
+    <module
+    name="companysearch"
+    target="SHCompanySearchViewController" />
+    <module
+    name="teamsearch"
+    target="SHTeamSearchViewController" />
+    <module
+    name="teamsearchuserlist"
+    target="SHTeamSearchUserViewController" />
+    
 </root>

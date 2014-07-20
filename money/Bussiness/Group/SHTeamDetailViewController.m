@@ -110,17 +110,32 @@
     return 1;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 2){
+        NSDictionary * dic_  = [[dic valueForKey:@"teamMembers"] objectAtIndex:indexPath.row];
+        SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+        NSDictionary * dic = [mList objectAtIndex:indexPath.row];
+        [intent.args setValue:@"zhangsan" forKey:@"friendId"];
+        
+        [[UIApplication sharedApplication]open:intent];
+
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SHTableViewGeneralCell * cell;
     if(indexPath.section == 0){
         cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
         cell.labTitle.text = [dic valueForKey:@"teamName"];
-       ((SHGroupListViewCell*)cell).labContent.text = [dic valueForKey:@"teamType"];
+        ((SHGroupListViewCell*)cell).labContent.text = [dic valueForKey:@"teamType"];
         [((SHGroupListViewCell*)cell).imgView setUrl:[dic valueForKey:@"teamHeadIcon"]];
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }else if(indexPath.section == 1){
         cell = [tableView dequeueReusableGeneralCell];
         cell.labTitle.text = [dic valueForKey:@"teamIntroduction"];
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }else {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"SHTeamMemberCell" owner:nil options:nil] objectAtIndex:0];
         NSDictionary *dicm = [[dic valueForKey:@"teamMembers"] objectAtIndex:indexPath.row];
@@ -130,10 +145,10 @@
             ((SHTeamMemberCell*)cell).labContent.text = @"发起人";
         }else{
             ((SHTeamMemberCell*)cell).labContent.text = @"";
-
+            
         }
     }
-    cell.accessoryType = UITableViewCellAccessoryNone;
+   
     return cell;
 }
 

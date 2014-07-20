@@ -27,6 +27,17 @@
 {
     [super viewDidLoad];
     self.title = @"财友搜索";
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryFriendInit.do");
+    [post start:^(SHTask * t) {
+        listType = [t.result valueForKey:@"oppoTypes"];
+        listCompany = [t.result valueForKey:@"companys"];
+        
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [self dismissWaitDialog];
+        [t.respinfo show];
+    }];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -38,26 +49,58 @@
 
 - (IBAction)btnSearchOnTouch:(id)sender
 {
-    SHIntent * indent = [[SHIntent alloc]init:@"usersearchlist" delegate:self containner:self.navigationController];
-    [[UIApplication sharedApplication]open:indent];
+    [self showWaitDialogForNetWork];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryFriend.do");
+    [post.postArgs setValue:@"" forKey:@"oppoType"];
+    [post.postArgs setValue:@"" forKey:@"companyId"];
+    [post start:^(SHTask * t) {
+        [self dismissWaitDialog];
+        NSArray * list  = [t.result valueForKey:@"friendList"];
+        if(self.delegate){
+            [self.delegate chatsearchviewcontrollerDidSubmit:self list:list];
+        }
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [self dismissWaitDialog];
+        [t.respinfo show];
+    }];
+//self.view
 }
 
 - (IBAction)btnTypeOnTouch:(id)sender {
     NSMutableArray * array = [[NSMutableArray alloc]init];
-    for (int i =0 ; i< 5; i++) {
+    for (int i =0 ; i< listType.count ; i++) {
         KxMenuItem* item = [[KxMenuItem alloc] init];
-        item.title = @"分类";
+        item.title =[[listType objectAtIndex:i] valueForKey:@"value"];
+        item.tag = i ;
+        item.target = self;
+        item.action = @selector(kxmType:);
         [array addObject:item];
     }
     [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnType.frame fromView:self.btnType] menuItems:array];
 }
 
+- (void)kxmType:(KxMenuItem*)k
+{
+    dicType = [listType objectAtIndex:k.tag];
+    [self.btnType setTitle:k.title forState:UIControlStateNormal];
+}
+
+- (void)kxmCompany:(KxMenuItem*)k
+{
+    dicCompany = [listCompany objectAtIndex:k.tag];
+    [self.btnCompany setTitle:k.title forState:UIControlStateNormal];
+}
+
 - (IBAction)btnCompanyOnTouch:(id)sender
 {
     NSMutableArray * array = [[NSMutableArray alloc]init];
-    for (int i =0 ; i< 5; i++) {
+    for (int i =0 ; i< listCompany.count; i++) {
         KxMenuItem* item = [[KxMenuItem alloc] init];
-        item.title = @"大众点评";
+        item.title = [[listCompany objectAtIndex:i] valueForKey:@"value"];
+        item.tag = i ;
+        item.target = self;
+        item.action = @selector(kxmCompany:);
         [array addObject:item];
     }
     [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnCompany.frame fromView:self.btnCompany] menuItems:array];

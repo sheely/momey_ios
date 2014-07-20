@@ -35,18 +35,35 @@
     [super viewDidLoad];
     self.title = @"财圈";
     isTeam = NO;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:@selector(btnSearch:)];
     [self request];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void) btnSearch:(NSObject * )sender
+{
+    if(isTeam){
+        
+        SHIntent * indent = [[SHIntent alloc]init:@"teamsearch" delegate:self containner:self.navigationController];
+        [[UIApplication sharedApplication]open:indent];
+
+    }else{
+        SHIntent * indent = [[SHIntent alloc]init:@"companysearch" delegate:self containner:self.navigationController];
+        [[UIApplication sharedApplication]open:indent];
+
+    }
+  
+}
+
 - (void) request
 {
     [self showWaitDialogForNetWork];
     if(isTeam){
         SHPostTaskM * post = [[SHPostTaskM alloc]init];
         post.URL = URL_FOR(@"miQueryTeam.do");
-        [post.postArgs setValue:@"" forKey:@"ownerUserName"];
-        [post.postArgs setValue:@"" forKey:@"teamName"];
-        [post.postArgs setValue:@"" forKey:@"memberUserName"];
+        [post.postArgs setValue:teamcreatname == nil ? @"" :teamcreatname forKey:@"ownerUserName"];
+        [post.postArgs setValue:teamname == nil ? @"" : teamname forKey:@"teamName"];
+        [post.postArgs setValue:teammembername == nil ?  @"" : teammembername forKey:@"memberUserName"];
         [post start:^(SHTask * t) {
             mIsEnd  = YES;
             mList = [t.result valueForKey:@"teams"];
@@ -61,8 +78,8 @@
     }else{
         SHPostTaskM * post = [[SHPostTaskM alloc]init];
         post.URL = URL_FOR(@"queryCompany.do");
-        [post.postArgs setValue:@"" forKey:@"companyCategoryKey"];
-        [post.postArgs setValue:@"" forKey:@"companyName"];
+        [post.postArgs setValue: diccompany == nil ? @"": [diccompany valueForKey:@"key"]  forKey:@"companyCategoryKey"];
+        [post.postArgs setValue:companyname == nil ? @"":companyname forKey:@"companyName"];
         
         [post start:^(SHTask * t) {
             mIsEnd  = YES;
@@ -131,6 +148,23 @@
   
 }
 
+- (void) companysearchviewcontrollerDidSubmit:(SHCompanySearchViewController *)controller type:(NSDictionary *)type company:(NSString *)company_
+{
+    diccompany = type ;
+    companyname = company_;
+    [self.navigationController popViewControllerAnimated:YES];
+
+    [self request];
+}
+- (void)teamSearchViewController:(SHTeamSearchViewController*)controller createName:(NSString*)createName teamName:(NSString*)teamName_ username:(NSString*)username
+{
+    teamname = teamName_;
+    teamcreatname = createName;
+    teammembername = username;
+    [self.navigationController popViewControllerAnimated:YES];
+    [self request];
+}
+
 - (IBAction)btnTeamOnTouch:(id)sender {
     self.btnCompany.selected = NO;
     self.btnTeam.selected = YES;
@@ -143,6 +177,5 @@
     self.btnTeam.selected = NO;
     isTeam = NO;
     [self request];
-
 }
 @end

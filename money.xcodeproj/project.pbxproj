@@ -22,6 +22,12 @@
 		9E0ECC0E195A5380004A907F /* SHSearchExecuteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC0C195A5380004A907F /* SHSearchExecuteViewController.xib */; };
 		9E0ECC13195C6663004A907F /* SHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0ECC11195C6663004A907F /* SHWebViewController.m */; };
 		9E0ECC14195C6663004A907F /* SHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0ECC12195C6663004A907F /* SHWebViewController.xib */; };
+		9E124AB11978F67300F9C953 /* SHCompanySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E124AAF1978F67300F9C953 /* SHCompanySearchViewController.m */; };
+		9E124AB21978F67300F9C953 /* SHCompanySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E124AB01978F67300F9C953 /* SHCompanySearchViewController.xib */; };
+		9E124AB61979125200F9C953 /* SHTeamSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E124AB41979125200F9C953 /* SHTeamSearchViewController.m */; };
+		9E124AB71979125200F9C953 /* SHTeamSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E124AB51979125200F9C953 /* SHTeamSearchViewController.xib */; };
+		9E124ABB197931CB00F9C953 /* SHTeamSearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E124AB9197931CB00F9C953 /* SHTeamSearchUserViewController.m */; };
+		9E124ABC197931CB00F9C953 /* SHTeamSearchUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E124ABA197931CB00F9C953 /* SHTeamSearchUserViewController.xib */; };
 		9E31360E19462719002A3298 /* button_red_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360D19462719002A3298 /* button_red_mini@2x.png */; };
 		9E3136111946272C002A3298 /* dialogue_ others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E31360F1946272C002A3298 /* dialogue_ others@2x.png */; };
 		9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3136101946272C002A3298 /* dialogue_me@2x.png */; };
@@ -308,6 +314,15 @@
 		9E0ECC10195C6663004A907F /* SHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWebViewController.h; sourceTree = "<group>"; };
 		9E0ECC11195C6663004A907F /* SHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWebViewController.m; sourceTree = "<group>"; };
 		9E0ECC12195C6663004A907F /* SHWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHWebViewController.xib; sourceTree = "<group>"; };
+		9E124AAE1978F67300F9C953 /* SHCompanySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCompanySearchViewController.h; sourceTree = "<group>"; };
+		9E124AAF1978F67300F9C953 /* SHCompanySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCompanySearchViewController.m; sourceTree = "<group>"; };
+		9E124AB01978F67300F9C953 /* SHCompanySearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHCompanySearchViewController.xib; sourceTree = "<group>"; };
+		9E124AB31979125200F9C953 /* SHTeamSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTeamSearchViewController.h; sourceTree = "<group>"; };
+		9E124AB41979125200F9C953 /* SHTeamSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTeamSearchViewController.m; sourceTree = "<group>"; };
+		9E124AB51979125200F9C953 /* SHTeamSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHTeamSearchViewController.xib; sourceTree = "<group>"; };
+		9E124AB8197931CB00F9C953 /* SHTeamSearchUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTeamSearchUserViewController.h; sourceTree = "<group>"; };
+		9E124AB9197931CB00F9C953 /* SHTeamSearchUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTeamSearchUserViewController.m; sourceTree = "<group>"; };
+		9E124ABA197931CB00F9C953 /* SHTeamSearchUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHTeamSearchUserViewController.xib; sourceTree = "<group>"; };
 		9E31360D19462719002A3298 /* button_red_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_red_mini@2x.png"; sourceTree = "<group>"; };
 		9E31360F1946272C002A3298 /* dialogue_ others@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_ others@2x.png"; sourceTree = "<group>"; };
 		9E3136101946272C002A3298 /* dialogue_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialogue_me@2x.png"; sourceTree = "<group>"; };
@@ -853,6 +868,15 @@
 				9E9EDDA11951F81100123254 /* SHTeamDetailViewController.h */,
 				9E9EDDA21951F81100123254 /* SHTeamDetailViewController.m */,
 				9E9EDDA31951F81100123254 /* SHTeamDetailViewController.xib */,
+				9E124AAE1978F67300F9C953 /* SHCompanySearchViewController.h */,
+				9E124AAF1978F67300F9C953 /* SHCompanySearchViewController.m */,
+				9E124AB01978F67300F9C953 /* SHCompanySearchViewController.xib */,
+				9E124AB31979125200F9C953 /* SHTeamSearchViewController.h */,
+				9E124AB41979125200F9C953 /* SHTeamSearchViewController.m */,
+				9E124AB51979125200F9C953 /* SHTeamSearchViewController.xib */,
+				9E124AB8197931CB00F9C953 /* SHTeamSearchUserViewController.h */,
+				9E124AB9197931CB00F9C953 /* SHTeamSearchUserViewController.m */,
+				9E124ABA197931CB00F9C953 /* SHTeamSearchUserViewController.xib */,
 			);
 			name = Group;
 			path = money/Bussiness/Group;
@@ -1699,6 +1723,7 @@
 				9EA69D781938E7D50030C27F /* SHTableViewTitleContentBottomCell.xib in Resources */,
 				9EA69D3A1938E7D50030C27F /* DSLCalendarDayCallout@2x.png in Resources */,
 				9E8986FD193AC996006B3BBD /* SHAboutMeViewController.xib in Resources */,
+				9E124ABC197931CB00F9C953 /* SHTeamSearchUserViewController.xib in Resources */,
 				9EA69D421938E7D50030C27F /* DSLCalendarDaySelection@2x.png in Resources */,
 				9EA69D451938E7D50030C27F /* blackArrow@2x.png in Resources */,
 				9E85229119462033001A17C5 /* SHChatUnitViewCell.xib in Resources */,
@@ -1713,6 +1738,7 @@
 				9E85226C1944743D001A17C5 /* login_icon_username@2x.png in Resources */,
 				9EA69D3C1938E7D50030C27F /* DSLCalendarDaySelection-left@2x.png in Resources */,
 				9E8522841944DBDB001A17C5 /* 7044702_190131486105_2.jpg in Resources */,
+				9E124AB71979125200F9C953 /* SHTeamSearchViewController.xib in Resources */,
 				9E94D236194CA81A00D7F074 /* SHMoneyDetailViewController.xib in Resources */,
 				9EA69D6E1938E7D50030C27F /* ic_re_error@2x.png in Resources */,
 				9E8522751944743D001A17C5 /* navi_icon_profile_press@2x.png in Resources */,
@@ -1757,6 +1783,7 @@
 				9EA69D721938E7D50030C27F /* SHNoneViewCell.xib in Resources */,
 				9EA69D3B1938E7D50030C27F /* DSLCalendarDaySelection-left.png in Resources */,
 				9EA69DA51938E7D50030C27F /* string.xml in Resources */,
+				9E124AB21978F67300F9C953 /* SHCompanySearchViewController.xib in Resources */,
 				9E94D22E194C69AA00D7F074 /* SHMyTeamTableViewCell.xib in Resources */,
 				9E8521DC193F9156001A17C5 /* a.png in Resources */,
 				9EA69D7C1938E7D50030C27F /* SHTableViewTitleImageCell.xib in Resources */,
@@ -1858,6 +1885,7 @@
 				9EA69D5C1938E7D50030C27F /* MMProgressHUDWindow.m in Sources */,
 				9EA69D291938E7D50030C27F /* SHContentViewController.m in Sources */,
 				9EDA5D39194C427700471471 /* SHMyTeamViewController.m in Sources */,
+				9E124AB11978F67300F9C953 /* SHCompanySearchViewController.m in Sources */,
 				9EA69D8D1938E7D50030C27F /* NSMutableArray+convenience.m in Sources */,
 				9EB92ECE19365A3E00E87981 /* main.m in Sources */,
 				9EA69D841938E7D50030C27F /* WTStatusView.m in Sources */,
@@ -1898,6 +1926,7 @@
 				9EA69D5A1938E7D50030C27F /* MMProgressHUDOverlayView.m in Sources */,
 				9EA69D571938E7D50030C27F /* MMProgressHUD+Animations.m in Sources */,
 				9EA69D971938E7D50030C27F /* IPConfigCMD.m in Sources */,
+				9E124ABB197931CB00F9C953 /* SHTeamSearchUserViewController.m in Sources */,
 				9EA69D8E1938E7D50030C27F /* UIColor+expanded.m in Sources */,
 				9E0670AA1961D82500E20195 /* SHReportViewController.m in Sources */,
 				9EA69D341938E7D50030C27F /* DSLCalendarView.m in Sources */,
@@ -1927,6 +1956,7 @@
 				9EA69D4E1938E7D50030C27F /* KxMenu.m in Sources */,
 				9E9EDDA41951F81100123254 /* SHTeamDetailViewController.m in Sources */,
 				9EA69D331938E7D50030C27F /* DSLCalendarRange.m in Sources */,
+				9E124AB61979125200F9C953 /* SHTeamSearchViewController.m in Sources */,
 				9EA69D6B1938E7D50030C27F /* SHTableViewCell.m in Sources */,
 				9EA69D431938E7D50030C27F /* NSDate+DSLCalendarView.m in Sources */,
 				9EDA5D33194B673600471471 /* SHMyCalendarViewCell.m in Sources */,

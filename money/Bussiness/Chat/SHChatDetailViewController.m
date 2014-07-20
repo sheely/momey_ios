@@ -23,12 +23,21 @@
     }
     return self;
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShown:)
+     											 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [super viewWillAppear:animated];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
   
-    self.title = @"聊天";
+    self.title = @"留言";
+    [self showWaitDialogForNetWork];
+
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"queryLmList.do");
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
@@ -37,15 +46,14 @@
         mIsEnd  = YES;
         mList = [[t.result valueForKey:@"leaveMessages"] mutableCopy];
         [self.tableView reloadData];
+        [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];
+        [self dismissWaitDialog];
+
     }];
     //[self registerForKeyboardNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-     											 selector:@selector(keyboardWillShown:)
-     											 name:UIKeyboardWillShowNotification
-     object:nil];
-    // Do any additional setup after loading the view from its nib.
+       // Do any additional setup after loading the view from its nib.
 }
 //- (void)registerForKeyboardNotifications
 //{
@@ -136,11 +144,22 @@
     return cell;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return mList.count;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (mList.count > 0) {
+        
+        SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+        NSDictionary * dic = [mList objectAtIndex:indexPath.row];
+        [intent.args setValue:[dic valueForKey:@"leaveMessager"] forKey:@"friendId"];
+        
+        [[UIApplication sharedApplication]open:intent];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -150,12 +169,13 @@
 
 - (IBAction)btnSenderOnTouch:(id)sender
 {
+    [self showWaitDialogForNetWork];
     NSString * msg = self.txtBox.text;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString *destDateString = [dateFormatter stringFromDate:[NSDate date]];
     NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
-    [dic setValue:@"我" forKey:@"leaveMessager"];
+    [dic setValue:[Entironment instance].loginName forKey:@"leaveMessager"];
     [dic setValue:@"" forKey:@"lmHeadIcon"];
     [dic setValue:msg forKey:@"lmContent"];
     [dic setValue:destDateString forKey:@"lmTime"];
@@ -163,12 +183,15 @@
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+    [post.postArgs setValue:msg forKey:@"leaveMessage"];
+    
     post.URL = URL_FOR(@"lmAdd.do");
     [post start:^(SHTask *t) {
         [self dismissWaitDialog];
           [mList addObject:dic];
          [self.tableView reloadData];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+        [t.respinfo show];
         [self dismissWaitDialog];
 
     }];

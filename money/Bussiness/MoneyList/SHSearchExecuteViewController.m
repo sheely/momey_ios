@@ -67,6 +67,7 @@
         mList =[t.result valueForKey:@"friendList"] ;
         [self.tableView reloadData];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+        t.respinfo.show ;
     }];
 
 }
