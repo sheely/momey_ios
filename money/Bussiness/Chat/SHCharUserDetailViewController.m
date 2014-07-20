@@ -236,6 +236,8 @@
                 [cell.btnAddFavorate setTitle:@"添加关注" forState:UIControlStateNormal];
                 cell.btnAddFavorate.userstyle = @"btnsubmit";
             }
+            cell.btnAddFavorate.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
+
             return  cell;
         }
             break;
