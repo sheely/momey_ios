@@ -10,6 +10,7 @@
 
 @interface SHChatSimpleUserInfoCell : SHTableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *labTitle;
 @property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 @property (weak, nonatomic) IBOutlet UIButton *btnChat;
 @end

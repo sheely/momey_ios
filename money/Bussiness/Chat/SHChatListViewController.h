@@ -7,7 +7,8 @@
 //
 
 #import "SHViewController.h"
+#import "SHChatSearchViewController.h"
 
-@interface SHChatListViewController : SHTableViewController
+@interface SHChatListViewController : SHTableViewController<SHChatSearchViewControllerDelegate>
 
 @end

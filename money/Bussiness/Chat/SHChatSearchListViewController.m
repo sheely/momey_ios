@@ -27,26 +27,49 @@
 {
     [super viewDidLoad];
     self.title = @"财友列表";
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+    mList = [self.intent.args valueForKey:@"list"];
+    mIsEnd = YES;
     // Do any additional setup after loading the view from its nib.
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     SHChatSimpleUserInfoCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatSimpleUserInfoCell" owner:nil options:nil] objectAtIndex:0];
+    cell.labTitle.text = [dic valueForKey:@"friendName"];
     cell.tag = indexPath.row;
     [cell.btnChat addTarget:self action:@selector(btnChat:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnAdd addTarget:self action:@selector(btnAdd:) forControlEvents:UIControlEventTouchUpInside];
+    cell.btnChat.tag = indexPath.row;
+    cell.btnAdd.tag = indexPath.row;
     return cell;
 }
 
-- (void)btnAdd:(NSObject*)sender
+- (void)btnAdd:(UIButton*)sender
 {
-    [self showWaitDialogForNetWorkDismissBySelf];
+    [self showWaitDialogForNetWork];
+    NSDictionary * dic = [mList objectAtIndex:sender.tag];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miFollowerAdd.do");
+    [post.postArgs setValue:Entironment.instance.loginName forKey:@"myUserName"];
+    [post.postArgs setValue:[dic valueForKey:@"friendId"] forKey:@"followerUserName"];
+    [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"addOrDelete"];
+    [post start:^(SHTask *t) {
+        [t.respinfo show];
+        [self dismissWaitDialog];
+        
+    } taskWillTry:nil taskDidFailed:^(SHTask *t) {
+        [t.respinfo show];
+        [self dismissWaitDialog];
+    }];
+    
+
 }
 
-- (void)btnChat:(NSObject*)sender
+- (void)btnChat:(UIButton*)sender
 {
+    NSDictionary * dic = [mList objectAtIndex:sender.tag];
     SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue:@"" forKey:[dic valueForKey:@"friendId"]];
     [[UIApplication sharedApplication]open:intent];
 
 }
@@ -58,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return mList.count;
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,7 +92,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[dic valueForKey:@"friendId"] forKey:@"friendId"];
     [[UIApplication sharedApplication]open:intent];
 
 }

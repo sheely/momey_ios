@@ -51,6 +51,13 @@
     return cell;
 }
 
+- (void)chatsearchviewcontrollerDidSubmit:(SHChatSearchViewController*)controller list:(NSArray * )list
+{
+    SHIntent * intent = [[SHIntent alloc ]init:@"usersearchlist" delegate:self containner:self.navigationController];
+    [[intent args] setValue:list forKey:@"list"];
+    [[UIApplication sharedApplication]open:intent];
+}
+
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;

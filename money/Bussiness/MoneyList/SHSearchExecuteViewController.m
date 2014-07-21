@@ -52,7 +52,13 @@
     }
     return cell;
 }
-
+- (void)chatsearchviewcontrollerDidSubmit:(SHChatSearchViewController*)controller list:(NSArray * )list
+{
+    mList = [list mutableCopy];
+    mIsEnd = YES;
+     [self.tableView reloadData];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForGeneralRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 70;
