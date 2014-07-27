@@ -39,6 +39,26 @@
     loginViewController = [[SHLoginViewController alloc]init];
     [self.view addSubview:loginViewController.view];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessful:) name:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
+    
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(message:) userInfo:nil repeats:YES];
+}
+
+- (void)message:(NSObject*)sender
+{
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miReceiveMessage.do");
+    [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
+    
+    [post start:^(SHTask * t) {
+        NSArray * array = [t.result valueForKey:@"immessages"];
+        if(array){
+            [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_MESSAGE object:array];
+        }
+
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+          }];
+    
+    
 }
 
 - (void)loginSuccessful:(NSObject *)sender

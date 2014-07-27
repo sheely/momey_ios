@@ -45,6 +45,8 @@
 #define RECT_MAIN_LANDSCAPE_LEFT CGRectMake(20, 0, 768, 1004)
 
 //notification
+#define NOTIFICATION_MESSAGE @"notification_message"
+
 #define NOTIFICATION_LOGIN_SUCCESSFUL @"notification_login_successful"
 #define NOTIFICATION_LOGINOUT @"notification_loginout"
 #define NOTIFICATION_FAVORITE @"notification_favotite"

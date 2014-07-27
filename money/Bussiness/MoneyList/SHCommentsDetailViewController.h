@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtBox;
 @property (weak, nonatomic) IBOutlet UIButton *btnSender;
 - (IBAction)btnSenderOnTouch:(id)sender;
+- (void)checkBottom;
 @end

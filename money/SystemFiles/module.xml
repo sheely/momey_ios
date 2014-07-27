@@ -11,8 +11,11 @@
     target="SHLoginViewController" />
     
     <module
-    name="chatdetail"
+    name="commentdetail"
     target="SHCommentsDetailViewController" />
+    <module
+    name="chatdetail"
+    target="SHChatDetailViewController" />
     
     <module
     name="chatuserdetail"

@@ -65,7 +65,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    SHIntent * intent = [[SHIntent alloc]init:@"commentdetail" delegate:nil containner:self.navigationController];
     [[UIApplication sharedApplication]open:intent];
 }
 

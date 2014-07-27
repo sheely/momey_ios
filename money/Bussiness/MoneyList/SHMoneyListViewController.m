@@ -33,7 +33,7 @@
     oppoType = @"";
     bossName = @"";
     oppoTitle = @"";
-    type = 0;
+    type = 99;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -81,7 +81,7 @@
     cell.btnState.tag = indexPath.row;
     cell.btnEmployee.tag = indexPath.row;
     [cell.btnState addTarget:self action:@selector(btnState:) forControlEvents:(UIControlEventTouchUpInside)];
-    if(type == 3){
+    if(type == 0){
         [cell.btnEmployee setTitle:@"执行人" forState:UIControlStateNormal];
     }else{
         [cell.btnEmployee setTitle:@"执行信息" forState:UIControlStateNormal];
@@ -96,15 +96,15 @@
             [cell.btnState setTitle:@"关闭财信" forState:UIControlStateNormal];
         cell.btnState.userstyle = @"btnclosemoney";
     }
-    if (type == 0 || type == 1) {
+    if (type == 99 || type == 2 || type == 3) {
         cell.btnEmployee.hidden = YES;
         cell.btnState.hidden = YES;
         cell.btnMark.hidden = YES;
-    }else if (type == 2){
+    }else if (type == 1){
         cell.btnEmployee.hidden = NO;
         cell.btnState.hidden = YES;
         cell.btnMark.hidden = NO;
-    }else {
+    }else if (type == 0 ){
         cell.btnEmployee.hidden = NO;
         cell.btnState.hidden = NO;
         cell.btnMark.hidden = NO;
@@ -116,7 +116,7 @@
 
 - (void)btnEmployee:(UIButton*)btn
 {
-    if(type == 3){
+    if(type == 0){
         NSDictionary * dic = [mList objectAtIndex:btn.tag];
         SHIntent * intent = [[SHIntent alloc]init:@"searchexecuter" delegate:nil containner:self.navigationController];
         [intent.args setValue:[dic valueForKey:@"oppoId"] forKey:@"oppoId"];
@@ -201,7 +201,7 @@
 }
 - (IBAction)btnAllOnTouch:(id)sender
 {
-    type = 0;
+    type = 99;
     [self reSet];
     self.btnAll.selected = YES;
     self.btnBidding.selected = NO;
@@ -210,7 +210,7 @@
 }
 - (IBAction)btnParticipateOnTouch:(id)sender
 {
-    type = 1;
+    type = 3;
     [self reSet];
     self.btnAll.selected = NO;
     self.btnBidding.selected = NO;
@@ -219,7 +219,7 @@
 }
 - (IBAction)btnBiddingOnTouch:(id)sender
 {
-    type = 2;
+    type = 1;
     [self reSet];
     self.btnAll.selected = NO;
     self.btnBidding.selected = YES;
@@ -229,7 +229,7 @@
 
 - (IBAction)btnStartOnTouch:(id)sender
 {
-    type = 3;
+    type = 0;
     [self reSet];
     self.btnAll.selected = NO;
     self.btnBidding.selected = NO;

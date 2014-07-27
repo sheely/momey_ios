@@ -36,25 +36,32 @@
     [super viewDidLoad];
   
     self.title = @"留言";
+       //[self registerForKeyboardNotifications];
+       // Do any additional setup after loading the view from its nib.
+    [self loadNext];
+}
+- (void)loadNext
+{
     [self showWaitDialogForNetWork];
-
+    
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"queryLmList.do");
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
-
+    
     [post start:^(SHTask * t) {
         mIsEnd  = YES;
         mList = [[t.result valueForKey:@"leaveMessages"] mutableCopy];
         [self.tableView reloadData];
+        [self checkBottom];
         [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];
         [self dismissWaitDialog];
-
+        
     }];
-    //[self registerForKeyboardNotifications];
-       // Do any additional setup after loading the view from its nib.
+
 }
+
 //- (void)registerForKeyboardNotifications
 //{
 //	[[NSNotificationCenter defaultCenter] addObserver:self
@@ -188,14 +195,21 @@
     post.URL = URL_FOR(@"lmAdd.do");
     [post start:^(SHTask *t) {
         [self dismissWaitDialog];
-          [mList addObject:dic];
-         [self.tableView reloadData];
+        [mList addObject:dic];
+        [self.tableView reloadData];
+        [self checkBottom];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
         [t.respinfo show];
         [self dismissWaitDialog];
-
+        
     }];
-   
+}
+
+- (void)checkBottom{
+    if(mList .count > 0){
+        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:mList.count-1 inSection:0];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
 }
 
 

@@ -45,6 +45,8 @@
 		9E31380C1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E31380B1947EF40002A3298 /* SHChatPersonalExperienceViewCell.xib */; };
 		9E43E2061985278300B2D1C4 /* SHCommentsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E43E2041985278300B2D1C4 /* SHCommentsDetailViewController.m */; };
 		9E43E2071985278300B2D1C4 /* SHCommentsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E2051985278300B2D1C4 /* SHCommentsDetailViewController.xib */; };
+		9E43E20B1985583400B2D1C4 /* SHChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E43E2091985583400B2D1C4 /* SHChatDetailViewController.m */; };
+		9E43E20C1985583400B2D1C4 /* SHChatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E20A1985583400B2D1C4 /* SHChatDetailViewController.xib */; };
 		9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */; };
 		9E8521CF193F8A93001A17C5 /* SHGroupListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */; };
 		9E8521DC193F9156001A17C5 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D3193F9155001A17C5 /* a.png */; };
@@ -345,6 +347,9 @@
 		9E43E2031985278300B2D1C4 /* SHCommentsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCommentsDetailViewController.h; sourceTree = "<group>"; };
 		9E43E2041985278300B2D1C4 /* SHCommentsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCommentsDetailViewController.m; sourceTree = "<group>"; };
 		9E43E2051985278300B2D1C4 /* SHCommentsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHCommentsDetailViewController.xib; sourceTree = "<group>"; };
+		9E43E2081985583400B2D1C4 /* SHChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatDetailViewController.h; sourceTree = "<group>"; };
+		9E43E2091985583400B2D1C4 /* SHChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatDetailViewController.m; sourceTree = "<group>"; };
+		9E43E20A1985583400B2D1C4 /* SHChatDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatDetailViewController.xib; sourceTree = "<group>"; };
 		9E8521CB193F8A85001A17C5 /* SHGroupListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHGroupListViewCell.h; sourceTree = "<group>"; };
 		9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHGroupListViewCell.m; sourceTree = "<group>"; };
 		9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGroupListViewCell.xib; sourceTree = "<group>"; };
@@ -1495,6 +1500,9 @@
 				9E9EDD991951D36100123254 /* SHChatSearchListViewController.h */,
 				9E9EDD9A1951D36100123254 /* SHChatSearchListViewController.m */,
 				9E9EDD9B1951D36100123254 /* SHChatSearchListViewController.xib */,
+				9E43E2081985583400B2D1C4 /* SHChatDetailViewController.h */,
+				9E43E2091985583400B2D1C4 /* SHChatDetailViewController.m */,
+				9E43E20A1985583400B2D1C4 /* SHChatDetailViewController.xib */,
 			);
 			name = Chat;
 			path = money/Bussiness/Chat;
@@ -1743,6 +1751,7 @@
 				9EA69D6E1938E7D50030C27F /* ic_re_error@2x.png in Resources */,
 				9E8522751944743D001A17C5 /* navi_icon_profile_press@2x.png in Resources */,
 				9EA69D371938E7D50030C27F /* DSLCalendar-previousMonth.png in Resources */,
+				9E43E20C1985583400B2D1C4 /* SHChatDetailViewController.xib in Resources */,
 				9E9EDD9F1951E31900123254 /* tab_selected@2x.png in Resources */,
 				9E9EDD83194E0A8E00123254 /* SHExecuteViewController.xib in Resources */,
 				9E9EDD8E194FCA1E00123254 /* SHMoneySearchViewController.xib in Resources */,
@@ -1883,6 +1892,7 @@
 				9EA69D981938E7D50030C27F /* LogCMD.m in Sources */,
 				9EDA5D2E194B66CA00471471 /* SHMyCalendarViewController.m in Sources */,
 				9EA69D5C1938E7D50030C27F /* MMProgressHUDWindow.m in Sources */,
+				9E43E20B1985583400B2D1C4 /* SHChatDetailViewController.m in Sources */,
 				9EA69D291938E7D50030C27F /* SHContentViewController.m in Sources */,
 				9EDA5D39194C427700471471 /* SHMyTeamViewController.m in Sources */,
 				9E124AB11978F67300F9C953 /* SHCompanySearchViewController.m in Sources */,

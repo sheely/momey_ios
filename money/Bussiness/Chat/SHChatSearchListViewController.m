@@ -69,7 +69,7 @@
 {
     NSDictionary * dic = [mList objectAtIndex:sender.tag];
     SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
-    [intent.args setValue:@"" forKey:[dic valueForKey:@"friendId"]];
+    [intent.args setValue:@"zhangsan" forKey:@"friendId"];
     [[UIApplication sharedApplication]open:intent];
 
 }
