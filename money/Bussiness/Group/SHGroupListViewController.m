@@ -62,6 +62,8 @@
         SHPostTaskM * post = [[SHPostTaskM alloc]init];
         post.URL = URL_FOR(@"miQueryTeam.do");
         [post.postArgs setValue:teamcreatname == nil ? @"" :teamcreatname forKey:@"ownerUserName"];
+        [post.postArgs setValue:@"" forKey:@"ownerUserId"];
+        
         [post.postArgs setValue:teamname == nil ? @"" : teamname forKey:@"teamName"];
         [post.postArgs setValue:teammembername == nil ?  @"" : teammembername forKey:@"memberUserName"];
         [post start:^(SHTask * t) {

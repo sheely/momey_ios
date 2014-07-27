@@ -48,6 +48,7 @@
         self.title = @"修改日程";
     }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"提交" target:self action:@selector(btnSubmit:)];
+    
     calendarcontroller = [[SHCalendarViewController alloc]init];
     calendarcontroller.delegate = self;
     // Do any additional setup after loading the view from its nib.
@@ -61,7 +62,7 @@
     }
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miTaskMaintainance.do");
-    NSString *taskid = [self.intent.args valueForKey:@"taskId"];
+    NSString *taskid = [[self.intent.args valueForKey:@"info"] valueForKey:@"taskId"];
     taskid = (taskid.length == 0 ? @"":taskid);
     [post.postArgs setValue:taskid forKey:@"taskId"];
     [post.postArgs setValue:self.btnStartTime.titleLabel.text forKey:@"startTime"];

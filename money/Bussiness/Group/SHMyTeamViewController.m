@@ -33,6 +33,8 @@
     [post.postArgs setValue: [[NSUserDefaults standardUserDefaults] valueForKey:LOGIN_INFO] forKey:@"ownerUserName"];
     [post.postArgs setValue:@"" forKey:@"teamName"];
     [post.postArgs setValue:@"" forKey:@"memberUserName"];
+    [post.postArgs setValue:[Entironment.instance loginName] forKey:@"ownerUserId"];
+    
     [post start:^(SHTask * t) {
         mIsEnd  = YES;
         mList = [t.result valueForKey:@"teams"];

@@ -21,9 +21,11 @@
     NSDictionary * dicType;
     NSDictionary * dicCompany;
 }
+@property (weak, nonatomic) IBOutlet UIButton *btnRegion;
 @property (weak, nonatomic) IBOutlet UIButton *btnType;
 @property (weak, nonatomic) IBOutlet UIButton *btnCompany;
 - (IBAction)btnSearchOnTouch:(id)sender;
 - (IBAction)btnTypeOnTouch:(id)sender;
 - (IBAction)btnCompanyOnTouch:(id)sender;
+- (IBAction)btnRegionOnTouch:(id)sender;
 @end

@@ -54,6 +54,7 @@
     post.URL = URL_FOR(@"miQueryFriend.do");
     [post.postArgs setValue:@"" forKey:@"oppoType"];
     [post.postArgs setValue:@"" forKey:@"companyId"];
+    [post.postArgs setValue:@"" forKey:@"address"];
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
         NSArray * list  = [t.result valueForKey:@"friendList"];
@@ -105,5 +106,18 @@
     }
     [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnCompany.frame fromView:self.btnCompany] menuItems:array];
 
+}
+
+- (IBAction)btnRegionOnTouch:(id)sender {
+    NSMutableArray * array = [[NSMutableArray alloc]init];
+    for (int i =0 ; i< listType.count ; i++) {
+        KxMenuItem* item = [[KxMenuItem alloc] init];
+        item.title =[[listType objectAtIndex:i] valueForKey:@"value"];
+        item.tag = i ;
+        item.target = self;
+        item.action = @selector(kxmType:);
+        [array addObject:item];
+    }
+    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnType.frame fromView:self.btnType] menuItems:array];
 }
 @end

@@ -44,7 +44,7 @@
 {
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
-    post.URL = URL_FOR(@"queryCommentsList.do");
+    post.URL = URL_FOR(@"commentAdd.do");
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
   
     [post.postArgs setValue:[self.intent.args valueForKey:@"commenterType"] forKey:@"commenterType"];
