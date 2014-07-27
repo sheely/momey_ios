@@ -12,7 +12,7 @@
     
     <module
     name="chatdetail"
-    target="SHChatDetailViewController" />
+    target="SHCommentsDetailViewController" />
     
     <module
     name="chatuserdetail"

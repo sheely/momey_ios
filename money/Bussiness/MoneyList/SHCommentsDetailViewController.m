@@ -6,14 +6,14 @@
 //  Copyright (c) 2014年 sheely.paean.coretest. All rights reserved.
 //
 
-#import "SHChatDetailViewController.h"
+#import "SHCommentsDetailViewController.h"
 #import "SHChatUnitViewCell.h"
 
-@interface SHChatDetailViewController ()
+@interface SHCommentsDetailViewController ()
 
 @end
 
-@implementation SHChatDetailViewController
+@implementation SHCommentsDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

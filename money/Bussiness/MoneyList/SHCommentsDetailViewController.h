@@ -8,7 +8,7 @@
 
 #import "SHTableViewController.h"
 
-@interface SHChatDetailViewController : SHTableViewController
+@interface SHCommentsDetailViewController : SHTableViewController
 {
     BOOL isAnimation;
 }

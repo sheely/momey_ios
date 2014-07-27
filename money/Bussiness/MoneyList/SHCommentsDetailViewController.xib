@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHChatDetailViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHCommentsDetailViewController">
             <connections>
                 <outlet property="btnSender" destination="EvO-BY-KLN" id="DBu-nR-hOR"/>
                 <outlet property="tableView" destination="YID-06-MC8" id="GaY-f2-jO0"/>
