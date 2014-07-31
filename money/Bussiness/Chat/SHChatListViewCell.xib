@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:44" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v4v-jJ-Kmj">
-                        <rect key="frame" x="238" y="0.0" width="49" height="34"/>
+                        <rect key="frame" x="154" y="0.0" width="133" height="34"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -38,9 +38,14 @@
                         <rect key="frame" x="6" y="9" width="50" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new.png" id="PV4-mL-5gh">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imgNew" destination="PV4-mL-5gh" id="Nkr-vF-mXn"/>
                 <outlet property="imgTitle" destination="mYR-0p-nhv" id="j6b-h7-0jz"/>
                 <outlet property="labBottom" destination="1cP-9X-YV3" id="Sbq-zh-6aJ"/>
                 <outlet property="labContent" destination="v4v-jJ-Kmj" id="Y7t-Mn-f2A"/>
@@ -50,5 +55,6 @@
     </objects>
     <resources>
         <image name="7044702_190131486105_2.jpg" width="1024" height="961"/>
+        <image name="new.png" width="182" height="102"/>
     </resources>
 </document>

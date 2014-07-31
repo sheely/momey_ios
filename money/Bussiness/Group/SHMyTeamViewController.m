@@ -30,7 +30,7 @@
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryTeam.do");
-    [post.postArgs setValue: [[NSUserDefaults standardUserDefaults] valueForKey:LOGIN_INFO] forKey:@"ownerUserName"];
+    [post.postArgs setValue: [Entironment.instance loginName] forKey:@"ownerUserName"];
     [post.postArgs setValue:@"" forKey:@"teamName"];
     [post.postArgs setValue:@"" forKey:@"memberUserName"];
     [post.postArgs setValue:[Entironment.instance loginName] forKey:@"ownerUserId"];

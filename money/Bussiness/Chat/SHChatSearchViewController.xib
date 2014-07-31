@@ -9,6 +9,7 @@
                 <outlet property="btnCompany" destination="gMj-yR-O72" id="yim-c8-xpu"/>
                 <outlet property="btnRegion" destination="Hc6-Ya-mef" id="89Z-GH-ioE"/>
                 <outlet property="btnType" destination="yqR-pc-XtB" id="8yk-DI-V9Q"/>
+                <outlet property="txtName" destination="7cv-V5-QJv" id="7oE-aB-q4F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

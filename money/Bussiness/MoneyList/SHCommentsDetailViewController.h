@@ -11,9 +11,11 @@
 @interface SHCommentsDetailViewController : SHTableViewController
 {
     BOOL isAnimation;
+    BOOL isScroll;
 }
 @property (weak, nonatomic) IBOutlet UITextField *txtBox;
 @property (weak, nonatomic) IBOutlet UIButton *btnSender;
 - (IBAction)btnSenderOnTouch:(id)sender;
 - (void)checkBottom;
+- (void)checkBottom2;
 @end

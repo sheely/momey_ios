@@ -7,6 +7,8 @@
 //
 
 #import "SHChatListViewController.h"
+#import "SHChatListHelper.h"
+#import "SHChatListViewCell.h"
 
 @interface SHChatListViewController ()
 
@@ -26,13 +28,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"财友";
-    mList = [@[@"",@"",@"",@"",@""] mutableCopy];
+    self.title = @"聊天";
+    mList = [[[SHChatListHelper instance]list] mutableCopy];
+    mIsEnd = YES;
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:@selector(btnSearch:)];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification:) name:NOTIFICATION_CHATITEMLIST_CHANGED object:nil];
     // Do any additional setup after loading the view from its nib.
 }
-
+- (void)notification:(NSNotification*)n
+{
+    mList = [[[SHChatListHelper instance]list] mutableCopy];
+    [self.tableView reloadData];
+}
 - (void)btnSearch:(UIButton*)sender
 {
     SHIntent * indent = [[SHIntent alloc]init:@"usersearchcondition" delegate:self containner:self.navigationController];
@@ -45,9 +54,13 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHTableViewTitleContentBottomCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatListViewCell" owner:nil options:nil] objectAtIndex:0];
-    cell.labTitle.text = @"王志跃";
-    cell.labBottom.text = @"Welcome to china";
+    SHChatItem * item = [mList objectAtIndex:indexPath.row];
+    SHChatListViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatListViewCell" owner:nil options:nil] objectAtIndex:0];
+    cell.labTitle.text = item.username;
+    cell.labContent.text = item.date;
+    [cell.imgTitle setUrl:item.headicon];
+    cell.labBottom.text = item.content;
+    cell.imgNew.hidden = !item.isNew;
     return cell;
 }
 
@@ -58,14 +71,17 @@
     [[UIApplication sharedApplication]open:intent];
 }
 
-- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 5;
-}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHIntent * intent = [[SHIntent alloc]init:@"commentdetail" delegate:nil containner:self.navigationController];
+    SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    SHChatItem * item = [mList objectAtIndex:indexPath.row];
+    [[SHChatListHelper instance]cleanNewFlag:item.userid];
+    [intent.args setValue:item.userid forKey:@"friendId"];
+    [intent.args setValue:item.username forKey:@"friendName"];
+    [intent.args setValue:item.headicon forKey:@"friendHeadicon"];
+
     [[UIApplication sharedApplication]open:intent];
 }
 

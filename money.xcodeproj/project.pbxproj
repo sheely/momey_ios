@@ -47,6 +47,13 @@
 		9E43E2071985278300B2D1C4 /* SHCommentsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E2051985278300B2D1C4 /* SHCommentsDetailViewController.xib */; };
 		9E43E20B1985583400B2D1C4 /* SHChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E43E2091985583400B2D1C4 /* SHChatDetailViewController.m */; };
 		9E43E20C1985583400B2D1C4 /* SHChatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E20A1985583400B2D1C4 /* SHChatDetailViewController.xib */; };
+		9E43E210198695D300B2D1C4 /* SHMoneyCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E43E20E198695D300B2D1C4 /* SHMoneyCreateViewController.m */; };
+		9E43E211198695D300B2D1C4 /* SHMoneyCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E20F198695D300B2D1C4 /* SHMoneyCreateViewController.xib */; };
+		9E43E2161986A3A100B2D1C4 /* ios_splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E2141986A3A100B2D1C4 /* ios_splash@2x.png */; };
+		9E43E2171986A3A100B2D1C4 /* ios_splash@568.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E2151986A3A100B2D1C4 /* ios_splash@568.png */; };
+		9E43E21B1986B3E300B2D1C4 /* SHChatItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E43E21A1986B3E300B2D1C4 /* SHChatItem.m */; };
+		9E43E21E1986B45200B2D1C4 /* SHChatListHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E43E21D1986B45200B2D1C4 /* SHChatListHelper.m */; };
+		9E43E2201986C6EC00B2D1C4 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E21F1986C6EC00B2D1C4 /* new.png */; };
 		9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */; };
 		9E8521CF193F8A93001A17C5 /* SHGroupListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */; };
 		9E8521DC193F9156001A17C5 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D3193F9155001A17C5 /* a.png */; };
@@ -350,6 +357,16 @@
 		9E43E2081985583400B2D1C4 /* SHChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatDetailViewController.h; sourceTree = "<group>"; };
 		9E43E2091985583400B2D1C4 /* SHChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatDetailViewController.m; sourceTree = "<group>"; };
 		9E43E20A1985583400B2D1C4 /* SHChatDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatDetailViewController.xib; sourceTree = "<group>"; };
+		9E43E20D198695D300B2D1C4 /* SHMoneyCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoneyCreateViewController.h; sourceTree = "<group>"; };
+		9E43E20E198695D300B2D1C4 /* SHMoneyCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoneyCreateViewController.m; sourceTree = "<group>"; };
+		9E43E20F198695D300B2D1C4 /* SHMoneyCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMoneyCreateViewController.xib; sourceTree = "<group>"; };
+		9E43E2141986A3A100B2D1C4 /* ios_splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios_splash@2x.png"; sourceTree = "<group>"; };
+		9E43E2151986A3A100B2D1C4 /* ios_splash@568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios_splash@568.png"; sourceTree = "<group>"; };
+		9E43E2191986B3E300B2D1C4 /* SHChatItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatItem.h; sourceTree = "<group>"; };
+		9E43E21A1986B3E300B2D1C4 /* SHChatItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatItem.m; sourceTree = "<group>"; };
+		9E43E21C1986B45200B2D1C4 /* SHChatListHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatListHelper.h; sourceTree = "<group>"; };
+		9E43E21D1986B45200B2D1C4 /* SHChatListHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatListHelper.m; sourceTree = "<group>"; };
+		9E43E21F1986C6EC00B2D1C4 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		9E8521CB193F8A85001A17C5 /* SHGroupListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHGroupListViewCell.h; sourceTree = "<group>"; };
 		9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHGroupListViewCell.m; sourceTree = "<group>"; };
 		9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGroupListViewCell.xib; sourceTree = "<group>"; };
@@ -764,6 +781,17 @@
 			path = SHWebViewController;
 			sourceTree = "<group>";
 		};
+		9E43E2181986B3CE00B2D1C4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E43E2191986B3E300B2D1C4 /* SHChatItem.h */,
+				9E43E21A1986B3E300B2D1C4 /* SHChatItem.m */,
+				9E43E21C1986B45200B2D1C4 /* SHChatListHelper.h */,
+				9E43E21D1986B45200B2D1C4 /* SHChatListHelper.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		9E8521CA193F8A53001A17C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +811,9 @@
 		9E8521D2193F9136001A17C5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9E43E21F1986C6EC00B2D1C4 /* new.png */,
+				9E43E2141986A3A100B2D1C4 /* ios_splash@2x.png */,
+				9E43E2151986A3A100B2D1C4 /* ios_splash@568.png */,
 				9E0ECC08195A5205004A907F /* icon_selected.png */,
 				9E871DEB1957B14F000109DA /* icon_myprofile_mycalender.png */,
 				9E871DEC1957B14F000109DA /* icon_myprofile_myfocus.png */,
@@ -1455,6 +1486,9 @@
 				9E0670AC1961D89700E20195 /* SHReportListViewController.h */,
 				9E0670AD1961D89700E20195 /* SHReportListViewController.m */,
 				9E0670AE1961D89700E20195 /* SHReportListViewController.xib */,
+				9E43E20D198695D300B2D1C4 /* SHMoneyCreateViewController.h */,
+				9E43E20E198695D300B2D1C4 /* SHMoneyCreateViewController.m */,
+				9E43E20F198695D300B2D1C4 /* SHMoneyCreateViewController.xib */,
 			);
 			name = MoneyList;
 			path = money/Bussiness/MoneyList;
@@ -1487,6 +1521,7 @@
 		9EA69DB9193AC5A30030C27F /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				9E43E2181986B3CE00B2D1C4 /* Data */,
 				9E8522801944D806001A17C5 /* View */,
 				9E8986F4193AC980006B3BBD /* SHChatListViewController.h */,
 				9E8986F5193AC980006B3BBD /* SHChatListViewController.m */,
@@ -1707,6 +1742,7 @@
 				9EA69D3F1938E7D50030C27F /* DSLCalendarDaySelection-right.png in Resources */,
 				9EA69D621938E7D50030C27F /* button_current_bg.png in Resources */,
 				9EA69D401938E7D50030C27F /* DSLCalendarDaySelection-right@2x.png in Resources */,
+				9E43E211198695D300B2D1C4 /* SHMoneyCreateViewController.xib in Resources */,
 				9E31361419468B5C002A3298 /* SHChatUnitMySelfViewCell.xib in Resources */,
 				9EA69DA41938E7D50030C27F /* module.xml in Resources */,
 				9E8522711944743D001A17C5 /* navi_icon_friend_press@2x.png in Resources */,
@@ -1736,6 +1772,7 @@
 				9EA69D451938E7D50030C27F /* blackArrow@2x.png in Resources */,
 				9E85229119462033001A17C5 /* SHChatUnitViewCell.xib in Resources */,
 				9EA69DB71938ED210030C27F /* SHMoneyListViewController.xib in Resources */,
+				9E43E2161986A3A100B2D1C4 /* ios_splash@2x.png in Resources */,
 				9E8522681944743D001A17C5 /* dialogue_ others.png in Resources */,
 				9EA69D761938E7D50030C27F /* SHTableViewGeneralCell.xib in Resources */,
 				9E85227F1944BA30001A17C5 /* SHLoginViewController.xib in Resources */,
@@ -1749,6 +1786,7 @@
 				9E124AB71979125200F9C953 /* SHTeamSearchViewController.xib in Resources */,
 				9E94D236194CA81A00D7F074 /* SHMoneyDetailViewController.xib in Resources */,
 				9EA69D6E1938E7D50030C27F /* ic_re_error@2x.png in Resources */,
+				9E43E2201986C6EC00B2D1C4 /* new.png in Resources */,
 				9E8522751944743D001A17C5 /* navi_icon_profile_press@2x.png in Resources */,
 				9EA69D371938E7D50030C27F /* DSLCalendar-previousMonth.png in Resources */,
 				9E43E20C1985583400B2D1C4 /* SHChatDetailViewController.xib in Resources */,
@@ -1782,6 +1820,7 @@
 				9E871DEF1957B14F000109DA /* icon_myprofile_myfocus.png in Resources */,
 				9EA69D9A1938E7D50030C27F /* NVDebugPanelController.xib in Resources */,
 				9E8522731944743D001A17C5 /* navi_icon_message_press@2x.png in Resources */,
+				9E43E2171986A3A100B2D1C4 /* ios_splash@568.png in Resources */,
 				9EA69DA61938E7D50030C27F /* style.xml in Resources */,
 				9EDA5D35194B674400471471 /* SHMyCalendarViewCell.xib in Resources */,
 				9EA69D481938E7D50030C27F /* grayArrow.png in Resources */,
@@ -1857,6 +1896,7 @@
 				9EA69D611938E7D50030C27F /* SHImageView.m in Sources */,
 				9EA69D321938E7D50030C27F /* DSLCalendarMonthView.m in Sources */,
 				9EA69D301938E7D50030C27F /* DSLCalendarMonthSelectorView.m in Sources */,
+				9E43E21E1986B45200B2D1C4 /* SHChatListHelper.m in Sources */,
 				9EA69DB61938ED210030C27F /* SHMoneyListViewController.m in Sources */,
 				9E94D231194C69D300D7F074 /* SHMyTeamTableViewCell.m in Sources */,
 				9EA69D2D1938E7D50030C27F /* DSLCalendarDayCalloutView.m in Sources */,
@@ -1890,6 +1930,7 @@
 				9EA69D531938E7D50030C27F /* PCHalfPieChart.m in Sources */,
 				9E0670AF1961D89700E20195 /* SHReportListViewController.m in Sources */,
 				9EA69D981938E7D50030C27F /* LogCMD.m in Sources */,
+				9E43E21B1986B3E300B2D1C4 /* SHChatItem.m in Sources */,
 				9EDA5D2E194B66CA00471471 /* SHMyCalendarViewController.m in Sources */,
 				9EA69D5C1938E7D50030C27F /* MMProgressHUDWindow.m in Sources */,
 				9E43E20B1985583400B2D1C4 /* SHChatDetailViewController.m in Sources */,
@@ -1945,6 +1986,7 @@
 				9EA69D9D1938E7D50030C27F /* SHAppDelegate.m in Sources */,
 				9EA69D951938E7D50030C27F /* GuidClear.m in Sources */,
 				9EA69D511938E7D50030C27F /* SHPictureViewController.m in Sources */,
+				9E43E210198695D300B2D1C4 /* SHMoneyCreateViewController.m in Sources */,
 				9EA69D551938E7D50030C27F /* PCPieChart.m in Sources */,
 				9E31380A1947EF22002A3298 /* SHChatPersonalExperienceViewCell.m in Sources */,
 				9EA69D881938E7D50030C27F /* SHTitleContentViewController.m in Sources */,

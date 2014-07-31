@@ -29,7 +29,7 @@
 #define DEVICE_TOKEN @"DeviceTokenStringKEY"
 
 
-#define LOGIN_INFO @"login_info"
+#define LOGIN_INFO @"login_info2"
 
 
 #define RECT_RIGHTSHOW CGRectMake(87, 23, 930, 730)
@@ -44,8 +44,12 @@
 #define RECT_MAIN_LANDSCAPE_RIGHT CGRectMake(-20, 0, 768, 1004)
 #define RECT_MAIN_LANDSCAPE_LEFT CGRectMake(20, 0, 768, 1004)
 
+#define USER_ICON   [[[NSUserDefaults standardUserDefaults]valueForKey:LOGIN_INFO] valueForKey:@"headIcon"]
+#define USER_NAME   [[[NSUserDefaults standardUserDefaults]valueForKey:LOGIN_INFO] valueForKey:@"name"]
+
 //notification
 #define NOTIFICATION_MESSAGE @"notification_message"
+#define NOTIFICATION_CHATITEMLIST_CHANGED @"notification_chatitemlist_changed"
 
 #define NOTIFICATION_LOGIN_SUCCESSFUL @"notification_login_successful"
 #define NOTIFICATION_LOGINOUT @"notification_loginout"

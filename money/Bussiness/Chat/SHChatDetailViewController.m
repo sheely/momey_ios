@@ -8,6 +8,7 @@
 
 #import "SHChatDetailViewController.h"
 #import "SHChatUnitViewCell.h"
+#import "SHChatListHelper.h"
 
 @interface SHChatDetailViewController ()
 
@@ -26,26 +27,28 @@
 
 - (void)loadNext
 {
-//    [self showWaitDialogForNetWork];
-//    
-//    SHPostTaskM * post = [[SHPostTaskM alloc]init];
-//    post.URL = URL_FOR(@"queryLmList.do");
-//    [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
-//    
-//    [post start:^(SHTask * t) {
+    [self showWaitDialogForNetWork];
+    
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"miQueryChatHistory.do");
+    [post.postArgs setValue:[self.intent.args valueForKey:@"friendId"]forKey:@"anotheruserid"];
+    [post.postArgs setValue:[Entironment.instance loginName] forKey:@"myuserid"];
+    
+    [post start:^(SHTask * t) {
         mIsEnd  = YES;
-//        mList = [[t.result valueForKey:@"leaveMessages"] mutableCopy];
+        mList = [[t.result valueForKey:@"historymessages"] mutableCopy];
     if(mList == nil){
         mList = [[NSMutableArray alloc]init];
     }
     
     [self.tableView reloadData];
-//        [self dismissWaitDialog];
-//    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
-//        [t.respinfo show];
-//        [self dismissWaitDialog];
-//        
-//    }];
+    
+        [self dismissWaitDialog];
+    } taskWillTry:nil taskDidFailed:^(SHTask * t) {
+        [t.respinfo show];
+        [self dismissWaitDialog];
+        
+    }];
     
 }
 
@@ -54,14 +57,17 @@
     [super viewDidLoad];
     self.title = @"聊天";
     friendId = [self.intent.args valueForKey:@"friendId"];
+    friendname = [self.intent.args valueForKey:@"friendName"];
+    headicon = [self.intent.args valueForKey:@"friendHeadicon"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(message:) name:NOTIFICATION_MESSAGE object:nil];
-    [self loadNext];
+    //[self loadNext];
     // Do any additional setup after loading the view from its nib.
 }
 - (void)message:(NSNotification * )n
 {
 //    friendId
     BOOL b = false;
+    [self checkBottom];
     for (NSDictionary * dic  in n.object) {
         if([[dic valueForKey:@"senderuserid"]isEqualToString:friendId ] == YES){
             [mList addObject:dic];
@@ -70,9 +76,9 @@
     }
     if(b){
         [self.tableView reloadData];
-        [self checkBottom];
 
     }
+    [self checkBottom2];
 }
 
 - (void)dealloc
@@ -102,7 +108,12 @@
     }
 }
 
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if(!isAnimation){
+//        [self.txtBox resignFirstResponder];
+    }
+}
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SHChatUnitViewCell * cell = nil;
@@ -120,6 +131,9 @@
 
 - (IBAction)btnSenderOnTouch:(id)sender
 {
+    if (self.txtBox.text.length == 0) {
+        return;
+    }
     [self showWaitDialogForNetWork];
     NSString * msg = self.txtBox.text;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -127,10 +141,23 @@
     NSString *destDateString = [dateFormatter stringFromDate:[NSDate date]];
     NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
     [dic setValue:[Entironment instance].loginName forKey:@"senderuserid"];
-    [dic setValue:@"" forKey:@"senderheadicon"];
+    [dic setValue:USER_ICON forKey:@"senderheadicon"];
+    [dic setValue:USER_NAME forKey:@"senderusername"];
     [dic setValue:msg forKey:@"chatcontent"];
     [dic setValue:destDateString forKey:@"sendtime"];
     [dic setValue:@"self" forKey:@"type"];
+    
+    SHChatItem * item = [[SHChatItem alloc]init] ;
+    item.userid = friendId;
+    item.content = [NSString stringWithFormat:@"⬆︎%@",[dic valueForKey:@"chatcontent"]];
+    item.date = [dic valueForKey:@"sendtime"];
+    item.headicon = headicon;
+    item.username = friendname;
+    item.isNew = NO;
+    [[SHChatListHelper instance] addItem: item];
+    [[SHChatListHelper instance] notice];
+    
+    
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     [post.postArgs setValue:msg forKey:@"chatcontent"];
@@ -141,8 +168,9 @@
     [post start:^(SHTask *t) {
         [self dismissWaitDialog];
         [mList addObject:dic];
-        [self.tableView reloadData];
         [self checkBottom];
+        [self.tableView reloadData];
+        [self checkBottom2];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
         [t.respinfo show];
         [self dismissWaitDialog];

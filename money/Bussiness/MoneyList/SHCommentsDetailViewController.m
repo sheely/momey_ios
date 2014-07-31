@@ -85,6 +85,8 @@
         self.btnSender.frame = CGRectMake(261, self.view.frame.size.height - 30 - rect.size.height + 44 , 48, 30);
         isAnimation = YES;
         
+        isScroll = YES;
+        [self checkBottom2];
     } completion:^(BOOL finished) {
         isAnimation = NO;
     }];
@@ -124,7 +126,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if(!isAnimation){
-        [self.txtBox resignFirstResponder];
+      //  [self.txtBox resignFirstResponder];
     }
 }
 
@@ -183,7 +185,7 @@
     NSString *destDateString = [dateFormatter stringFromDate:[NSDate date]];
     NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
     [dic setValue:[Entironment instance].loginName forKey:@"leaveMessager"];
-    [dic setValue:@"" forKey:@"lmHeadIcon"];
+    [dic setValue:USER_ICON forKey:@"lmHeadIcon"];
     [dic setValue:msg forKey:@"lmContent"];
     [dic setValue:destDateString forKey:@"lmTime"];
     [dic setValue:@"self" forKey:@"type"];
@@ -196,8 +198,9 @@
     [post start:^(SHTask *t) {
         [self dismissWaitDialog];
         [mList addObject:dic];
-        [self.tableView reloadData];
         [self checkBottom];
+        [self.tableView reloadData];
+        [self checkBottom2];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
         [t.respinfo show];
         [self dismissWaitDialog];
@@ -207,8 +210,21 @@
 
 - (void)checkBottom{
     if(mList .count > 0){
+        if(ABS((self.tableView.contentSize.height - self.tableView.frame.size.height - self.tableView.contentOffset.y) )<=5)
+        {
+            isScroll = YES;
+        }else{
+            isScroll = NO;
+        }
+    }
+}
+- (void)checkBottom2{
+    if(isScroll){
+        if(mList .count > 0){
+
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:mList.count-1 inSection:0];
         [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
     }
 }
 

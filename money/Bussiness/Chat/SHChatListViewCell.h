@@ -9,6 +9,7 @@
 #import "SHTableViewTitleContentBottomCell.h"
 
 @interface SHChatListViewCell : SHTableViewTitleContentBottomCell
-@property (weak, nonatomic) IBOutlet UIImageView *imgTitle;
+@property (weak, nonatomic) IBOutlet SHImageView *imgTitle;
+@property (weak, nonatomic) IBOutlet UIImageView *imgNew;
 
 @end

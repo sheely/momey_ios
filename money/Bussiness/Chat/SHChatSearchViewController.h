@@ -18,12 +18,16 @@
 {
     NSArray * listType ;
     NSArray * listCompany;
+    NSArray * listRegion;
     NSDictionary * dicType;
+    NSDictionary * dicRegion;
     NSDictionary * dicCompany;
+    UITapGestureRecognizer* _tapGestureRec;
 }
 @property (weak, nonatomic) IBOutlet UIButton *btnRegion;
 @property (weak, nonatomic) IBOutlet UIButton *btnType;
 @property (weak, nonatomic) IBOutlet UIButton *btnCompany;
+@property (weak, nonatomic) IBOutlet UITextField *txtName;
 - (IBAction)btnSearchOnTouch:(id)sender;
 - (IBAction)btnTypeOnTouch:(id)sender;
 - (IBAction)btnCompanyOnTouch:(id)sender;

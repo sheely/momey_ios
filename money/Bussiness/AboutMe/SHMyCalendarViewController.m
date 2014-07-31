@@ -32,7 +32,7 @@
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryTasks.do");
     [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"isOwnTask"];
-    NSString * user = [[NSUserDefaults standardUserDefaults] valueForKey:LOGIN_INFO];
+    NSString * user = [Entironment.instance loginName];
 
     [post.postArgs setValue:user forKey:@"queryedUserName"];
     

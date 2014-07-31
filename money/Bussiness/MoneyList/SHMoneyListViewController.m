@@ -30,13 +30,18 @@
     self.title = @"财信";
    // mList = [@[@"",@"",@"",@"",@""] mutableCopy];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[NVSkin.instance image:@"navi_search_nest"] target:self action:@selector(btnSearch:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"新增" target:self action:@selector(btnAdd:)];
     oppoType = @"";
     bossName = @"";
     oppoTitle = @"";
     type = 99;
     // Do any additional setup after loading the view from its nib.
 }
-
+- (void)btnAdd:(NSObject*)sender
+{
+    SHIntent * indent = [[SHIntent alloc]init:@"moneycreate" delegate:self containner:self.navigationController];
+    [[UIApplication sharedApplication]open:indent];
+}
 - (void)loadNext
 {
     SHPostTaskM * post = [[SHPostTaskM alloc]init];

@@ -32,15 +32,20 @@
     [post start:^(SHTask * t) {
         listType = [t.result valueForKey:@"oppoTypes"];
         listCompany = [t.result valueForKey:@"companys"];
-        
+        listRegion  =[t.result valueForKey:@"address"];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [self dismissWaitDialog];
         [t.respinfo show];
     }];
-
+  _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
+    [self.view addGestureRecognizer:_tapGestureRec];
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)closeKeyboard
+{
+    [self.txtName resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -52,9 +57,13 @@
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryFriend.do");
-    [post.postArgs setValue:@"" forKey:@"oppoType"];
-    [post.postArgs setValue:@"" forKey:@"companyId"];
-    [post.postArgs setValue:@"" forKey:@"address"];
+    NSString * type = [dicType valueForKey:@"key"];
+    NSString * company = [dicCompany valueForKey:@"key"];
+    NSString * region = [dicRegion valueForKey:@"key"];
+    [post.postArgs setValue:type.length > 0 ? type:@"" forKey:@"oppoType"];
+    [post.postArgs setValue:company.length > 0 ? company:@"" forKey:@"companyId"];
+    [post.postArgs setValue:region.length > 0 ? region:@"" forKey:@"address"];
+//    [post.postArgs setValue:[dicRegion valueForKey:@"key"] forKey:@"address"];
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
         NSArray * list  = [t.result valueForKey:@"friendList"];
@@ -86,7 +95,11 @@
     dicType = [listType objectAtIndex:k.tag];
     [self.btnType setTitle:k.title forState:UIControlStateNormal];
 }
-
+- (void)kxmRegion:(KxMenuItem*)k
+{
+    dicRegion = [listRegion objectAtIndex:k.tag];
+    [self.btnRegion setTitle:k.title forState:UIControlStateNormal];
+}
 - (void)kxmCompany:(KxMenuItem*)k
 {
     dicCompany = [listCompany objectAtIndex:k.tag];
@@ -112,12 +125,12 @@
     NSMutableArray * array = [[NSMutableArray alloc]init];
     for (int i =0 ; i< listType.count ; i++) {
         KxMenuItem* item = [[KxMenuItem alloc] init];
-        item.title =[[listType objectAtIndex:i] valueForKey:@"value"];
+        item.title =[[listRegion objectAtIndex:i] valueForKey:@"value"];
         item.tag = i ;
         item.target = self;
-        item.action = @selector(kxmType:);
+        item.action = @selector(kxmRegion:);
         [array addObject:item];
     }
-    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnType.frame fromView:self.btnType] menuItems:array];
+    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnRegion.frame fromView:self.btnRegion] menuItems:array];
 }
 @end

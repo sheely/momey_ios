@@ -85,5 +85,8 @@
     <module
     name="teamsearchuserlist"
     target="SHTeamSearchUserViewController" />
+    <module
+    name="moneycreate"
+    target="SHMoneyCreateViewController" />
     
 </root>

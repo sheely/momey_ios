@@ -21,7 +21,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <tabBarItem title="财信" image="navi_icon_message_press.png" id="2N6-ot-kKU"/>
-                        <tabBarItem tag="1" title=" 聊天" image="navi_icon_friend_press.png" badgeValue="2" id="saG-cC-jsp"/>
+                        <tabBarItem tag="1" title=" 聊天" image="navi_icon_friend_press.png" id="saG-cC-jsp"/>
                         <tabBarItem tag="2" title="财圈" image="navi_icon_circle_press.png" id="MlW-P6-eUG"/>
                         <tabBarItem tag="3" title="我" image="navi_icon_profile_press.png" id="QC8-kN-eVs"/>
                     </items>

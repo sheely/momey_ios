@@ -32,7 +32,7 @@
     [super viewDidLoad];
     self.keybordView = self.view;
     self.keybordheight = 70;
-    self.txtLogin.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
+    self.txtLogin.text = [[[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO] valueForKey:@"userId"];
 #ifdef DEBUG
     self.txtLogin.text = @"germmy";
     self.txtPassword.text = @"123456" ;
@@ -75,7 +75,8 @@
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
         //Entironment.instance.sessionid = [t.result valueForKey:@"sessionId"];
-        [[NSUserDefaults standardUserDefaults] setValue:self.txtLogin.text forKey:LOGIN_INFO];
+        [[NSUserDefaults standardUserDefaults] setValue:t.result forKey:LOGIN_INFO];
+      
         [[NSUserDefaults standardUserDefaults] synchronize];
         [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {

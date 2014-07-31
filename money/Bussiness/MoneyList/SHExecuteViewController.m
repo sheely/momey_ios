@@ -29,7 +29,7 @@
     self.title = @"执行信息";
     if([[self.intent.args valueForKey:@"type"] length ] > 0 &&  [[self.intent.args valueForKey:@"type"] caseInsensitiveCompare:@"self"] == NSOrderedSame){
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"提交" target:self action:@selector(btnSubmit:)];
-        labExecuter.text = [[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO];
+        labExecuter.text =[Entironment.instance loginName];
     }
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];

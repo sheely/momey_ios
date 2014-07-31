@@ -10,6 +10,7 @@
 #import "SHGroupListViewController.h"
 #import "SHChatListViewController.h"
 #import "SHAboutMeViewController.h"
+#import "SHChatListHelper.h"
 
 @interface MainViewController ()
 
@@ -40,7 +41,6 @@
     [self.view addSubview:loginViewController.view];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessful:) name:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
     
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(message:) userInfo:nil repeats:YES];
 }
 
 - (void)message:(NSObject*)sender
@@ -51,14 +51,28 @@
     
     [post start:^(SHTask * t) {
         NSArray * array = [t.result valueForKey:@"immessages"];
-        if(array){
+        if(array.count > 0){
             [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_MESSAGE object:array];
+            UITabBarItem * item = [self.tabbar.items objectAtIndex:1];
+            
+            if(item != self.tabbar.selectedItem){
+                item.badgeValue = @"N+";
+            }
+            
+            for (NSDictionary*dic in array) {
+                SHChatItem * item = [[SHChatItem alloc]init] ;
+                item.userid = [dic valueForKey:@"senderuserid"];
+                item.content = [dic valueForKey:@"chatcontent"];
+                item.date = [dic valueForKey:@"sendtime"];
+                item.headicon = [dic valueForKey:@"senderheadicon"];
+                item.username = [dic valueForKey:@"senderusername"];
+                item.isNew = YES;
+                [[SHChatListHelper instance] addItem: item];
+            }
+            [[SHChatListHelper instance]notice];
         }
-
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
           }];
-    
-    
 }
 
 - (void)loginSuccessful:(NSObject *)sender
@@ -72,6 +86,8 @@
         [loginViewController.view removeFromSuperview];
     }];
     [self tabBar:self.tabbar didSelectItem:self.tabbar.selectedItem];
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(message:) userInfo:nil repeats:YES];
+
 }
 
 #pragma  mark Tabbar
@@ -96,6 +112,7 @@
             nacontroller = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
             [mDictionary setValue:nacontroller forKey:@"SHChatListViewController"];
         }
+        item.badgeValue = nil;
     }
     else if(item.tag == 2){
         nacontroller =[ mDictionary valueForKey:@"SHGroupListViewController"];

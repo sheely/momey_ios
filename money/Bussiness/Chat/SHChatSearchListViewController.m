@@ -36,6 +36,7 @@
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     SHChatSimpleUserInfoCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatSimpleUserInfoCell" owner:nil options:nil] objectAtIndex:0];
     cell.labTitle.text = [dic valueForKey:@"friendName"];
+    cell.labContent.text = [dic valueForKey:@"companyName"];
     cell.tag = indexPath.row;
     [cell.btnChat addTarget:self action:@selector(btnChat:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnAdd addTarget:self action:@selector(btnAdd:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,7 +70,10 @@
 {
     NSDictionary * dic = [mList objectAtIndex:sender.tag];
     SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
-    [intent.args setValue:@"zhangsan" forKey:@"friendId"];
+    [intent.args setValue:[dic valueForKey:@"friendId"] forKey:@"friendId"];
+    [intent.args setValue:[dic valueForKey:@"friendIcon"] forKey:@"friendIcon"];
+    [intent.args setValue:[dic valueForKey:@"friendName"] forKey:@"friendName"];
+
     [[UIApplication sharedApplication]open:intent];
 
 }

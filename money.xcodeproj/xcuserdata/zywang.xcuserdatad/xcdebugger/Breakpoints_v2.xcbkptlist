@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MainPageController/MainViewController.m"
-            timestampString = "427737332.784849"
+            timestampString = "428259326.046577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatListViewController.m"
-            timestampString = "424790232.969441"
+            timestampString = "428260314.899269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228">
+            startingLineNumber = "256"
+            endingLineNumber = "256">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187">
+            startingLineNumber = "215"
+            endingLineNumber = "215">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -180,11 +180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189">
+            startingLineNumber = "217"
+            endingLineNumber = "217">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -194,11 +194,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234">
+            startingLineNumber = "262"
+            endingLineNumber = "262">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -336,11 +336,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MainPageController/MainViewController.m"
-            timestampString = "428171963.040446"
+            timestampString = "428263724.781926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-tabBar:didSelectItem:"
             landmarkType = "5">
          </BreakpointContent>
@@ -352,11 +352,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MainPageController/MainViewController.m"
-            timestampString = "427737332.784849"
+            timestampString = "428259326.046577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -368,11 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426698813.678908"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-loadNext"
             landmarkType = "5">
             <Locations>
@@ -430,11 +430,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426698813.678908"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-loadNext"
             landmarkType = "5">
          </BreakpointContent>
@@ -462,11 +462,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426698813.678908"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-loadNext"
             landmarkType = "5">
          </BreakpointContent>
@@ -478,11 +478,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426698813.678908"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-loadNext"
             landmarkType = "5">
          </BreakpointContent>
@@ -494,11 +494,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -510,11 +510,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -558,11 +558,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -574,11 +574,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -590,11 +590,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-btnState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -622,11 +622,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "-btnEmployee:"
             landmarkType = "5">
          </BreakpointContent>
@@ -638,11 +638,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "-btnState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -924,11 +924,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161">
+            startingLineNumber = "189"
+            endingLineNumber = "189">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -938,11 +938,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158">
+            startingLineNumber = "186"
+            endingLineNumber = "186">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -952,11 +952,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160">
+            startingLineNumber = "188"
+            endingLineNumber = "188">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -996,11 +996,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162">
+            startingLineNumber = "190"
+            endingLineNumber = "190">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1010,11 +1010,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247">
+            startingLineNumber = "275"
+            endingLineNumber = "275">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1024,11 +1024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306">
+            startingLineNumber = "334"
+            endingLineNumber = "334">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1038,11 +1038,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310">
+            startingLineNumber = "338"
+            endingLineNumber = "338">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1130,11 +1130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "-btnMark:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1146,11 +1146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "-btnMark:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1354,11 +1354,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHCharUserDetailViewController.m"
-            timestampString = "427569838.049802"
+            timestampString = "428437807.263652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1370,11 +1370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHCharUserDetailViewController.m"
-            timestampString = "427569838.049802"
+            timestampString = "428437807.263652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1386,11 +1386,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHCharUserDetailViewController.m"
-            timestampString = "427569838.049802"
+            timestampString = "428437807.263652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "364"
-            endingLineNumber = "364"
+            startingLineNumber = "376"
+            endingLineNumber = "376"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1402,11 +1402,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHCharUserDetailViewController.m"
-            timestampString = "427569838.049802"
+            timestampString = "428437807.263652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1418,11 +1418,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700362.594798"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1498,11 +1498,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "426700384.276769"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-moneysearchviewcontrollerDidSubmit:type:boss:title:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1766,11 +1766,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "427043436.201896"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1910,13 +1910,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatSearchViewController.m"
-            timestampString = "428077715.504112"
+            timestampString = "428437151.391544"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-btnSearchOnTouch:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SHChatSearchViewController btnSearchOnTouch:]"
+                  moduleName = "money"
+                  urlString = "file:///Users/zywang/ios/money/money/Bussiness/Chat/SHChatSearchViewController.m"
+                  timestampString = "428437151.836124"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "921">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[SHChatSearchViewController btnSearchOnTouch:]_block_invoke"
+                  moduleName = "money"
+                  urlString = "file:///Users/zywang/ios/money/money/Bussiness/Chat/SHChatSearchViewController.m"
+                  timestampString = "428437151.836594"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2038,11 +2068,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269">
+            startingLineNumber = "297"
+            endingLineNumber = "297">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2052,11 +2082,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265">
+            startingLineNumber = "293"
+            endingLineNumber = "293">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2066,11 +2096,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288">
+            startingLineNumber = "316"
+            endingLineNumber = "316">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2080,7 +2110,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MainPageController/MainViewController.m"
-            timestampString = "428171915.63327"
+            timestampString = "428259680.406782"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -2128,11 +2158,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHMoneyListViewController.m"
-            timestampString = "428162578.234325"
+            timestampString = "428250846.465818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-loadNext"
             landmarkType = "5">
          </BreakpointContent>
@@ -2144,7 +2174,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MainPageController/MainViewController.m"
-            timestampString = "428171931.778973"
+            timestampString = "428259680.406782"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -2156,47 +2186,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MainPageController/MainViewController.m"
-            timestampString = "428171971.092991"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-message:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428174399.480103"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-message:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428173758.606734"
+            timestampString = "428435589.860917"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
+            landmarkName = "-message:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428436023.714283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-message:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428433521.41702"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -2208,11 +2238,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatSearchListViewController.m"
-            timestampString = "428173798.385963"
+            timestampString = "428262287.580014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-btnChat:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2224,7 +2254,343 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428174114.48551"
+            timestampString = "428433521.41702"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-loadNext"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHCommentsDetailViewController.m"
+            timestampString = "428266369.997657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHCommentsDetailViewController.m"
+            timestampString = "428266369.997657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428436023.714283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MainPageController/MainViewController.m"
+            timestampString = "428259680.406782"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-message:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatListViewController.m"
+            timestampString = "428263690.920121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-chatsearchviewcontrollerDidSubmit:list:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatListViewController.m"
+            timestampString = "428260355.997433"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-btnSearch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatItem.m"
+            timestampString = "428263644.66064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-initWithCoder:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatItem.m"
+            timestampString = "428263644.66064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-encodeWithCoder:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatSearchListViewController.m"
+            timestampString = "428264061.512551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428436023.714283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "-btnSenderOnTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHCommentsDetailViewController.m"
+            timestampString = "428266369.997657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "-checkBottom"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHCommentsDetailViewController.m"
+            timestampString = "428266369.997657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "-checkBottom"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428436023.714283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-message:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428436023.714283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-message:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHMoneyCreateViewController.m"
+            timestampString = "428378092.017801"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHMoneyCreateViewController.m"
+            timestampString = "428432320.186081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-btnOnTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHMoneyCreateViewController.m"
+            timestampString = "428432320.186081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-btnSubmit:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHMoneyCreateViewController.m"
+            timestampString = "428432496.238607"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-btnSubmit:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MoneyList/SHMoneyCreateViewController.m"
+            timestampString = "428432571.424727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-btnSubmit:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428433594.878411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-loadNext"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428433630.142461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -2240,12 +2606,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHCommentsDetailViewController.m"
-            timestampString = "428175581.340041"
+            timestampString = "428433832.039005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-loadNext"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2256,12 +2622,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/MoneyList/SHCommentsDetailViewController.m"
-            timestampString = "428175581.340041"
+            timestampString = "428433839.22604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-loadNext"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MainPageController/SHLoginViewController.m"
+            timestampString = "428434117.043469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-btnLoginOnTouch:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2272,12 +2654,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
-            timestampString = "428175831.314285"
+            timestampString = "428436023.714283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-tableView:dequeueReusableStandardCellForRowAtIndexPath:"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-btnSenderOnTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/MainPageController/SHLoginViewController.m"
+            timestampString = "428435287.410277"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-btnLoginOnTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatDetailViewController.m"
+            timestampString = "428436023.714283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-btnSenderOnTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatListViewController.m"
+            timestampString = "428435895.388238"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatSearchViewController.m"
+            timestampString = "428437151.391544"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-kxmRegion:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHCharUserDetailViewController.m"
+            timestampString = "428437796.178988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "-btnSendChat:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "money/Bussiness/Chat/SHChatSearchListViewController.m"
+            timestampString = "428437967.86771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-btnChat:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

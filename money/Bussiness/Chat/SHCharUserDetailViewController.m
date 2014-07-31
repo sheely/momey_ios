@@ -236,6 +236,7 @@
                 [cell.btnAddFavorate setTitle:@"添加关注" forState:UIControlStateNormal];
                 cell.btnAddFavorate.userstyle = @"btnsubmit";
             }
+            [cell.btnSendChat addTarget:self action:@selector(btnSendChat:) forControlEvents:UIControlEventTouchUpInside];
             cell.btnAddFavorate.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
 
             return  cell;
@@ -358,6 +359,17 @@
     }
     return nil;
 }
+
+- (void)btnSendChat:(UIButton*)b
+{ SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+     [intent.args setValue:[dic valueForKey:@"friendId"] forKey:@"friendId"];
+    [intent.args setValue:[dic valueForKey:@"friendName"]forKey:@"friendName"];
+    [intent.args setValue:[dic valueForKey:@"friendHeadIcon"] forKey:@"friendHeadicon"];
+//    
+    [[UIApplication sharedApplication]open:intent];
+
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 5) {
