@@ -12,17 +12,16 @@
 
 @interface SHViewController : UIViewController<ISHSkin>
 {
-    CGRect mRectkeybordview;
-   
+    
     
 }
 
 /**
  left right sider
  **/
-@property (nonatomic,strong) IBOutlet UIView * contentView;//
-@property (nonatomic,strong) IBOutlet UIView * leftView;
-@property (nonatomic,strong) IBOutlet UIView * rightView;
+
+@property (nonatomic,strong) SHViewController * leftViewController;
+@property (nonatomic,strong) SHViewController * rightViewController;
 
 
 @property (nonatomic,strong) UIView * keybordView;
@@ -34,25 +33,31 @@
 @property (nonatomic,strong) SHIntent * intent;
 
 - (BOOL)checkIntent:(NSString*)error;
-
+/**
+ 展示等待框
+ */
 - (void)showWaitDialog:(NSString*)title state:(NSString*)state;
 
+- (void)showWaitDialogForNetWork;
+
+- (void)showWaitDialogForNetWorkDismissBySelf;
+/**
+ 取消等待框
+ */
 - (void)dismissWaitDialog;
 
 - (void)dismissWaitDialog:(NSString*)msg;
 
 - (void)dismissWaitDialogSuccess;
 
-- (void)showWaitDialogForNetWork;
-
-- (void)showWaitDialogForNetWorkDismissBySelf;
-
 - (void)dismissWaitDialogSuccess:(NSString*) title;
 
 - (void)alertViewCancelOnClick;
 
 - (void)alertViewEnSureOnClick;
-
+/**
+ 展示对话框
+ */
 - (void)showAlertDialog:(NSString*)content;
 
 - (void)showAlertDialogForCancel:(NSString*)content;
@@ -66,10 +71,15 @@
 - (void)dismiss;
 
 - (void)btnBack:(NSObject*)sender;
+/**
+ 侧滑
+ **/
+- (void)leftItemClick4ViewController;
 
-- (void)leftItemClick;
-
-- (void)rightItemClick;
+- (void)rightItemClick4ViewController;
 
 - (void)closeSideBar;
+
+- (float)leftSContentOffset;
+
 @end

@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
 {
     BOOL mIsShowKeyboard;
     UIAlertView * alert;
-    
+    CGRect mRectkeybordview;
     
     float  _LeftSContentOffset;
     float _RightSContentOffset;
@@ -68,14 +68,24 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
     }
 }
 
+- (float)leftSContentOffset
+{
+    return 240;
+}
+
+- (float)rightSContentOffset
+{
+    return 160;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     UIButton* button = [[UIButton alloc]initWithFrame:CGRectMake(10, 0, 40, 40)];
     [button setImage:[UIImage imageNamed:@"NaviBack"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
-//   // [self.navigationItem.backBarButtonItem setBackButtonBackgroundImage:nil forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
+    //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+    //   // [self.navigationItem.backBarButtonItem setBackButtonBackgroundImage:nil forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
 	//initWithImage:[UIImage imageNamed:@"NaviBack"] target:self action:@selector(btnBack:)// Do any additional setup after loading the view.
     if(self.navigationController.viewControllers.count > 1){
         UIBarButtonItem * barbutton = [[UIBarButtonItem alloc]initWithCustomView:button];
@@ -83,21 +93,21 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
     }
     [self loadSkin];
     
-    _LeftSContentOffset=240;
-    _RightSContentOffset=160;
-    _LeftSContentScale=0.85;
-    _RightSContentScale=0.85;
+    _LeftSContentOffset = [self leftSContentOffset];
+    _RightSContentOffset = [self rightSContentOffset];
+    _LeftSContentScale=1;
+    _RightSContentScale=1;
     _LeftSJudgeOffset=100;
     _RightSJudgeOffset=100;
     _LeftSOpenDuration=0.4;
     _RightSOpenDuration=0.4;
     _LeftSCloseDuration=0.3;
     _RightSCloseDuration=0.3;
-    if(self.contentView){
-        [self.view addSubview:self.contentView];
+    if(self.leftViewController ||self.rightViewController){
+      
         _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSideBar)];
         _tapGestureRec.delegate = self;
-        [self.contentView addGestureRecognizer:_tapGestureRec];
+        [self.view addGestureRecognizer:_tapGestureRec];
         _tapGestureRec.enabled = NO;
         
         _panGestureRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGesture:)];
@@ -110,47 +120,91 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
 - (void)moveViewWithGesture:(UIPanGestureRecognizer *)panGes
 {
     static CGFloat currentTranslateX;
+    UIView * view ;
+    for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+        if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+            view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+            break;
+        }
+        
+    }
+
     if (panGes.state == UIGestureRecognizerStateBegan){
-        currentTranslateX = self.contentView.transform.tx;
+             currentTranslateX = view.transform.tx;
     }
     if (panGes.state == UIGestureRecognizerStateChanged){
-        CGFloat transX = [panGes translationInView:self.contentView].x;
+        CGFloat transX = [panGes translationInView:self.view].x;
         transX = transX + currentTranslateX;
         CGFloat sca;
         if (transX > 0){
-            [self.view sendSubviewToBack:self.rightView];
+            if(self.leftViewController == nil){
+                return;
+            }
+            CGRect frame = self.leftViewController.view.frame;
+            frame.origin.x =  0;
+            frame.size.width = _LeftSContentOffset;
+            self.leftViewController.view.frame = frame;
+            [[UIApplication sharedApplication].keyWindow insertSubview:self.leftViewController.view atIndex:0];
             [self configureViewShadowWithDirection:RMoveDirectionRight];
             
-            if (self.contentView.frame.origin.x < _LeftSContentOffset){
-                sca = 1 - (self.contentView.frame.origin.x/_LeftSContentOffset) * (1-_LeftSContentScale);
+            if (view.frame.origin.x <= _LeftSContentOffset){
+                sca = 1 - (view.frame.origin.x/_LeftSContentOffset) * (1-_LeftSContentScale);
             }
             else{
                 sca = _LeftSContentScale;
             }
+            if(  transX > _LeftSContentOffset){
+                  transX  = _LeftSContentOffset;
+            }
+
         }else {   //transX < 0
-            [self.view sendSubviewToBack:self.leftView];
+            if(self.rightViewController == nil){
+                return;
+            }
+            CGRect frame = self.rightViewController.view.frame;
+            frame.origin.x =  self.view.frame.size.width - _RightSContentOffset;
+            frame.size.width = _RightSContentOffset;
+            self.rightViewController.view.frame = frame;
+            [[UIApplication sharedApplication].keyWindow insertSubview:self.rightViewController.view atIndex:0];
             [self configureViewShadowWithDirection:RMoveDirectionLeft];
             
-            if (self.contentView.frame.origin.x > -_RightSContentOffset){
-                sca = 1 - (-self.contentView.frame.origin.x/_RightSContentOffset) * (1-_RightSContentScale);
+            if (view.frame.origin.x > -_RightSContentOffset){
+                sca = 1 - (-view.frame.origin.x/_RightSContentOffset) * (1-_RightSContentScale);
             }
             else{
                 sca = _RightSContentScale;
             }
+            if(  transX < -_RightSContentOffset){
+                transX  = -_RightSContentOffset;
+            }
+
         }
         CGAffineTransform transS = CGAffineTransformMakeScale(1.0, sca);
         CGAffineTransform transT = CGAffineTransformMakeTranslation(transX, 0);
         
         CGAffineTransform conT = CGAffineTransformConcat(transT, transS);
         
-        self.contentView.transform = conT;
+        for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+            if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+                UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+                view.transform = conT;
+            }
+            
+        }
     }else if (panGes.state == UIGestureRecognizerStateEnded){
-        CGFloat panX = [panGes translationInView:self.contentView].x;
+        CGFloat panX = [panGes translationInView:self.view].x;
         CGFloat finalX = currentTranslateX + panX;
         if (finalX > _LeftSJudgeOffset){
             CGAffineTransform conT = [self transformWithDirection:RMoveDirectionRight];
             [UIView beginAnimations:nil context:nil];
-            self.contentView.transform = conT;
+            for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+                if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+                    UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+                    view.transform = conT;
+                }
+                
+            }
+
             [UIView commitAnimations];
             
             _tapGestureRec.enabled = YES;
@@ -159,7 +213,14 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
         if (finalX < -_RightSJudgeOffset){
             CGAffineTransform conT = [self transformWithDirection:RMoveDirectionLeft];
             [UIView beginAnimations:nil context:nil];
-            self.contentView.transform = conT;
+            for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+                if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+                    UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+                    view.transform = conT;
+                }
+                
+            }
+
             [UIView commitAnimations];
             
             _tapGestureRec.enabled = YES;
@@ -167,7 +228,14 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
         }else{
             CGAffineTransform oriT = CGAffineTransformIdentity;
             [UIView beginAnimations:nil context:nil];
-            self.contentView.transform = oriT;
+            for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+                if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+                    UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+                    view.transform = oriT;
+                }
+                
+            }
+
             [UIView commitAnimations];
             
             _tapGestureRec.enabled = NO;
@@ -175,33 +243,55 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
     }
 }
 
-- (void)rightItemClick
+- (void)rightItemClick4ViewController
 {
     CGAffineTransform conT = [self transformWithDirection:RMoveDirectionLeft];
+    [self configureViewShadowWithDirection:RMoveDirectionRight];
+    CGRect frame = self.rightViewController.view.frame;
+    frame.origin.x =  self.view.frame.size.width - _RightSContentOffset;
+    frame.size.width = _RightSContentOffset;
+    self.rightViewController.view.frame = frame;
     
-    [self.view insertSubview:self.rightView belowSubview:self.contentView];
+    [[UIApplication sharedApplication].keyWindow insertSubview:self.rightViewController.view atIndex:0];
     [self configureViewShadowWithDirection:RMoveDirectionLeft];
     
     [UIView animateWithDuration:_RightSOpenDuration
                      animations:^{
-                         self.contentView.transform = conT;
+                         for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+                             if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+                                 UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+                                 view.transform = conT;
+                             }
+                             
+                         }
+
                      }
                      completion:^(BOOL finished) {
                          _tapGestureRec.enabled = YES;
                      }];
+    
 }
-- (void)leftItemClick{
+
+- (void)leftItemClick4ViewController{
     CGAffineTransform conT = [self transformWithDirection:RMoveDirectionRight];
-    
-    
     [self configureViewShadowWithDirection:RMoveDirectionRight];
-    [self.view insertSubview:self.leftView belowSubview:self.contentView];
+    CGRect frame = self.leftViewController.view.frame;
+    frame.origin.x =  0;
+    frame.size.width = _LeftSContentOffset;
+    self.leftViewController.view.frame = frame;
+    [[UIApplication sharedApplication].keyWindow insertSubview:self.leftViewController.view atIndex:0];
     [UIView animateWithDuration:_LeftSOpenDuration
                      animations:^{
-                         self.contentView.transform = conT;
+                         for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+                             if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+                                 UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+                                 view.transform = conT;
+                             }
+                             
+                         }
                      }
                      completion:^(BOOL finished) {
-                            _tapGestureRec.enabled = YES;
+                         _tapGestureRec.enabled = YES;
                      }];
 }
 
@@ -225,7 +315,6 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
     CGAffineTransform transT = CGAffineTransformMakeTranslation(translateX, 0);
     CGAffineTransform scaleT = CGAffineTransformMakeScale(1.0, transcale);
     CGAffineTransform conT = CGAffineTransformConcat(transT, scaleT);
-    
     return conT;
 }
 
@@ -243,22 +332,41 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
         default:
             break;
     }
+    for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+        if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+            UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+            view.layer.shadowOffset = CGSizeMake(shadowW, 1.0);
+            view.layer.shadowColor = [UIColor blackColor].CGColor;
+            view.layer.shadowOpacity = 0.8f;
+            
+        }
+        
+    }
     
-    self.contentView.layer.shadowOffset = CGSizeMake(shadowW, 1.0);
-    self.contentView.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.contentView.layer.shadowOpacity = 0.8f;
 }
 
 - (void)closeSideBar
 {
-    CGAffineTransform oriT = CGAffineTransformIdentity;
-    [UIView animateWithDuration:self.view.transform.tx==_LeftSContentOffset?_LeftSCloseDuration:_RightSCloseDuration
-                     animations:^{
-                         self.contentView.transform = oriT;
-                     }
-                     completion:^(BOOL finished) {
-                         _tapGestureRec.enabled = NO;
-                     }];
+    if(self.leftViewController != nil || self.rightViewController != nil){
+        CGAffineTransform oriT = CGAffineTransformIdentity;
+        [UIView animateWithDuration:self.view.transform.tx==_LeftSContentOffset?_LeftSCloseDuration:_RightSCloseDuration
+                         animations:^{
+                             for (int i=0; i < [UIApplication sharedApplication].keyWindow.subviews.count; i++) {
+                                 if([[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.leftViewController.view && [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] != self.rightViewController.view){
+                                     UIView * view = [[[UIApplication sharedApplication].keyWindow subviews] objectAtIndex:i] ;
+                                     view.transform = oriT;
+                                 }
+                                 
+                             }
+                             
+                         }
+                         completion:^(BOOL finished) {
+                             _tapGestureRec.enabled = NO;
+                             [self.leftViewController.view removeFromSuperview];
+                             [self.rightViewController.view removeFromSuperview];
+
+                         }];
+    }
 }
 
 
@@ -297,7 +405,7 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
 
 - (void)showAlertDialogForCancel:(NSString*)content
 {
-     [self showAlertDialog:content button:@"确定" otherButton:@"取消"];
+    [self showAlertDialog:content button:@"确定" otherButton:@"取消"];
 }
 
 - (void)showAlertDialog:(NSString*)content otherButton:(NSString*)button
@@ -345,18 +453,18 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
 }
 -(void)showWaitDialogForNetWork
 {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-        [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
-        [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleNone];
-        [MMProgressHUD showWithTitle:@"请求数据..." status:@"请稍候..."];
-
-//    });
-   
+    //    dispatch_async(dispatch_get_main_queue(), ^{
+    [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleNone];
+    [MMProgressHUD showWithTitle:@"请求数据..." status:@"请稍候..."];
+    
+    //    });
+    
     //[self performSelector:@selector(showWaitDialogForWait) withObject:nil afterDelay:0.001];
 }
 //- (void)showWaitDialogForWait
 //{
-//    
+//
 //    [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
 //    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleNone];
 //    [MMProgressHUD showWithTitle:@"请求数据..." status:@"请稍候..."];
@@ -370,20 +478,20 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self dismissWaitDialog];
     });
-
+    
 }
 
 -(void)dismissWaitDialog:(NSString*)msg
 {
     [MMProgressHUD dismissWithSuccess:msg];
-
+    
 }
 
 -(void)dismissWaitDialog
 {
-
+    
     [MMProgressHUD dismiss];
-
+    
 }
 -(void)dismissWaitDialogSuccess
 {
@@ -433,6 +541,8 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
 {
     [self unregisterForKeyboardNotifications];
     [self resignKeyBoardInView:self.view];
+    [self closeSideBar];
+
 }
 
 - (void)registerForKeyboardNotifications
@@ -460,14 +570,14 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
     //动画的内容
     
     //动画结束
-   
+    
     CGRect rect;
     [[[ns userInfo] objectForKey:UIKeyboardBoundsUserInfoKey] getValue:&rect];
     _keybordView.frame = CGRectMake(mRectkeybordview.origin.x,
                                     mRectkeybordview.origin.y - (self.keybordheight != 0? self.keybordheight: rect.size.height),
                                     mRectkeybordview.size.width,
                                     mRectkeybordview.size.height);
-     [UIView commitAnimations];
+    [UIView commitAnimations];
 }
 
 - (void)unregisterForKeyboardNotifications
