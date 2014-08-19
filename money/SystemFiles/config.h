@@ -50,7 +50,7 @@
 //notification
 #define NOTIFICATION_MESSAGE @"notification_message"
 #define NOTIFICATION_CHATITEMLIST_CHANGED @"notification_chatitemlist_changed"
-
+#define NOTIFICATION_NEED_LOGIN @"notification_need_login"
 #define NOTIFICATION_LOGIN_SUCCESSFUL @"notification_login_successful"
 #define NOTIFICATION_LOGINOUT @"notification_loginout"
 #define NOTIFICATION_FAVORITE @"notification_favotite"

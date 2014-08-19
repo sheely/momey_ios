@@ -78,4 +78,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnQuit:(id)sender
+{
+    Entironment.instance.loginName = @"";
+    Entironment.instance.sessionid = @"";
+    Entironment.instance.password = @"";
+    [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_NEED_LOGIN object:nil];
+}
 @end

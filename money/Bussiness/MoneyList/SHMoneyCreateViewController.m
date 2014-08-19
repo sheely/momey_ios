@@ -57,7 +57,7 @@
         return;
     }
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
-    post.URL = URL_FOR(@"miAddNewOppo.do");
+    post.URL = URL_FOR(@"miOppoAdd.do");
     [post.postArgs setValue:txtTitle.text forKey:@"oppotitle"];
     [post.postArgs setValue:[mdic valueForKey:@"key"] forKey:@"oppotype"];
     [post.postArgs setValue:txtContent.text forKey:@"oppocontent"];

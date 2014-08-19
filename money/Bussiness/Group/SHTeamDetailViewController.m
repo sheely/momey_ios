@@ -116,7 +116,7 @@
         NSDictionary * dic_  = [[dic valueForKey:@"teamMembers"] objectAtIndex:indexPath.row];
         SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
         NSDictionary * dic = [mList objectAtIndex:indexPath.row];
-        [intent.args setValue:@"zhangsan" forKey:@"friendId"];
+        [intent.args setValue: [dic_ valueForKey:@"memberId"]forKey:@"friendId"];
         
         [[UIApplication sharedApplication]open:intent];
 

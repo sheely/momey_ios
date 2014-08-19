@@ -10,4 +10,5 @@
 
 @interface SHAboutMeViewController : SHTableViewController
 
+- (IBAction)btnQuit:(id)sender;
 @end

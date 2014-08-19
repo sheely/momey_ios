@@ -63,6 +63,7 @@
     [post.postArgs setValue:type.length > 0 ? type:@"" forKey:@"oppoType"];
     [post.postArgs setValue:company.length > 0 ? company:@"" forKey:@"companyId"];
     [post.postArgs setValue:region.length > 0 ? region:@"" forKey:@"address"];
+    [post.postArgs setValue:self.txtName.text.length > 0 ? self.txtName.text:@"" forKey:@"friendname"];
 //    [post.postArgs setValue:[dicRegion valueForKey:@"key"] forKey:@"address"];
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];

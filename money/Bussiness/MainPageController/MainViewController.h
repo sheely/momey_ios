@@ -16,6 +16,6 @@
     SHLoginViewController * loginViewController;
 }
 @property (weak, nonatomic) IBOutlet UITabBar *tabbar;
-
+- (void)login;
 // 设置消息 个数
 @end

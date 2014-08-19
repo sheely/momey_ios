@@ -118,7 +118,7 @@
 {
     SHChatUnitViewCell * cell = nil;
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
-    if([[dic valueForKey:@"type"] length] > 0 ){
+    if([[dic valueForKey:@"issendbyme"] integerValue] > 0 ){
         cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatUnitMySelfViewCell" owner:nil options:nil] objectAtIndex:0];
     }else{
         cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatUnitViewCell" owner:nil options:nil] objectAtIndex:0];
@@ -145,7 +145,7 @@
     [dic setValue:USER_NAME forKey:@"senderusername"];
     [dic setValue:msg forKey:@"chatcontent"];
     [dic setValue:destDateString forKey:@"sendtime"];
-    [dic setValue:@"self" forKey:@"type"];
+    [dic setValue:[NSNumber numberWithInt:1] forKey:@"issendbyme"];
     
     SHChatItem * item = [[SHChatItem alloc]init] ;
     item.userid = friendId;

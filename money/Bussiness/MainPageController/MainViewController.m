@@ -35,12 +35,19 @@
    // [self tabBar:self.tabbar didSelectItem:self.tabbar.selectedItem];
     self.tabbar.selectedImageTintColor = [UIColor colorWithRed:255/255.0 green:130/255.0  blue:46/255.0  alpha:1];
     
-   // [self performSelector:@selector(nedlogin) withObject:nil afterDelay:0.5];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(login:) name:NOTIFICATION_NEED_LOGIN object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessful:) name:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
+    [self login:nil];
+    // [self performSelector:@selector(nedlogin) withObject:nil afterDelay:0.5];
     //引导页加载
+    
+    
+}
+- (void)login:(NSObject*)o
+{
     loginViewController = [[SHLoginViewController alloc]init];
     [self.view addSubview:loginViewController.view];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessful:) name:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
-    
+  
 }
 
 - (void)message:(NSObject*)sender
