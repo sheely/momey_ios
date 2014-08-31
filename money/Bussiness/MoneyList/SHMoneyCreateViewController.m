@@ -37,8 +37,14 @@
         [self dismissWaitDialog];
         [t.respinfo show];
     }];
-}
+    _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
+    [self.view addGestureRecognizer:_tapGestureRec];
 
+}
+- (void)closeKeyboard
+{
+    [txtContent resignFirstResponder];
+}
     // Do any additional setup after loading the view from its nib.
 
 
@@ -64,6 +70,10 @@
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
         [t.respinfo show];
+        if(self.delegate && [self.delegate respondsToSelector:@selector(moneyCreateViewControllerDidSubmit)]){
+            [self.delegate moneyCreateViewControllerDidSubmit];
+
+        }
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [self dismissWaitDialog];
         [t.respinfo show];

@@ -40,8 +40,21 @@
     cell.tag = indexPath.row;
     [cell.btnChat addTarget:self action:@selector(btnChat:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnAdd addTarget:self action:@selector(btnAdd:) forControlEvents:UIControlEventTouchUpInside];
+    if([[dic valueForKey:@"isFollowed"]integerValue] ==1){
+        cell.btnAdd.userstyle = @"btnsubmitred";
+        [cell.btnAdd setTitle:@"取消关注" forState:UIControlStateNormal];
+
+    }else{
+        cell.btnAdd.userstyle = @"btnsubmit";
+        [cell.btnAdd setTitle:@"加关注" forState:UIControlStateNormal];
+
+    }
+    cell.btnAdd.titleLabel.font = [NVSkin.instance fontOfStyle:@"FontScaleSmall"];
+
     cell.btnChat.tag = indexPath.row;
     cell.btnAdd.tag = indexPath.row;
+    
+    
     return cell;
 }
 
@@ -53,9 +66,21 @@
     post.URL = URL_FOR(@"miFollowerAdd.do");
     [post.postArgs setValue:Entironment.instance.loginName forKey:@"myUserName"];
     [post.postArgs setValue:[dic valueForKey:@"friendId"] forKey:@"followerUserName"];
-    [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"addOrDelete"];
+    if([[dic valueForKey:@"isFollowed"]integerValue] ==1){
+        [post.postArgs setValue:[NSNumber numberWithInt:0] forKey:@"addOrDelete"];
+    }else{
+        [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"addOrDelete"];
+        
+    }
     [post start:^(SHTask *t) {
-        [t.respinfo show];
+        //[t.respinfo show];
+        if([[dic valueForKey:@"isFollowed"]integerValue] ==1){
+            [dic setValue:[NSNumber numberWithInt:0] forKey:@"isFollowed"];
+        }else{
+            [dic setValue:[NSNumber numberWithInt:1] forKey:@"isFollowed"];
+            
+        }
+        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:sender.tag inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
         [self dismissWaitDialog];
         
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {

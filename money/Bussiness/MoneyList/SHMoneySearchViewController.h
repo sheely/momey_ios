@@ -19,6 +19,7 @@
 {
     NSArray * mList;
     NSDictionary * dictype;
+    UITapGestureRecognizer* _tapGestureRec;
 }
 @property (weak, nonatomic) IBOutlet UIButton *btnType;
 - (IBAction)btnTypeOnTouch:(id)sender;

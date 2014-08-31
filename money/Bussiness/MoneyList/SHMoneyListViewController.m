@@ -69,6 +69,7 @@
 - (void) moneysearchviewcontrollerDidSubmit:(SHMoneySearchViewController*)obj type:(NSDictionary*)type_ boss:(NSString*)boss title:(NSString*)title
 {
 
+    self.title = @"高级搜索";
     bossName = boss;
     oppoTitle = title;
     oppoType = [type_ valueForKey:@"key"] == nil ? @"":[type_ valueForKey:@"key"] ;
@@ -139,7 +140,7 @@
 {
     NSDictionary * dic = [mList objectAtIndex:btn.tag];
     SHIntent * intent = [[SHIntent alloc]init:@"userreport" delegate:nil containner:self.navigationController];
-    if (type == 3) {
+    if (type == 0) {
         [intent.args setValue:[NSNumber numberWithInt:1] forKey:@"commenterType"];
     }else{
         [intent.args setValue:[NSNumber numberWithInt:2] forKey:@"commenterType"];
@@ -171,7 +172,11 @@
         [t.respinfo show];
     }];
 }
-
+- (void)moneyCreateViewControllerDidSubmit
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    [self reSet];
+}
 - (CGFloat) tableView:(UITableView *)tableView heightForGeneralRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return  110;
@@ -201,12 +206,17 @@
 - (void)reSet
 {
     mIsEnd = NO;
+  
     [mList removeAllObjects];
     [self.tableView reloadData];
 }
 - (IBAction)btnAllOnTouch:(id)sender
 {
     type = 99;
+    oppoType = @"";
+    bossName = @"";
+    oppoTitle = @"";
+    self.title = @"财信";
     [self reSet];
     self.btnAll.selected = YES;
     self.btnBidding.selected = NO;
@@ -216,6 +226,10 @@
 - (IBAction)btnParticipateOnTouch:(id)sender
 {
     type = 3;
+    oppoType = @"";
+    bossName = @"";
+    oppoTitle = @"";
+    self.title = @"财信";
     [self reSet];
     self.btnAll.selected = NO;
     self.btnBidding.selected = NO;
@@ -225,6 +239,10 @@
 - (IBAction)btnBiddingOnTouch:(id)sender
 {
     type = 1;
+    oppoType = @"";
+    bossName = @"";
+    oppoTitle = @"";
+    self.title = @"财信";
     [self reSet];
     self.btnAll.selected = NO;
     self.btnBidding.selected = YES;
@@ -235,7 +253,13 @@
 - (IBAction)btnStartOnTouch:(id)sender
 {
     type = 0;
+    oppoType = @"";
+    bossName = @"";
+    oppoTitle = @"";
+    self.title = @"财信";
+
     [self reSet];
+    
     self.btnAll.selected = NO;
     self.btnBidding.selected = NO;
     self.btnParticipate.selected = NO;

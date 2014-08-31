@@ -8,12 +8,20 @@
 
 #import "SHViewController.h"
 
+@class SHMoneyCreateViewController;
+
+@protocol SHMoneyCreateViewControllerDelegate<NSObject>
+- (void)moneyCreateViewControllerDidSubmit;
+@end
+
 @interface SHMoneyCreateViewController : SHViewController
 {
     NSArray *array;
     __weak IBOutlet UITextField *txtTitle;
     NSDictionary * mdic;
     __weak IBOutlet UITextView *txtContent;
+    UITapGestureRecognizer* _tapGestureRec;
+
 }
 - (IBAction)btnOnTouch:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnType;

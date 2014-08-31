@@ -30,8 +30,19 @@
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryFriendInit.do");
     [post start:^(SHTask * t) {
-        listType = [t.result valueForKey:@"oppoTypes"];
-        listCompany = [t.result valueForKey:@"companys"];
+        NSMutableArray* array = [[t.result valueForKey:@"oppoTypes"]mutableCopy] ;
+        NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
+        [dic setValue:@"全部分类" forKey:@"value"];
+        [dic setValue:@"" forKey:@"key"];
+        [array insertObject:dic atIndex:0];
+        listType = array;
+        
+        array = [[t.result valueForKey:@"companys"]mutableCopy] ;
+        dic = [[NSMutableDictionary alloc]init];
+        [dic setValue:@"全部公司" forKey:@"value"];
+        [dic setValue:@"" forKey:@"key"];
+        [array insertObject:dic atIndex:0];
+        listCompany = array;
         listRegion  =[t.result valueForKey:@"address"];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [self dismissWaitDialog];
@@ -124,7 +135,7 @@
 
 - (IBAction)btnRegionOnTouch:(id)sender {
     NSMutableArray * array = [[NSMutableArray alloc]init];
-    for (int i =0 ; i< listType.count ; i++) {
+    for (int i =0 ; i< listRegion.count ; i++) {
         KxMenuItem* item = [[KxMenuItem alloc] init];
         item.title =[[listRegion objectAtIndex:i] valueForKey:@"value"];
         item.tag = i ;

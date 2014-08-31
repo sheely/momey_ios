@@ -74,7 +74,9 @@
     [post.postArgs setValue:[NSNumber numberWithInt:(taskid.length == 0 ? 1:2)] forKey:@"operationType"];
     [post start:^(SHTask * t) {
         [t.respinfo show];
-        [self.navigationController popViewControllerAnimated:YES];
+        if(self.delegate && [self.delegate respondsToSelector:@selector(editCalendarViewControllerSubmit)]){
+            [self.delegate editCalendarViewControllerSubmit];
+        }
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];
     }];

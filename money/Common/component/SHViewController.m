@@ -430,17 +430,17 @@ typedef NS_ENUM(NSInteger, RMoveDirection) {
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if(buttonIndex == 0){
-        [self alertViewCancelOnClick];
+        [self alertViewCancelOnClick:alertView.tag];
     }else if (buttonIndex == 1){
-        [self alertViewEnSureOnClick];
+        [self alertViewEnSureOnClick :alertView.tag];
     }
 }
 
-- (void)alertViewCancelOnClick
+- (void)alertViewCancelOnClick : (int)tag
 {
 }
 
-- (void)alertViewEnSureOnClick
+- (void)alertViewEnSureOnClick : (int)tag
 {
     
 }

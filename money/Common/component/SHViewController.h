@@ -52,9 +52,9 @@
 
 - (void)dismissWaitDialogSuccess:(NSString*) title;
 
-- (void)alertViewCancelOnClick;
+- (void)alertViewCancelOnClick:(int)tag;
 
-- (void)alertViewEnSureOnClick;
+- (void)alertViewEnSureOnClick:(int)tag;
 /**
  展示对话框
  */

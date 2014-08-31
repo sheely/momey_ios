@@ -68,12 +68,23 @@
     cell.labUserName.text = [dic valueForKey:@"followerName"];
     cell.btnCancel.tag = indexPath.row;
     cell.btnCalendar.tag =indexPath.row;
+    cell.btnChat.tag = indexPath.row;
+       [cell.btnChat addTarget:self action:@selector(btnChat:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnCalendar addTarget:self action:@selector(btnCalendar:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnCancel addTarget:self action:@selector(btnCancel:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
+- (void)btnChat:(UIButton*)btn
+{
+    NSDictionary * dic = [mList objectAtIndex:btn.tag];
+    SHIntent * intent = [[SHIntent alloc]init:@"chatdetail" delegate:nil containner:self.navigationController];
+    [intent.args setValue:[dic valueForKey:@"followerId"]  forKey:@"friendId"];
+    [intent.args setValue:[dic valueForKey:@"followerName"]  forKey:@"friendName"];
+    [intent.args setValue:[dic valueForKey:@"followerHeadIcon"]  forKey:@"friendHeadicon"];
+    [[UIApplication sharedApplication]open:intent];
 
+}
 - (void)btnCalendar:(UIButton*)btn
 {
     NSDictionary * dic = [mList objectAtIndex:btn.tag];

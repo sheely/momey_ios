@@ -38,7 +38,7 @@
 {
     SHIntent * intent = [[SHIntent alloc]init:@"writereport" delegate:nil containner:self.navigationController];
     [intent.args setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
-  [intent.args setValue:[self.intent.args valueForKey:@"commenterType"] forKey:@"commenterType"];
+    [intent.args setValue:[self.intent.args valueForKey:@"commenterType"] forKey:@"commenterType"];
     int type = [[self.intent.args valueForKey:@"commenterType"] intValue];
     for (int i = 0; i< mList.count; i++) {
         NSDictionary * dic = [mList objectAtIndex:i];
@@ -60,6 +60,17 @@
     [post start:^(SHTask * t) {
         mIsEnd  = YES;
         mList = [t.result valueForKey:@"leaveComments"];
+        int value = [[t.result valueForKey:@"relationWithOppo"] integerValue] ;
+        BOOL flag = NO;
+        for (NSDictionary * dic  in mList) {
+            if(value == [[dic valueForKey:@"commenterType"]integerValue]){
+                flag = YES;
+                break;
+            }
+        }
+        if (flag ) {
+            self.navigationItem.rightBarButtonItem = nil;
+        }
         [self dismissWaitDialog];
         [self.tableView reloadData];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {

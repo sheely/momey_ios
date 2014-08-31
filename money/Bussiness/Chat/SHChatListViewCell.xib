@@ -34,7 +34,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7044702_190131486105_2.jpg" id="mYR-0p-nhv" customClass="SHImageView">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userphoto.png" id="mYR-0p-nhv" customClass="SHImageView">
                         <rect key="frame" x="6" y="9" width="50" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -54,7 +54,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="7044702_190131486105_2.jpg" width="1024" height="961"/>
         <image name="new.png" width="182" height="102"/>
+        <image name="userphoto.png" width="224" height="224"/>
     </resources>
 </document>

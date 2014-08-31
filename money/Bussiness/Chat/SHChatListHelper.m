@@ -53,6 +53,12 @@ static SHChatListHelper * _instance;
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_CHATITEMLIST_CHANGED object:mList];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+- (void)  removeAll
+{
+    @synchronized(mList){
+        [mList removeAllObjects];
+    }
+}
 - (void)  addItem:(SHChatItem*)item
 {
     @synchronized(mList){

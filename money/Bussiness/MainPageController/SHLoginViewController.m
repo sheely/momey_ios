@@ -7,7 +7,7 @@
 //
 
 #import "SHLoginViewController.h"
-
+#import "SHChatListHelper.h"
 
 @interface SHLoginViewController ()
 
@@ -32,7 +32,7 @@
     [super viewDidLoad];
     self.keybordView = self.view;
     self.keybordheight = 70;
-    self.txtLogin.text = [[[NSUserDefaults standardUserDefaults] stringForKey:LOGIN_INFO] valueForKey:@"userId"];
+    self.txtLogin.text = [[[NSUserDefaults standardUserDefaults] valueForKey:LOGIN_INFO] valueForKey:@"userId"];
 #ifdef DEBUG
     self.txtLogin.text = @"germmy";
     self.txtPassword.text = @"123456" ;
@@ -75,6 +75,14 @@
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
         //Entironment.instance.sessionid = [t.result valueForKey:@"sessionId"];
+        
+        NSString * value = [[[NSUserDefaults standardUserDefaults] valueForKey:LOGIN_INFO] valueForKey:@"userId"];
+
+        if(![value isEqualToString:self.txtLogin.text] ){
+            [[SHChatListHelper instance]removeAll];
+             [[SHChatListHelper instance]notice];
+
+        }
         [[NSUserDefaults standardUserDefaults] setValue:t.result forKey:LOGIN_INFO];
       
         [[NSUserDefaults standardUserDefaults] synchronize];

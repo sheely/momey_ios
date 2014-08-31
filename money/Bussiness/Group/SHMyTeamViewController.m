@@ -50,18 +50,20 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(UITableViewCell*) tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SHMyTeamTableViewCell * cell = [[[NSBundle mainBundle]loadNibNamed:@"SHMyTeamTableViewCell" owner:nil options:nil] objectAtIndex:0];
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     cell.labTitle.text = [dic valueForKey:@"teamName"];
     if([[dic valueForKey:@"isCreatedByMe"] integerValue]){
-        cell.labContent.text = @"我参与的";
-    }else {
         cell.labContent.text = @"我发起的";
+    }else {
+        cell.labContent.text = @"我参与的";
     }
     return cell;
 }
+
+
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

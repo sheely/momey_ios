@@ -57,13 +57,15 @@
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
     
     [post start:^(SHTask * t) {
+        //[[self.tabbar.items objectAtIndex:1]setBadgeValue:@"📩"]; ;
+
         NSArray * array = [t.result valueForKey:@"immessages"];
         if(array.count > 0){
             [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_MESSAGE object:array];
             UITabBarItem * item = [self.tabbar.items objectAtIndex:1];
             
             if(item != self.tabbar.selectedItem){
-                item.badgeValue = @"N+";
+                item.badgeValue = @".";
             }
             
             for (NSDictionary*dic in array) {

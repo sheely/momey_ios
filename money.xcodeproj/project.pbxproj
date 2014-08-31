@@ -280,6 +280,8 @@
 		9EB92EE319365A3E00E87981 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB92EC519365A3E00E87981 /* UIKit.framework */; };
 		9EB92EEB19365A3E00E87981 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EB92EE919365A3E00E87981 /* InfoPlist.strings */; };
 		9EB92EED19365A3E00E87981 /* moneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB92EEC19365A3E00E87981 /* moneyTests.m */; };
+		9EC8B4A619B21097003B190E /* ic_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC8B4A419B21097003B190E /* ic_arrow_down.png */; };
+		9EC8B4A719B21097003B190E /* ic_arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC8B4A519B21097003B190E /* ic_arrow_down@2x.png */; };
 		9EDA5D2E194B66CA00471471 /* SHMyCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA5D2C194B66CA00471471 /* SHMyCalendarViewController.m */; };
 		9EDA5D2F194B66CA00471471 /* SHMyCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDA5D2D194B66CA00471471 /* SHMyCalendarViewController.xib */; };
 		9EDA5D33194B673600471471 /* SHMyCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDA5D32194B673600471471 /* SHMyCalendarViewCell.m */; };
@@ -728,6 +730,8 @@
 		9EB92EE819365A3E00E87981 /* moneyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "moneyTests-Info.plist"; sourceTree = "<group>"; };
 		9EB92EEA19365A3E00E87981 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9EB92EEC19365A3E00E87981 /* moneyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moneyTests.m; sourceTree = "<group>"; };
+		9EC8B4A419B21097003B190E /* ic_arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_down.png; sourceTree = "<group>"; };
+		9EC8B4A519B21097003B190E /* ic_arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_arrow_down@2x.png"; sourceTree = "<group>"; };
 		9EDA5D2B194B66CA00471471 /* SHMyCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMyCalendarViewController.h; sourceTree = "<group>"; };
 		9EDA5D2C194B66CA00471471 /* SHMyCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMyCalendarViewController.m; sourceTree = "<group>"; };
 		9EDA5D2D194B66CA00471471 /* SHMyCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMyCalendarViewController.xib; sourceTree = "<group>"; };
@@ -811,6 +815,8 @@
 		9E8521D2193F9136001A17C5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9EC8B4A419B21097003B190E /* ic_arrow_down.png */,
+				9EC8B4A519B21097003B190E /* ic_arrow_down@2x.png */,
 				9E43E21F1986C6EC00B2D1C4 /* new.png */,
 				9E43E2141986A3A100B2D1C4 /* ios_splash@2x.png */,
 				9E43E2151986A3A100B2D1C4 /* ios_splash@568.png */,
@@ -1742,6 +1748,7 @@
 				9EA69D3F1938E7D50030C27F /* DSLCalendarDaySelection-right.png in Resources */,
 				9EA69D621938E7D50030C27F /* button_current_bg.png in Resources */,
 				9EA69D401938E7D50030C27F /* DSLCalendarDaySelection-right@2x.png in Resources */,
+				9EC8B4A619B21097003B190E /* ic_arrow_down.png in Resources */,
 				9E43E211198695D300B2D1C4 /* SHMoneyCreateViewController.xib in Resources */,
 				9E31361419468B5C002A3298 /* SHChatUnitMySelfViewCell.xib in Resources */,
 				9EA69DA41938E7D50030C27F /* module.xml in Resources */,
@@ -1805,6 +1812,7 @@
 				9EA69D2A1938E7D50030C27F /* SHContentViewController.xib in Resources */,
 				9E0670A119607AFD00E20195 /* SHTeamMemberCell.xib in Resources */,
 				9E8521DF193F9156001A17C5 /* button_gray_mini.png in Resources */,
+				9EC8B4A719B21097003B190E /* ic_arrow_down@2x.png in Resources */,
 				9E9EDD89194E146100123254 /* SHCalendarViewController.xib in Resources */,
 				9E3136121946272C002A3298 /* dialogue_me@2x.png in Resources */,
 				9E85226B1944743D001A17C5 /* login_icon_password@2x.png in Resources */,

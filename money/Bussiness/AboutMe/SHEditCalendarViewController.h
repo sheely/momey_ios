@@ -7,6 +7,13 @@
 //
 
 #import "SHViewController.h"
+@class SHEditCalendarViewController;
+
+@protocol SHEditCalendarViewControllerDelegate <NSObject>
+
+- (void)editCalendarViewControllerSubmit;
+
+@end
 
 @interface SHEditCalendarViewController : SHViewController
 {

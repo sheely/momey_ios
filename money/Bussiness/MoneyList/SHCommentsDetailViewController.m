@@ -201,6 +201,8 @@
         [self checkBottom];
         [self.tableView reloadData];
         [self checkBottom2];
+        self.txtBox.text = @"";
+
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
         [t.respinfo show];
         [self dismissWaitDialog];
@@ -210,7 +212,7 @@
 
 - (void)checkBottom{
     if(mList .count > 0){
-        if(ABS((self.tableView.contentSize.height - self.tableView.frame.size.height - self.tableView.contentOffset.y) )<=5)
+        if(ABS((self.tableView.contentSize.height - self.tableView.frame.size.height - self.tableView.contentOffset.y) )>=5)
         {
             isScroll = YES;
         }else{

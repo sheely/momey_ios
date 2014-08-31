@@ -17,9 +17,12 @@
 - (NSArray*) list;
 + (SHChatListHelper*) instance;
 
-- (void)addItem:(SHChatItem*)item;
+- (void) addItem:(SHChatItem*)item;
 
 - (void) notice;
 
-- (void)cleanNewFlag:(NSString*)name;
+- (void) cleanNewFlag:(NSString*)name;
+
+- (void) removeAll;
+
 @end

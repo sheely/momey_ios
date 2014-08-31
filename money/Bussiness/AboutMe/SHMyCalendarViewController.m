@@ -28,12 +28,18 @@
 {
     [super viewDidLoad];
     self.title = @"我的日历";//http://cjcapp.nat123.net:21414/myStruts1/ miQueryTasks.do
+    [self request];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"新增" target:self action:@selector(btnAdd:)];
+    // Do any additional setup after loading the view from its nib.
+}
+- (void)request
+{
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miQueryTasks.do");
     [post.postArgs setValue:[NSNumber numberWithInt:1] forKey:@"isOwnTask"];
     NSString * user = [Entironment.instance loginName];
-
+    
     [post.postArgs setValue:user forKey:@"queryedUserName"];
     
     [post start:^(SHTask * t) {
@@ -44,16 +50,21 @@
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];
         [self dismissWaitDialog];
-
+        
     }];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"新增" target:self action:@selector(btnAdd:)];
-    // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)btnAdd:(UIButton*)btn
 {
-    SHIntent  *intent = [[SHIntent alloc]init:@"editcalendar" delegate:nil containner:self.navigationController];
+    SHIntent  *intent = [[SHIntent alloc]init:@"editcalendar" delegate:self containner:self.navigationController];
     [[UIApplication sharedApplication]open:intent];   
+}
+
+- (void)editCalendarViewControllerSubmit
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    [self request];
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,13 +82,19 @@
 
 - (void)btnDelete:(UIButton*)btn
 {
-    NSDictionary * dic = [mList objectAtIndex:btn.tag];
+    [self showAlertDialog:@"确定删除这条日历?" button:@"确定" otherButton:@"取消" tag:btn.tag];
+  
+}
+
+- (void)alertViewEnSureOnClick:(int)tag;
+{
+    NSDictionary * dic = [mList objectAtIndex:tag];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"miTaskMaintainance.do");
     [post.postArgs setValue:[dic valueForKey:@"taskId"] forKey:@"taskId"];
     [post.postArgs setValue:[NSNumber numberWithInt:3] forKey:@"operationType"];
     [post start:^(SHTask * t) {
-        [mList removeObjectAtIndex:btn.tag];
+        [mList removeObjectAtIndex:tag];
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];

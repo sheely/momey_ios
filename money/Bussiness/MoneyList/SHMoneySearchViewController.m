@@ -33,14 +33,26 @@
     post.cachetype = CacheTypeTimes;
     [post start:^(SHTask * t) {
         [self dismissWaitDialog];
-        mList = [t.result valueForKey:@"oppoTypes"];
+        NSMutableArray* array = [[t.result valueForKey:@"oppoTypes"]mutableCopy] ;
+        NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
+        [dic setValue:@"全部分类" forKey:@"value"];
+        [dic setValue:@"" forKey:@"key"];
+        [array insertObject:dic atIndex:0];
+        mList = array;
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [self dismissWaitDialog];
     }];
-
+    _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
+    [self.view addGestureRecognizer:_tapGestureRec];
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)closeKeyboard
+{
+    
+    [self.txtBoss resignFirstResponder];
+    [self.txtTitle resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

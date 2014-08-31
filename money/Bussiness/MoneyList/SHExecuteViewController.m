@@ -9,7 +9,9 @@
 #import "SHExecuteViewController.h"
 
 @interface SHExecuteViewController ()
-
+{
+    UITapGestureRecognizer* _tapGestureRec;
+}
 @end
 
 @implementation SHExecuteViewController
@@ -29,15 +31,25 @@
     self.title = @"执行信息";
     if([[self.intent.args valueForKey:@"type"] length ] > 0 &&  [[self.intent.args valueForKey:@"type"] caseInsensitiveCompare:@"self"] == NSOrderedSame){
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"提交" target:self action:@selector(btnSubmit:)];
-        labExecuter.text =[Entironment.instance loginName];
+        btnStart.enabled = YES;
+        btnEnd.enabled = YES;
+        txtBudge.enabled = YES;
+        txtMark.enabled = YES;
+        txtPlace.enabled = YES;
     }
+    if([UIApplication sharedApplication].keyWindow.bounds.size.height < 546){
+        self.keybordView = self.view;
+        self.keybordheight = 80;
+    }
+     _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
+    [self.view addGestureRecognizer:_tapGestureRec];
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
     post.URL = URL_FOR(@"queryexecuteinfodetail.do");
     [post start:^(SHTask *t) {
         dic = t.result;
-        labExecuter.text = [dic valueForKey:@"oppoPublisherId"];
+        labExecuter.text = [dic valueForKey:@"oppoPublisher"];
         txtPlace.text = [dic valueForKey:@"executePlace"];
         txtMark.text = [dic valueForKey:@"remark"];
         [btnStart setTitle:[dic valueForKey:@"startTime"] forState:UIControlStateNormal];
@@ -56,6 +68,14 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)closeKeyboard
+{
+    [txtPlace resignFirstResponder];
+    [txtMark resignFirstResponder];
+    [txtBudge resignFirstResponder];
+
+}
+
 - (void)btnSubmit:(NSObject*)sender
 {
     if(btnStart.titleLabel.text.length == 0){
@@ -70,8 +90,8 @@
         [self showAlertDialog:@"地点不能为空"];
         return;
     }
-    if(txtBudge.text.length == 0){
-        [self showAlertDialog:@"预算不能为空"];
+    if(txtBudge.text.length == 0 || [txtBudge.text intValue] ==0 ){
+        [self showAlertDialog:@"预算值非法"];
         return;
     }
     [self showWaitDialogForNetWork];
@@ -111,6 +131,9 @@
 - (IBAction)btnCalendarOnTouch:(id)sender {
     mButton = sender;
     [calendarcontroller show];
+    [txtPlace resignFirstResponder];
+    [txtMark resignFirstResponder];
+    [txtBudge resignFirstResponder];
 }
 
 -(void)calendarViewController:(SHCalendarViewController *)controller dateSelected:(NSDate *)date

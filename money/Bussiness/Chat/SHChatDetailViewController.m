@@ -11,7 +11,8 @@
 #import "SHChatListHelper.h"
 
 @interface SHChatDetailViewController ()
-
+{
+}
 @end
 
 @implementation SHChatDetailViewController
@@ -37,12 +38,13 @@
     [post start:^(SHTask * t) {
         mIsEnd  = YES;
         mList = [[t.result valueForKey:@"historymessages"] mutableCopy];
-    if(mList == nil){
-        mList = [[NSMutableArray alloc]init];
-    }
-    
-    [self.tableView reloadData];
-    
+        if(mList == nil){
+            mList = [[NSMutableArray alloc]init];
+        }
+        
+        [self.tableView reloadData];
+        [self checkBottom];
+        [self checkBottom2];
         [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [t.respinfo show];
@@ -55,10 +57,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"聊天";
+    
     friendId = [self.intent.args valueForKey:@"friendId"];
     friendname = [self.intent.args valueForKey:@"friendName"];
     headicon = [self.intent.args valueForKey:@"friendHeadicon"];
+    self.title = [NSString stringWithFormat:@"与\"%@\"聊天",friendname];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(message:) name:NOTIFICATION_MESSAGE object:nil];
     //[self loadNext];
     // Do any additional setup after loading the view from its nib.
@@ -171,6 +174,7 @@
         [self checkBottom];
         [self.tableView reloadData];
         [self checkBottom2];
+        self.txtBox.text = @"";
     } taskWillTry:nil taskDidFailed:^(SHTask *t) {
         [t.respinfo show];
         [self dismissWaitDialog];
