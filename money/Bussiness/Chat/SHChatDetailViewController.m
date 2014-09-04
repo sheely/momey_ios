@@ -43,7 +43,7 @@
         }
         
         [self.tableView reloadData];
-        [self checkBottom];
+        isScroll = YES;
         [self checkBottom2];
         [self dismissWaitDialog];
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {

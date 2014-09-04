@@ -54,7 +54,10 @@
         txtMark.text = [dic valueForKey:@"remark"];
         [btnStart setTitle:[dic valueForKey:@"startTime"] forState:UIControlStateNormal];
         [btnEnd setTitle:[dic valueForKey:@"endTime"] forState:UIControlStateNormal];
-
+        
+        [btnStart setTitle:[dic valueForKey:@"startTime"] forState:UIControlStateDisabled];
+        [btnEnd setTitle:[dic valueForKey:@"endTime"] forState:UIControlStateDisabled];
+        
         txtBudge.text = [dic valueForKey:@"budget"];
 
         
@@ -90,7 +93,7 @@
         [self showAlertDialog:@"地点不能为空"];
         return;
     }
-    if(txtBudge.text.length == 0 || [txtBudge.text intValue] ==0 ){
+    if(txtBudge.text.length == 0 || [txtBudge.text intValue] < 0 ){
         [self showAlertDialog:@"预算值非法"];
         return;
     }
@@ -123,10 +126,14 @@
 
 - (IBAction)btnSeeOnTouch:(id)sender
 {
-    SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
-    [intent.args setValue:[dic valueForKey:@"oppoPublisherId"] forKey:@"friendId"];
-    [[UIApplication sharedApplication]open:intent];
-}
+    if([[dic valueForKey:@"oppoPublisherId"] length ] == 0){
+        [self showAlertDialog:@"尚未确定执行人"];
+    }else{
+        SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+        [intent.args setValue:[dic valueForKey:@"oppoPublisherId"] forKey:@"friendId"];
+        [[UIApplication sharedApplication]open:intent];
+    }
+  }
 
 - (IBAction)btnCalendarOnTouch:(id)sender {
     mButton = sender;

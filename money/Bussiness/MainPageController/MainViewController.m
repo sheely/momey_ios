@@ -47,7 +47,7 @@
 {
     loginViewController = [[SHLoginViewController alloc]init];
     [self.view addSubview:loginViewController.view];
-  
+    
 }
 
 - (void)message:(NSObject*)sender
@@ -57,7 +57,7 @@
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
     
     [post start:^(SHTask * t) {
-        //[[self.tabbar.items objectAtIndex:1]setBadgeValue:@"📩"]; ;
+       // [[self.tabbar.items objectAtIndex:1]setBadgeValue:@"😄"]; ;
 
         NSArray * array = [t.result valueForKey:@"immessages"];
         if(array.count > 0){
@@ -65,7 +65,7 @@
             UITabBarItem * item = [self.tabbar.items objectAtIndex:1];
             
             if(item != self.tabbar.selectedItem){
-                item.badgeValue = @".";
+                item.badgeValue = @"😄";
             }
             
             for (NSDictionary*dic in array) {

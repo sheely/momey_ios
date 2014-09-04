@@ -43,7 +43,13 @@
         [dic setValue:@"" forKey:@"key"];
         [array insertObject:dic atIndex:0];
         listCompany = array;
-        listRegion  =[t.result valueForKey:@"address"];
+        
+        array = [[t.result valueForKey:@"address"]mutableCopy] ;
+        dic = [[NSMutableDictionary alloc]init];
+        [dic setValue:@"全部" forKey:@"value"];
+        [dic setValue:@"" forKey:@"key"];
+        [array insertObject:dic atIndex:0];
+        listRegion = array;
     } taskWillTry:nil taskDidFailed:^(SHTask * t) {
         [self dismissWaitDialog];
         [t.respinfo show];
@@ -99,7 +105,7 @@
         item.action = @selector(kxmType:);
         [array addObject:item];
     }
-    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnType.frame fromView:self.btnType] menuItems:array];
+    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnType.frame fromView:self.btnType.superview] menuItems:array];
 }
 
 - (void)kxmType:(KxMenuItem*)k
@@ -129,7 +135,10 @@
         item.action = @selector(kxmCompany:);
         [array addObject:item];
     }
-    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnCompany.frame fromView:self.btnCompany] menuItems:array];
+//    CGRect f = [self.view convertRect:self.btnCompany.frame fromView:self.btnCompany.superview];
+//    CGRect f2 = [self.view convertRect:self.btnCompany.frame fromView:self.btnCompany];
+
+    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnCompany.frame fromView:self.btnCompany.superview] menuItems:array];
 
 }
 
@@ -143,6 +152,6 @@
         item.action = @selector(kxmRegion:);
         [array addObject:item];
     }
-    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnRegion.frame fromView:self.btnRegion] menuItems:array];
+    [KxMenu showMenuInView:self.view fromRect:[self.view convertRect:self.btnRegion.frame fromView:self.btnRegion.superview] menuItems:array];
 }
 @end

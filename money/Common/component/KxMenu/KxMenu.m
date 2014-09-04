@@ -528,8 +528,8 @@ typedef enum {
         itemY += maxItemHeight;
         ++itemNum;
     }    
-    if (itemY > 600) {
-        contentView.frame = (CGRect){0, 0, maxItemWidth, 600};
+    if (itemY > 300) {
+        contentView.frame = (CGRect){0, 0, maxItemWidth, 300};
         contentView.contentSize = CGSizeMake(0, itemY + kMarginY * 2);
     }else{
         contentView.frame = (CGRect){0, 0, maxItemWidth, itemY + kMarginY * 2};

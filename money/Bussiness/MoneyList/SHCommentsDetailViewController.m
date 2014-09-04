@@ -139,7 +139,7 @@
 {
     SHChatUnitViewCell * cell = nil;
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
-    if([[dic valueForKey:@"type"] length] > 0 ){
+    if([[dic valueForKey:@"isSentByMe"] integerValue] > 0 ){
 
         cell = [[[NSBundle mainBundle]loadNibNamed:@"SHChatUnitMySelfViewCell" owner:nil options:nil] objectAtIndex:0];
     }else{
@@ -164,7 +164,7 @@
         
         SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
         NSDictionary * dic = [mList objectAtIndex:indexPath.row];
-        [intent.args setValue:[dic valueForKey:@"leaveMessager"] forKey:@"friendId"];
+        [intent.args setValue:[dic valueForKey:@"leaveMessagerid"] forKey:@"friendId"];
         
         [[UIApplication sharedApplication]open:intent];
     }
@@ -184,11 +184,11 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString *destDateString = [dateFormatter stringFromDate:[NSDate date]];
     NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
-    [dic setValue:[Entironment instance].loginName forKey:@"leaveMessager"];
+    [dic setValue:[Entironment instance].loginName forKey:@"leaveMessagerid"];
     [dic setValue:USER_ICON forKey:@"lmHeadIcon"];
     [dic setValue:msg forKey:@"lmContent"];
     [dic setValue:destDateString forKey:@"lmTime"];
-    [dic setValue:@"self" forKey:@"type"];
+    [dic setValue:[NSNumber numberWithInt:1] forKey:@"isSentByMe"];
     [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     [post.postArgs setValue:[self.intent.args valueForKey:@"oppoId"] forKey:@"oppoId"];
@@ -212,7 +212,7 @@
 
 - (void)checkBottom{
     if(mList .count > 0){
-        if(ABS((self.tableView.contentSize.height - self.tableView.frame.size.height - self.tableView.contentOffset.y) )>=5)
+        if(ABS((self.tableView.contentSize.height - self.tableView.frame.size.height - self.tableView.contentOffset.y) )<=5)
         {
             isScroll = YES;
         }else{

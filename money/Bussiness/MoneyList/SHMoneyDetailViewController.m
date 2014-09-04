@@ -61,10 +61,15 @@
 
 - (IBAction)btnSeeOnTouch:(id)sender
 {
-    SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
-    [intent.args setValue:[dic valueForKey:@"oppoPublisherId"] forKey:@"friendId"];
-
-    [[UIApplication sharedApplication]open:intent];
+    if([[dic valueForKey:@"oppoPublisherId"] length ] == 0){
+        [self showAlertDialog:@"尚未确定承接人"];
+    }else{
+        SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
+        [intent.args setValue:[dic valueForKey:@"oppoPublisherId"] forKey:@"friendId"];
+        
+        [[UIApplication sharedApplication]open:intent];
+    }
+    
 }
 
 - (IBAction)btnAttachmentOnTouch:(id)sender

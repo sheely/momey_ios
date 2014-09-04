@@ -56,7 +56,6 @@
 		9E43E2201986C6EC00B2D1C4 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E43E21F1986C6EC00B2D1C4 /* new.png */; };
 		9E8521CD193F8A85001A17C5 /* SHGroupListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */; };
 		9E8521CF193F8A93001A17C5 /* SHGroupListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */; };
-		9E8521DC193F9156001A17C5 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D3193F9155001A17C5 /* a.png */; };
 		9E8521DD193F9156001A17C5 /* button_blue_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D4193F9156001A17C5 /* button_blue_mini.png */; };
 		9E8521DE193F9156001A17C5 /* button_blue_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D5193F9156001A17C5 /* button_blue_mini@2x.png */; };
 		9E8521DF193F9156001A17C5 /* button_gray_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E8521D6193F9156001A17C5 /* button_gray_mini.png */; };
@@ -95,7 +94,6 @@
 		9E85227E1944BA30001A17C5 /* SHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E85227C1944BA30001A17C5 /* SHLoginViewController.m */; };
 		9E85227F1944BA30001A17C5 /* SHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E85227D1944BA30001A17C5 /* SHLoginViewController.xib */; };
 		9E8522821944D84F001A17C5 /* SHChatListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8522811944D84F001A17C5 /* SHChatListViewCell.xib */; };
-		9E8522841944DBDB001A17C5 /* 7044702_190131486105_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E8522831944DBDB001A17C5 /* 7044702_190131486105_2.jpg */; };
 		9E8522871944DC25001A17C5 /* SHChatListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8522861944DC25001A17C5 /* SHChatListViewCell.m */; };
 		9E85228F19462022001A17C5 /* SHChatUnitViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E85228E19462022001A17C5 /* SHChatUnitViewCell.m */; };
 		9E85229119462033001A17C5 /* SHChatUnitViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E85229019462033001A17C5 /* SHChatUnitViewCell.xib */; };
@@ -372,7 +370,6 @@
 		9E8521CB193F8A85001A17C5 /* SHGroupListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHGroupListViewCell.h; sourceTree = "<group>"; };
 		9E8521CC193F8A85001A17C5 /* SHGroupListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHGroupListViewCell.m; sourceTree = "<group>"; };
 		9E8521CE193F8A93001A17C5 /* SHGroupListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGroupListViewCell.xib; sourceTree = "<group>"; };
-		9E8521D3193F9155001A17C5 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
 		9E8521D4193F9156001A17C5 /* button_blue_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_blue_mini.png; sourceTree = "<group>"; };
 		9E8521D5193F9156001A17C5 /* button_blue_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_blue_mini@2x.png"; sourceTree = "<group>"; };
 		9E8521D6193F9156001A17C5 /* button_gray_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_gray_mini.png; sourceTree = "<group>"; };
@@ -413,7 +410,6 @@
 		9E85227C1944BA30001A17C5 /* SHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLoginViewController.m; sourceTree = "<group>"; };
 		9E85227D1944BA30001A17C5 /* SHLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHLoginViewController.xib; sourceTree = "<group>"; };
 		9E8522811944D84F001A17C5 /* SHChatListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChatListViewCell.xib; sourceTree = "<group>"; };
-		9E8522831944DBDB001A17C5 /* 7044702_190131486105_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7044702_190131486105_2.jpg; sourceTree = "<group>"; };
 		9E8522851944DC25001A17C5 /* SHChatListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatListViewCell.h; sourceTree = "<group>"; };
 		9E8522861944DC25001A17C5 /* SHChatListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChatListViewCell.m; sourceTree = "<group>"; };
 		9E85228D19462022001A17C5 /* SHChatUnitViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChatUnitViewCell.h; sourceTree = "<group>"; };
@@ -827,7 +823,6 @@
 				9E31380119477AC6002A3298 /* userphoto.png */,
 				9E9EDD9E1951E31900123254 /* tab_selected@2x.png */,
 				9E31360D19462719002A3298 /* button_red_mini@2x.png */,
-				9E8522831944DBDB001A17C5 /* 7044702_190131486105_2.jpg */,
 				9E8522491944743D001A17C5 /* app_logo.png */,
 				9E31360F1946272C002A3298 /* dialogue_ others@2x.png */,
 				9E3136101946272C002A3298 /* dialogue_me@2x.png */,
@@ -855,7 +850,6 @@
 				9E85225F1944743D001A17C5 /* navi_search_press@2x.png */,
 				9E8522601944743D001A17C5 /* tab_rest.png */,
 				9E8522611944743D001A17C5 /* tab_selected.png */,
-				9E8521D3193F9155001A17C5 /* a.png */,
 				9E8521D4193F9156001A17C5 /* button_blue_mini.png */,
 				9E8521D5193F9156001A17C5 /* button_blue_mini@2x.png */,
 				9E8521D6193F9156001A17C5 /* button_gray_mini.png */,
@@ -1789,7 +1783,6 @@
 				9E0670B01961D89700E20195 /* SHReportListViewController.xib in Resources */,
 				9E85226C1944743D001A17C5 /* login_icon_username@2x.png in Resources */,
 				9EA69D3C1938E7D50030C27F /* DSLCalendarDaySelection-left@2x.png in Resources */,
-				9E8522841944DBDB001A17C5 /* 7044702_190131486105_2.jpg in Resources */,
 				9E124AB71979125200F9C953 /* SHTeamSearchViewController.xib in Resources */,
 				9E94D236194CA81A00D7F074 /* SHMoneyDetailViewController.xib in Resources */,
 				9EA69D6E1938E7D50030C27F /* ic_re_error@2x.png in Resources */,
@@ -1841,7 +1834,6 @@
 				9EA69DA51938E7D50030C27F /* string.xml in Resources */,
 				9E124AB21978F67300F9C953 /* SHCompanySearchViewController.xib in Resources */,
 				9E94D22E194C69AA00D7F074 /* SHMyTeamTableViewCell.xib in Resources */,
-				9E8521DC193F9156001A17C5 /* a.png in Resources */,
 				9EA69D7C1938E7D50030C27F /* SHTableViewTitleImageCell.xib in Resources */,
 				9E983FC11972D31600EA3E1B /* SHMyFollowViewCell.xib in Resources */,
 				9E9EDD9D1951D36100123254 /* SHChatSearchListViewController.xib in Resources */,

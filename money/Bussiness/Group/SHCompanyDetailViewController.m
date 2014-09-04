@@ -135,10 +135,12 @@
 {
     SHGroupListViewCell * cell;
     if(indexPath.section == 0){
-    cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"SHGroupListViewCell" owner:nil options:nil] objectAtIndex:0];
         cell.labTitle.text = [dic valueForKey:@"companyName"];
+        [cell.imgView setUrl:[dic valueForKey:@"companyHeadIcon"]];
         cell.labContent.text = [dic valueForKey:@"companyType"];
-
+        
+        
     }else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableGeneralCell];
         cell.labTitle.text =  [dic valueForKey:@"introduction"];
@@ -148,10 +150,10 @@
         for (int i = 0;i < com.count; i++) {
             [msg appendFormat:@"%@,",[[com objectAtIndex:i] valueForKey:@"productName"]];
         }
-
+        
         cell = [tableView dequeueReusableGeneralCell];
         cell.labTitle.text =  msg;
-
+        
     }else if (indexPath.section == 3){
         cell = [tableView dequeueReusableGeneralCell];
         cell.labTitle.text =  [dic valueForKey:@"mainClients"];
