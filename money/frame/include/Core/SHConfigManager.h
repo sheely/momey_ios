@@ -31,6 +31,8 @@ typedef enum  {
 //updateinfo
 @property (nonatomic,assign,readonly) NSDictionary* updateInfo;
 @property (nonatomic,assign,readonly) NSDictionary* configInfo;
+@property (nonatomic,assign) BOOL get;
+
 - (void) refresh;
 
 - (BOOL) show;

@@ -28,7 +28,7 @@
     [super viewDidLoad];
     self.title = @"我";
     
-    mList = [@[@"我的日历",@"我的关注",@"我的团队"] mutableCopy];
+    mList = [@[@"我的日历",@"我的关注",@"我的团队", [NSString stringWithFormat:@"版本:%@",[Entironment.instance version]]] mutableCopy];
     // Do any additional setup after loading the view from its nib.
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -40,6 +40,9 @@
         cell.imgIcon.image = [UIImage imageNamed:@"icon_myprofile_myfocus"];
     }else  if(indexPath.row == 2){
         cell.imgIcon.image = [UIImage imageNamed:@"icon_myprofile_myteam"];
+    }else  if(indexPath.row == 3){
+        cell.imgIcon.image = [UIImage imageNamed:@"icon_myprofile_mycalender"];
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
     cell.labTitle.text = [mList objectAtIndex:indexPath.row];
     return cell;
@@ -52,7 +55,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return mList.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

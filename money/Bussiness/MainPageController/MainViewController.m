@@ -38,11 +38,20 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(login:) name:NOTIFICATION_NEED_LOGIN object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessful:) name:NOTIFICATION_LOGIN_SUCCESSFUL object:nil];
     [self login:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification:) name:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:nil];
+
+    SHConfigManager.instance.URL = @"http://www.isheely.com/a/getconfig.html";
+    SHConfigManager.instance.get = YES;
+    [SHConfigManager.instance refresh];
     // [self performSelector:@selector(nedlogin) withObject:nil afterDelay:0.5];
     //引导页加载
-    
-    
 }
+
+- (void)notification:(NSNotification*)s
+{
+    SHConfigManager.instance.show;
+}
+
 - (void)login:(NSObject*)o
 {
     loginViewController = [[SHLoginViewController alloc]init];

@@ -104,7 +104,7 @@
 
 - (void)btnEdit:(UIButton*)btn
 {
-    SHIntent  *intent = [[SHIntent alloc]init:@"editcalendar" delegate:nil containner:self.navigationController];
+    SHIntent  *intent = [[SHIntent alloc]init:@"editcalendar" delegate:self containner:self.navigationController];
     NSDictionary * dic = [mList objectAtIndex:btn.tag];
     [intent.args setValue:dic forKey:@"info"];
     [[UIApplication sharedApplication]open:intent];

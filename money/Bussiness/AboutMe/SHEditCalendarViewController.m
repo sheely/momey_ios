@@ -9,7 +9,9 @@
 #import "SHEditCalendarViewController.h"
 
 @interface SHEditCalendarViewController ()
-
+{
+    UITapGestureRecognizer*     _tapGestureRec;
+}
 @end
 
 @implementation SHEditCalendarViewController
@@ -52,6 +54,14 @@
     calendarcontroller = [[SHCalendarViewController alloc]init];
     calendarcontroller.delegate = self;
     // Do any additional setup after loading the view from its nib.
+    _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
+    [self.view addGestureRecognizer:_tapGestureRec];
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)closeKeyboard
+{
+    [self.txtView resignFirstResponder];
 }
 
 - (void)btnSubmit:(NSObject*)sender
