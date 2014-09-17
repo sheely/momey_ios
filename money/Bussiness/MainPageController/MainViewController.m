@@ -40,8 +40,8 @@
     [self login:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification:) name:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:nil];
 
-    SHConfigManager.instance.URL = @"http://www.isheely.com/a/getconfig.html";
-    SHConfigManager.instance.get = YES;
+    SHConfigManager.instance.URL = URL_FOR(@"getconfig");
+    //SHConfigManager.instance.get = YES;
     [SHConfigManager.instance refresh];
     // [self performSelector:@selector(nedlogin) withObject:nil afterDelay:0.5];
     //引导页加载
