@@ -115,7 +115,7 @@
     if(indexPath.section == 2){
         NSDictionary * dic_  = [[dic valueForKey:@"teamMembers"] objectAtIndex:indexPath.row];
         SHIntent * intent = [[SHIntent alloc]init:@"chatuserdetail" delegate:nil containner:self.navigationController];
-        NSDictionary * dic = [mList objectAtIndex:indexPath.row];
+        //NSDictionary * dic = [mList objectAtIndex:indexPath.row];
         [intent.args setValue: [dic_ valueForKey:@"memberId"]forKey:@"friendId"];
         
         [[UIApplication sharedApplication]open:intent];
@@ -140,7 +140,7 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"SHTeamMemberCell" owner:nil options:nil] objectAtIndex:0];
         NSDictionary *dicm = [[dic valueForKey:@"teamMembers"] objectAtIndex:indexPath.row];
         ((SHTeamMemberCell*)cell).labTitle.text = [dicm valueForKey:@"memberName"];
-        [((SHTeamMemberCell*)cell).imageView setUrl:[dicm valueForKey:@"memberHeadIcon"]];
+        [((SHTeamMemberCell*)cell).imgView setUrl:[dicm valueForKey:@"memberHeadIcon"]];
         if([[dicm valueForKey:@"isOwner"] boolValue]){
             ((SHTeamMemberCell*)cell).labContent.text = @"发起人";
         }else{

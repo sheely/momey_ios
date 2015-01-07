@@ -23,6 +23,8 @@
 {
     [super loadSkin];
     self.labContent.textColor = [UIColor orangeColor];
+    self.imgView.layer.cornerRadius = 5;
+    self.imgView.layer.masksToBounds = YES;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

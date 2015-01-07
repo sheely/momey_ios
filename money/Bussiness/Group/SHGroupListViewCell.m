@@ -10,4 +10,10 @@
 
 @implementation SHGroupListViewCell
 
+- (void)loadSkin
+{
+    [super loadSkin];
+    self.imgView.layer.cornerRadius = 5;
+    self.imgView.layer.masksToBounds = YES;
+}
 @end

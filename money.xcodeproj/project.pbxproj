@@ -1418,8 +1418,8 @@
 		9EA69D211938E7D50030C27F /* SystemFiles */ = {
 			isa = PBXGroup;
 			children = (
-				9EA69D221938E7D50030C27F /* color.xml */,
 				9EA69D231938E7D50030C27F /* config.h */,
+				9EA69D221938E7D50030C27F /* color.xml */,
 				9EA69D241938E7D50030C27F /* font.xml */,
 				9EA69D251938E7D50030C27F /* module.xml */,
 				9EA69D261938E7D50030C27F /* string.xml */,
@@ -1695,7 +1695,7 @@
 				ORGANIZATIONNAME = sheely.paean.coretest;
 				TargetAttributes = {
 					9EB92EBD19365A3E00E87981 = {
-						DevelopmentTeam = RJ35P28RXH;
+						DevelopmentTeam = 8RBVY6U3X8;
 					};
 					9EB92EDE19365A3E00E87981 = {
 						TestTargetID = 9EB92EBD19365A3E00E87981;

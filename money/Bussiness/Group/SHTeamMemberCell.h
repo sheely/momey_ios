@@ -10,5 +10,5 @@
 
 @interface SHTeamMemberCell : SHTableViewTitleContentCell
 
-@property (weak, nonatomic) IBOutlet SHImageView *imageView;
+@property (weak, nonatomic) IBOutlet SHImageView *imgView;
 @end

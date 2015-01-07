@@ -10,29 +10,29 @@
 	<string>money</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>55D98EA5-FF71-49AE-A9AD-C3D01F7EFACD</key>
+		<key>97FD5934BFC6FC1899D5E163083135795D046A23</key>
 		<string>https://github.com/sheely/momey_ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>money.xcodeproj/project.xcworkspace</string>
+	<string>money.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>55D98EA5-FF71-49AE-A9AD-C3D01F7EFACD</key>
+		<key>97FD5934BFC6FC1899D5E163083135795D046A23</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/sheely/momey_ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>55D98EA5-FF71-49AE-A9AD-C3D01F7EFACD</string>
+	<string>97FD5934BFC6FC1899D5E163083135795D046A23</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>55D98EA5-FF71-49AE-A9AD-C3D01F7EFACD</string>
+			<string>97FD5934BFC6FC1899D5E163083135795D046A23</string>
 			<key>IDESourceControlWCCName</key>
 			<string>money</string>
 		</dict>

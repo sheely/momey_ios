@@ -104,7 +104,7 @@
         [loginViewController.view removeFromSuperview];
     }];
     [self tabBar:self.tabbar didSelectItem:self.tabbar.selectedItem];
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(message:) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(message:) userInfo:nil repeats:YES];
 
 }
 
